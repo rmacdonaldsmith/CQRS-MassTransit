@@ -1,0 +1,85 @@
+﻿@model MHM.WinFlexOne.CQRS.Commands.MakeHsaElection
+
+@{
+    ViewBag.Title = "Make a HSA Election";
+}
+
+<h2>Make a HSA Election</h2>
+
+@Html.ValidationSummary(false)
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>MakeHsaElection</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AdministratorCode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AdministratorCode)
+            @Html.ValidationMessageFor(model => model.AdministratorCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CompanyCode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CompanyCode)
+            @Html.ValidationMessageFor(model => model.CompanyCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ParticipantId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ParticipantId)
+            @Html.ValidationMessageFor(model => model.ParticipantId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PlanCode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PlanCode)
+            @Html.ValidationMessageFor(model => model.PlanCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BenefitCode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BenefitCode)
+            @Html.ValidationMessageFor(model => model.BenefitCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ElectionReason)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ElectionReason)
+            @Html.ValidationMessageFor(model => model.ElectionReason)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ElectionAmount)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ElectionAmount)
+            @Html.ValidationMessageFor(model => model.ElectionAmount)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

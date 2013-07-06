@@ -1,0 +1,52 @@
+﻿@model CQRS.UI.Web.MFO.Models.NewFsaViewModel
+
+@{
+    ViewBag.Title = "Make an Election";
+}
+
+<h2>Make an Election</h2>
+
+@Html.ValidationSummary(false)
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Make An Election</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Command.PlanYearBenefitId, "Plan Year Benefit")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(m => m.Command.PlanYearBenefitId, Model.PlanYearBenefitsOffered)
+            @Html.ValidationMessageFor(model => model.Command.PlanYearBenefitId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Command.ElectionReason, "Election Reason")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(m => m.Command.ElectionReason, Model.ElectionReasons)
+            @Html.ValidationMessageFor(model => model.Command.ElectionReason)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Command.ElectionAmount, "Election Amount")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Command.ElectionAmount)
+            @Html.ValidationMessageFor(model => model.Command.ElectionAmount)
+        </div>
+        <p>
+            <input type="submit" value="NewFsa" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

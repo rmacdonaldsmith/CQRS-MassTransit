@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{33E90437-CFD1-48B9-BFCC-23FB733B3591}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MHM.WinFlexOne.CQRS.Messages</RootNamespace>
+    <AssemblyName>MHM.WinFlexOne.CQRS.Messages</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MassTransit">
+      <HintPath>..\packages\MassTransit.2.7.1\lib\net40\MassTransit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ack.cs" />
+    <Compile Include="Commands\Commands1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Commands.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Commands\Partial\AssignBenefitToYear.cs" />
+    <Compile Include="Commands\Partial\ChangeElectionAmount.cs" />
+    <Compile Include="Commands\Partial\CommandResponse.cs" />
+    <Compile Include="Commands\Partial\DefineNewBenefit.cs" />
+    <Compile Include="Commands\Partial\DefineNewPlan.cs" />
+    <Compile Include="Commands\Partial\DefineYearForPlan.cs" />
+    <Compile Include="Commands\Partial\DisburseClaim.cs" />
+    <Compile Include="Commands\Partial\MakeAnElection.cs" />
+    <Compile Include="Commands\Partial\MakeHsaElection.cs" />
+    <Compile Include="Commands\Partial\RejectClaimRequest.cs" />
+    <Compile Include="Commands\Partial\StartTimeout.cs" />
+    <Compile Include="Commands\Partial\SubmitClaimRequest.cs" />
+    <Compile Include="Commands\Partial\TerminateElection.cs" />
+    <Compile Include="Commands\Partial\VerifyCardUse.cs" />
+    <Compile Include="Dtos\Dtos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dtos.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\Partial\BenefitDto.cs" />
+    <Compile Include="Dtos\Partial\CompanyDto.cs" />
+    <Compile Include="Dtos\Partial\CopayInfo.cs" />
+    <Compile Include="Dtos\Partial\ElectionBalanceDto.cs" />
+    <Compile Include="Dtos\Partial\ElectionDto.cs" />
+    <Compile Include="Dtos\Partial\Participant.cs" />
+    <Compile Include="Dtos\Partial\PlanDto.cs" />
+    <Compile Include="Dtos\Partial\PlanYearBenefitDto.cs" />
+    <Compile Include="Dtos\Partial\PlanYearDto.cs" />
+    <Compile Include="Events\Events.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Events.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Events\Partial\BenefitAssignedToYearEvent.cs" />
+    <Compile Include="Events\Partial\CardUseVerifiedEvent.cs" />
+    <Compile Include="Events\Partial\ClaimDisbursedEvent.cs" />
+    <Compile Include="Events\Partial\ClaimNotDisbursedEvent.cs" />
+    <Compile Include="Events\Partial\ClaimRequestAutoSubstantiatedEvent.cs" />
+    <Compile Include="Events\Partial\ClaimRequestCreatedPendingVerificationEvent.cs" />
+    <Compile Include="Events\Partial\ClaimRequestRejectedEvent.cs" />
+    <Compile Include="Events\Partial\ClaimRequestSubmittedEvent.cs" />
+    <Compile Include="Events\Partial\ElectionAmountChangedEvent.cs" />
+    <Compile Include="Events\Partial\ElectionMadeEvent.cs" />
+    <Compile Include="Events\Partial\ElectionTerminatedEvent.cs" />
+    <Compile Include="Events\Partial\HsaElectionMadeEvent.cs" />
+    <Compile Include="Events\Partial\NewBenefitDefinedEvent.cs" />
+    <Compile Include="Events\Partial\NewPlanDefined.cs" />
+    <Compile Include="Events\Partial\NewPlanYearAssignedEvent.cs" />
+    <Compile Include="Events\Partial\TimeoutElapsedEvent.cs" />
+    <Compile Include="Faults\CommandFault.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Commands\Commands.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Commands1.cs</LastGenOutput>
+    </None>
+    <None Include="Dtos\Dtos.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Dtos.cs</LastGenOutput>
+    </None>
+    <None Include="Events\Events.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Events.cs</LastGenOutput>
+    </None>
+    <None Include="XSD\CommandDefinitions.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XSD\DtoDefinitions.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XSD\EventDefinitions.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CQRS.Interfaces\MHM.WinFlexOne.CQRS.Interfaces.csproj">
+      <Project>{230600C4-94FC-4C17-8D0D-0030D72EDDF1}</Project>
+      <Name>MHM.WinFlexOne.CQRS.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

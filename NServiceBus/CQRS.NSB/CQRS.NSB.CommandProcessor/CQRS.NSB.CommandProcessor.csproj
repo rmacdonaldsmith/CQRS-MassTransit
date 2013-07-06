@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{18248C36-54A4-4FDF-BD2C-C69579B215FE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CQRS.NSB.CommandProcessor</RootNamespace>
+    <AssemblyName>CQRS.NSB.CommandProcessor</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NServiceBus">
+      <HintPath>..\packages\NServiceBus.3.2.0\lib\net40\NServiceBus.dll</HintPath>
+    </Reference>
+    <Reference Include="NServiceBus.Core">
+      <HintPath>..\packages\NServiceBus.3.2.0\lib\net40\NServiceBus.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NServiceBus.Host">
+      <HintPath>..\packages\NServiceBus.Host.3.2.0\lib\net40\NServiceBus.Host.exe</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Elections\CreateElectionProcessor.cs">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/CQRS.NSB/Element/C:\Source Code\CQRS\NServiceBus\CQRS.NSB\CQRS.NSB.slnbldr%252f64926147-73ce-471d-bf12-76bc052340de</SourceModelReference>
+      <ItemGuid>97750c0f-697c-4174-bcb8-494926cf83df</ItemGuid>
+    </Compile>
+    <Compile Include="EndpointConfig.cs">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/CQRS.NSB/Product/C:\Source Code\CQRS\NServiceBus\CQRS.NSB\CQRS.NSB.slnbldr%252f0463e486-a5f0-4b11-b535-ec5f4bda984c</SourceModelReference>
+      <ItemGuid>bb709dea-a0f1-4f6c-a36b-c8e7d32384c0</ItemGuid>
+    </Compile>
+    <Compile Include="Infrastructure\GeneratedCode\Elections\CreateElectionProcessor.cs">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/CQRS.NSB/Element/C:\Source Code\CQRS\NServiceBus\CQRS.NSB\CQRS.NSB.slnbldr%252f64926147-73ce-471d-bf12-76bc052340de</SourceModelReference>
+      <ItemGuid>664dd74b-006c-484a-b16b-816e0f162c67</ItemGuid>
+    </Compile>
+    <Compile Include="Infrastructure\MessageConventions.cs">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/CQRS.NSB/Product/C:\Source Code\CQRS\NServiceBus\CQRS.NSB\CQRS.NSB.slnbldr%252f0463e486-a5f0-4b11-b535-ec5f4bda984c</SourceModelReference>
+      <ItemGuid>b5f1afe6-49cd-4733-ae2c-1e549ba10324</ItemGuid>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Infrastructure\GeneratedCode\Config\MasterNodeConfig.config">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/CQRS.NSB/Product/C:\Source Code\CQRS\NServiceBus\CQRS.NSB\CQRS.NSB.slnbldr%252f0463e486-a5f0-4b11-b535-ec5f4bda984c</SourceModelReference>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ItemGuid>c8a24b55-0bbd-48eb-9b07-8b62a1d1b8c3</ItemGuid>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Infrastructure\GeneratedCode\Config\MessageForwardingInCaseOfFaultConfig.config">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/CQRS.NSB/Product/C:\Source Code\CQRS\NServiceBus\CQRS.NSB\CQRS.NSB.slnbldr%252f0463e486-a5f0-4b11-b535-ec5f4bda984c</SourceModelReference>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ItemGuid>f92c6d9e-8ea5-4690-b956-2c997423ad1f</ItemGuid>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Infrastructure\GeneratedCode\Config\MsmqTransportConfig.config">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/CQRS.NSB/Product/C:\Source Code\CQRS\NServiceBus\CQRS.NSB\CQRS.NSB.slnbldr%252f0463e486-a5f0-4b11-b535-ec5f4bda984c</SourceModelReference>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ItemGuid>342a729a-d1c2-4260-8680-db2b3d4e7291</ItemGuid>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Infrastructure\GeneratedCode\Config\UnicastBusConfig.config">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/CQRS.NSB/Product/C:\Source Code\CQRS\NServiceBus\CQRS.NSB\CQRS.NSB.slnbldr%252f0463e486-a5f0-4b11-b535-ec5f4bda984c</SourceModelReference>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ItemGuid>5246f3d8-b46c-4f67-8158-930a065e474e</ItemGuid>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Infrastructure\GeneratedCode\Config\SecondLevelRetriesConfig.config">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/CQRS.NSB/Product/C:\Source Code\CQRS\NServiceBus\CQRS.NSB\CQRS.NSB.slnbldr%252f0463e486-a5f0-4b11-b535-ec5f4bda984c</SourceModelReference>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ItemGuid>678f4e86-8dfe-451a-804a-dc612a0f1661</ItemGuid>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/CQRS.NSB/Product/C:\Source Code\CQRS\NServiceBus\CQRS.NSB\CQRS.NSB.slnbldr%252f0463e486-a5f0-4b11-b535-ec5f4bda984c</SourceModelReference>
+      <ItemGuid>5fdc53b5-615e-4208-89dc-5ca946d9794e</ItemGuid>
+    </None>
+    <Content Include="Infrastructure\Logging.config">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/CQRS.NSB/Product/C:\Source Code\CQRS\NServiceBus\CQRS.NSB\CQRS.NSB.slnbldr%252f0463e486-a5f0-4b11-b535-ec5f4bda984c</SourceModelReference>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ItemGuid>3fb98d39-0940-4fd4-ae3e-dd03b882e918</ItemGuid>
+    </Content>
+    <None Include="CommandProcessor.endpoints">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/CQRS.NSB/Product/C:\Source Code\CQRS\NServiceBus\CQRS.NSB\CQRS.NSB.slnbldr%252f0463e486-a5f0-4b11-b535-ec5f4bda984c</SourceModelReference>
+      <ItemGuid>92386e6a-c6de-429a-9f3e-08ea6ec92017</ItemGuid>
+    </None>
+    <None Include="packages.config">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/CQRS.NSB/Product/C:\Source Code\CQRS\NServiceBus\CQRS.NSB\CQRS.NSB.slnbldr%252f0463e486-a5f0-4b11-b535-ec5f4bda984c</SourceModelReference>
+      <ItemGuid>f5626cdb-071a-43c8-b7fa-b9fece887647</ItemGuid>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CQRS.NSB.Contract\CQRS.NSB.Contract.csproj">
+      <Project>{367EF345-FAFF-4DF0-95A0-A6012FD3B645}</Project>
+      <Name>CQRS.NSB.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CQRS.NSB.InternalMessages\CQRS.NSB.InternalMessages.csproj">
+      <Project>{7224EB3F-95F8-4A00-8873-6180F52D8EC9}</Project>
+      <Name>CQRS.NSB.InternalMessages</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <StartAction>Program</StartAction>
+    <StartProgram>$(ProjectDir)$(OutputPath)NServiceBus.Host.exe</StartProgram>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

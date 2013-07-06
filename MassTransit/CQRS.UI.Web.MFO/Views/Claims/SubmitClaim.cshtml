@@ -1,0 +1,61 @@
+﻿@model CQRS.UI.Web.MFO.Models.SubmitClaimViewModel
+
+@{
+    ViewBag.Title = "Submit Claim Request";
+}
+
+<h2>Submit Claim Request</h2>
+
+@Html.ValidationSummary(false)
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Submit Claim Request</legend>
+
+        <div class="editor-label">
+            @Html.Label("Date of Transaction")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Command.DateOfTransaction)
+            @Html.ValidationMessageFor(model => model.Command.DateOfTransaction)
+        </div>
+
+        <div class="editor-label">
+            @Html.Label("Provider")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Command.ProviderName)
+            @Html.ValidationMessageFor(model => model.Command.ProviderName)
+        </div>
+
+        <div class="editor-label">
+            @Html.Label("Claim Type")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(m => m.Command.ClaimType, Model.ClaimTypes)
+            @Html.ValidationMessageFor(model => model.Command.ClaimType)
+        </div>
+
+        <div class="editor-label">
+            @Html.Label("Amount")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Command.Amount)
+            @Html.ValidationMessageFor(model => model.Command.Amount)
+        </div>
+
+        <p>
+            <input type="submit" value="SubmitClaim" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to Claims Home", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

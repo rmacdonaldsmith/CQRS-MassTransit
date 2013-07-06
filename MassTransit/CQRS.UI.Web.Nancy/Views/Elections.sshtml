@@ -1,0 +1,22 @@
+﻿@Master['MasterPage']
+
+@Section['Content']
+	<p>Manage your elections from here.<p>
+	<p>Your current elections:
+	<ul>
+	@Each.Elections
+		<li>
+			<a href="/elections/@Current.Id">@Current.Id, @Current.BenefitCode, @Current.PlanYear, @Current.ElectionAmount, Terminated=@Current.IsTerminated</a> 
+			<a href="/elections/terminate/@Current.Id">Terminate</a>
+		</li>
+	@EndEach
+	</ul>
+	<p>
+	@If.ShowElectionDetail
+		Election Details:
+		@Partial['ElectionDetail.sshtml', Model.SelectedElection]
+	@EndIf
+	
+	<p><a href="/elections/newelection">Add a new election...</a>
+
+@EndSection

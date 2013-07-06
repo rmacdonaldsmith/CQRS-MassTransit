@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<productState xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.2.0.0" Id="3a952792-50ea-48b7-9862-4f8f66192d19" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/productstate">
+  <products>
+    <product Id="86bd173e-3a7d-43a3-b388-fd938bd4cb05" definitionId="2c52bbfe-442d-4f40-8f6f-7df75dd99cac" definitionName="Application" instanceName="CQRS.EventDispatch.Tests" extensionId="a5e9f15b-ad7f-4201-851e-186dd8db3bc9" extensionName="NServiceBus Studio" author="NServiceBus" version="3.2.0.0">
+      <properties>
+        <property Id="649f9549-5e04-4cd3-899d-ddfc3225666f" definitionId="fad5bb76-e58a-4d6f-a4dd-4d460d1d56e5" definitionName="ForwardReceivedMessagesTo" rawValue="audit" />
+        <property Id="d81a59a1-c956-4f26-8652-ca300a99dca1" definitionId="2d4e9c90-92f5-4b3b-a413-49796b498035" definitionName="ErrorQueue" rawValue="error" />
+        <property Id="cd9ee828-1c66-4efe-8f0b-fcf75ab0234f" definitionId="8823a0ac-36e9-47a6-9007-705cd12080a8" definitionName="NServiceBusVersion" rawValue="3.2.0" />
+        <property Id="4a1bf8af-4c50-47ab-abe3-a563610b4944" definitionId="0580d214-a417-4747-b859-2ad7596b5092" definitionName="ExtensionPath" rawValue="C:\Users\rmsmith\AppData\Local\Microsoft\VisualStudio\10.0\Extensions\NServiceBus\NServiceBus Studio\3.2.0.0\" />
+      </properties>
+      <views>
+        <view Id="f2a6fc9f-5af7-4473-a73b-317c133368ca" definitionId="6bc9143a-3e32-4dee-b950-2aa11e4c5f5d" definitionName="Design">
+          <elements>
+            <collection Id="d25a31d4-a683-4ee6-9d56-f96d39ba01df" definitionId="25802dff-4552-4b8a-9fec-4943a9f20c26" definitionName="Services" instanceName="Services" />
+            <collection Id="4657e807-8594-401d-9759-23c97afb5f78" definitionId="ad8ac730-01f5-47d8-bd53-5a1bc52ccb3b" definitionName="Endpoints" instanceName="Endpoints" />
+            <collection Id="d1257c49-06ab-4645-9c89-32433e175379" definitionId="f847dee0-d0b7-4270-932f-8b18ceb74f21" definitionName="Infrastructure" instanceName="Infrastructure" />
+          </elements>
+        </view>
+        <view Id="4f50940a-7fab-4d1f-9f70-6c3756ffd8f0" definitionId="2b81bb1a-4ca7-4e8b-9743-aa9eb19e2a94" definitionName="Deployment" />
+      </views>
+    </product>
+  </products>
+</productState>

@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "EFO Home Page";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+        </div>
+    </section>
+}
+<h3>Try one of the following:</h3>
+<ol class="round">
+    <li class="one">
+        <h5>Plans</h5>
+        @Html.ActionLink("View and manage your plans here.", "Index", "Plans")
+    </li>
+    <li class="two">
+        <h5>Benefits</h5>
+        @Html.ActionLink("View and manage the benefits that you offer here.", "List", "Benefits")
+    </li>
+        <li class="three">
+        <h5>Claims</h5>
+        @Html.ActionLink("View and manage the unsubstatiated claims here.", "Index", "Claims")
+    </li>
+</ol>

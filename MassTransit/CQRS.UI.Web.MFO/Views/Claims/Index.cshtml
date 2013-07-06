@@ -1,0 +1,20 @@
+﻿@model MHM.WinFlexOne.CQRS.Commands.SubmitClaimRequest
+
+@{
+    ViewBag.Title = "Claims";
+}
+
+<h2>Claims</h2>
+
+<ol class="round">
+    <li class="one">
+        <h5>View your claims</h5>
+        @Html.ActionLink("Click here to view the status of claims that you have submitted", "ViewClaims")
+    </li>
+
+    <li class="two">
+        <h5>Submit a claim</h5>
+        @Html.ActionLink("Click here to submit a new claim", "SubmitClaim")
+    </li>
+</ol>
+

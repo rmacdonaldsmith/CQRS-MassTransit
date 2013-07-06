@@ -1,0 +1,10 @@
+﻿@Master['MasterPage']
+
+@Section['Content']
+	<p>Manage your benefits from here:<p>
+	<ul>
+		<li><a href="elections">Elections</a></li>
+		<li><a href="claims">Claims</a></li>
+	</ul>
+
+@EndSection

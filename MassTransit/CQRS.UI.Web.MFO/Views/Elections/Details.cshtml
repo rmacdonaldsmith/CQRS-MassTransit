@@ -1,0 +1,84 @@
+﻿@model MHM.WinFlexOne.CQRS.Dtos.ElectionDto
+
+@{
+    ViewBag.Title = "Election Details";
+}
+
+<h2>Election Details</h2>
+
+<fieldset>
+    <legend>ElectionDto</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PlanCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PlanCode)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PlanYear)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PlanYear)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BenefitCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BenefitCode)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BenefitType)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BenefitType)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IsTerminated)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsTerminated)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TerminationDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TerminationDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.QualifyingEvent)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.QualifyingEvent)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ElectionAmount)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ElectionAmount)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PerPayPeriodAmount)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PerPayPeriodAmount)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Version)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Version)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

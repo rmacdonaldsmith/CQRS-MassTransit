@@ -1,0 +1,52 @@
+﻿@model IEnumerable<MHM.WinFlexOne.CQRS.Dtos.BenefitDto>
+
+@{
+    ViewBag.Title = "Benefits Summary";
+}
+
+<h2>Benefits Summary</h2>
+
+<p>
+    @Html.ActionLink("Define a new benefit here", "Create", "Benefits") 
+</p>
+<p>
+    @Html.ActionLink("View Plan Year Benefits", "ListPlanYearBenefits", "Benefits")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BenefitType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HasMaxElectionAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaxElectionAmount)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var benefitDto in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => benefitDto.BenefitType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => benefitDto.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => benefitDto.HasMaxElectionAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => benefitDto.MaxElectionAmount)
+        </td>
+        <td>
+            @Html.ActionLink("Assign to year", "AssignToYear", new { benefitId=benefitDto.Id, planId=benefitDto.PlanId })
+        </td>
+    </tr>
+}
+
+</table>

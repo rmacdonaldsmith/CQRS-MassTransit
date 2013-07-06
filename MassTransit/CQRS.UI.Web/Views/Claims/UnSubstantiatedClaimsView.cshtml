@@ -1,0 +1,55 @@
+﻿@model IEnumerable<MHM.WinFlexOne.CQRS.Dtos.ClaimDto>
+
+@{
+    ViewBag.Title = "UnSubstantiated Claims";
+}
+
+<h2>UnSubstantiated Claims</h2>
+
+@Html.ValidationSummary(false)
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ParticipantId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Provider)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClaimType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClaimAmount)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ParticipantId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ServiceDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Provider)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClaimType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClaimAmount)
+        </td>
+        <td>
+            @Html.ActionLink("Substantiate", "Substantiate", new { id = item.Id }) |
+            @Html.ActionLink("Reject", "Reject", new { id = item.Id })
+        </td>
+    </tr>
+}
+
+</table>

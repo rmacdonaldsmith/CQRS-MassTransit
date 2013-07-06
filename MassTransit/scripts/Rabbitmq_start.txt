@@ -1,0 +1,3 @@
+C:\Program Files (x86)\RabbitMQ Server\rabbitmq_server-2.8.7\sbin>rabbitmq-server.bat install
+
+guest user name / pass: guest / guest

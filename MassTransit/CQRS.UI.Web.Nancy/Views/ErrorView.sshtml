@@ -1,0 +1,7 @@
+﻿@Master['MasterPage']
+
+@Section['Content']
+  <p>There was a problem processing your request:
+  <p>@Model.ErrorMessage
+  <p>Click <a href=@Model.LinkAddress>here</a> to go back and try again.
+@EndSection

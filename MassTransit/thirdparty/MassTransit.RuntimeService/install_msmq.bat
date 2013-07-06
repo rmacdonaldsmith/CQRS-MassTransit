@@ -1,0 +1,1 @@
+ocsetup MSMQ-Container;MSMQ-Server;MSMQ-Multicast

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MHM.WinFlexOne.CQRS.Dtos.PlanYearDto>
+
+@{
+    ViewBag.Title = "PlanYearList";
+}
+
+<h2>Plan Year List</h2>
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Year)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Starts)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ends)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Year)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Starts)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ends)
+        </td>
+    </tr>
+}
+
+</table>
+
+@Html.ActionLink("Back to Plans", "Index")

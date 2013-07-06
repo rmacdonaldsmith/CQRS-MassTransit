@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2013 sp1 (x64) (http://www.altova.com) by Pasquale M Fatino (Wageworks, Inc.) -->
+<xs:schema xmlns="http://tempuri.org/DtoDefinitions.xsd" xmlns:mstns="http://tempuri.org/DtoDefinitions.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://tempuri.org/DtoDefinitions.xsd" elementFormDefault="qualified" id="DtoDefinitions">
+	<xs:simpleType name="ClaimStateEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="PendingSubstantiation"/>
+			<xs:enumeration value="Substantiated"/>
+			<xs:enumeration value="Rejected"/>
+			<xs:enumeration value="Paid"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="ElectionDto">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:string"/>
+			<xs:element name="CompanyId"/>
+			<xs:element name="CompanyName"/>
+			<xs:element name="ParticipantId" type="xs:string"/>
+			<xs:element name="PlanCode" type="xs:string"/>
+			<xs:element name="PlanYear" type="xs:int"/>
+			<xs:element name="BenefitCode" type="xs:string"/>
+			<xs:element name="PlanYearBenefitId" type="xs:string"/>
+			<xs:element name="PlanYearBenefitDesc" type="xs:string"/>
+			<xs:element name="BenefitType" type="xs:string"/>
+			<xs:element name="IsTerminated" type="xs:boolean"/>
+			<xs:element name="TerminationDate" type="xs:dateTime"/>
+			<xs:element name="QualifyingEvent" type="xs:string"/>
+			<xs:element name="ElectionAmount" type="xs:decimal"/>
+			<xs:element name="Balance" type="xs:decimal"/>
+			<xs:element name="PerPayPeriodAmount" type="xs:decimal"/>
+			<xs:element name="Version" type="xs:int"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ElectionBalanceDto">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:string"/>
+			<xs:element name="ElectionId" type="xs:string"/>
+			<xs:element name="ParticipantId" type="xs:string"/>
+			<xs:element name="ElectionDescription" type="xs:string"/>
+			<xs:element name="ElectionAmount" type="xs:decimal"/>
+			<xs:element name="BalanceRemaining" type="xs:decimal"/>
+			<xs:element name="Claims">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ClaimId" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ParticipantDto">
+		<xs:sequence>
+			<xs:element name="FirstName" type="xs:string"/>
+			<xs:element name="LastName" type="xs:string"/>
+			<xs:element name="Employer" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PlanYearBenefitDto">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:string"/>
+			<xs:element name="PlanId" type="xs:string"/>
+			<xs:element name="BenefitId" type="xs:string"/>
+			<xs:element name="CompanyId" type="xs:string"/>
+			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="PlanYear" type="xs:int"/>
+			<xs:element name="HasAnnualLimit" type="xs:boolean"/>
+			<xs:element name="AnnualLimit" type="xs:decimal"/>
+			<xs:element name="StartDate" type="xs:dateTime"/>
+			<xs:element name="EndDate" type="xs:dateTime"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BenefitDto">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:string"/>
+			<xs:element name="CompanyId" type="xs:string"/>
+			<xs:element name="PlanId" type="xs:string"/>
+			<xs:element name="PlanYearId"/>
+			<xs:element name="BenefitType" type="xs:string"/>
+			<xs:element name="Description" type="xs:string"/>
+			<xs:element name="HasMaxElectionAmount" type="xs:boolean"/>
+			<xs:element name="MaxElectionAmount" type="xs:decimal"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CompanyDto">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:string"/>
+			<xs:element name="AdmCode" type="xs:string"/>
+			<xs:element name="CompanyName" type="xs:string"/>
+			<xs:element name="Plans">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="PlanId" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PlanDto">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:string"/>
+			<xs:element name="PlanType" type="xs:string"/>
+			<xs:element name="CompanyId" type="xs:string"/>
+			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="Description" type="xs:string"/>
+			<xs:element name="PlanYears">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="PlanYearId" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Copays">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="CopayInfo" type="CopayInfo" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PlanYearDto">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:string"/>
+			<xs:element name="PlanId" type="xs:string"/>
+			<xs:element name="CompanyId" type="xs:string"/>
+			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="Year" type="xs:int"/>
+			<xs:element name="Starts" type="xs:dateTime"/>
+			<xs:element name="Ends" type="xs:dateTime"/>
+			<xs:element name="Benefits">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="BenefitId" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ClaimDto">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:string"/>
+			<xs:element name="ParticipantId" type="xs:string"/>
+			<xs:element name="ServiceDate" type="xs:dateTime"/>
+			<xs:element name="Provider" type="xs:string"/>
+			<xs:element name="ClaimType" type="xs:string"/>
+			<xs:element name="ClaimState" type="ClaimStateEnum"/>
+			<xs:element name="Source" type="xs:string"/>
+			<xs:element name="ElectionId" type="xs:string"/>
+			<xs:element name="ClaimAmount" type="xs:decimal"/>
+			<xs:element name="AmountPaid" type="xs:decimal"/>
+			<xs:element name="RejectReason" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CopayInfo">
+		<xs:sequence>
+			<xs:element name="CompanyId" type="xs:string"/>
+			<xs:element name="CompanyName" type="xs:string"/>
+			<xs:element name="PlanId" type="xs:string"/>
+			<xs:element name="PlanName" type="xs:string"/>
+			<xs:element name="ClaimType" type="xs:string"/>
+			<xs:element name="CopayAmount" type="xs:decimal"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="CompanyDto" type="CompanyDto"/>
+	<xs:element name="PlanYearDto" type="PlanYearDto"/>
+	<xs:element name="PlanDto" type="PlanDto"/>
+	<xs:element name="ClaimDto" type="ClaimDto"/>
+</xs:schema>

@@ -1,0 +1,33 @@
+Summary of the problem:
+
+I downloaded the MassTransit source. I locally compiled the MassTransit.Tests project and included that in my solution. This project contains some useful code for testing Sagas (or any MassTransit functionality, but I was working on Sagas at the time). In my solution I was using MassTransit and MassTransit.TestFramework, both of which I obtained via NuGet. There were at version 2.7.1 and the assemblies were signed. This is the important part: both MassTransit and MassTransit.TestFramework were signed, but the MassTransit.Tests (that I build locally) was not signed. When I came to compile the solution I got the following compilation error:
+
+The type 'MassTransit.Saga.ISaga' is defined in an assembly that is not referenced. You must add a reference to assembly 'MassTransit, Version=2.7.0.0, Culture=neutral, PublicKeyToken=null'.
+
+Basically, the MassTransit.Tests was built with a reference to MassTransit that was not signed (as you can see: PublicKeyToken=null), which makes sense - I bulit it locally from source and none of the projects were signed for the build. But the reference I have in my solution is to MassTransit (that I downloaded from NuGet) that was signed with PublicKeyToken=B8 E0 E9 F2 F1 E6 57 FA.
+
+I had several options here:
+
+1. Rebuild my local copy of the MassTransit source with the snk file provided by MassTransit - painful because I would have to build the entire solution and I only wanted one assembly.
+2. Build and use the local copy of the MassTransit codebase. I didn't want to do this because I wanted to use the current released versions provided by MassTransit via NuGet.
+3. Edit the masnifest of the MassTransit.Tests.dll so that it references the signed version of the MassTransit.dll
+
+I opted for 3 above. I must give credit to Ryan Farleys post that described something similar and gave me the inspiration for editing the IL and rebuilding my assemlby:
+
+http://ryanfarley.com/blog/archive/2010/04/23/sign-a-.net-assembly-with-a-strong-name-without-recompiling.aspx
+
+Here is what I did:
+
+Run ildasm with the following commands: "%ProgramFiles(x86)%\Microsoft SDKs\Windows\v7.0A\Bin\ildasm.exe" .\MassTransit.Tests.dll /out:.\Signed\MassTransit.Tests.il
+
+This will generate the disassembled IL in its own file. I then went in to the manifest section (at the top) and added the public key token to the MassTransit reference, so it now looks like this:
+
+.assembly extern MassTransit
+{
+  .publickeytoken = (B8 E0 E9 F2 F1 E6 57 FA )                         // ......W.
+  .ver 2:7:0:0
+}
+
+Then I ran ilasm to reassemble the assembly with the changes I made: "C:\Windows\Microsoft.NET\Framework\v2.0.50727\ilasm.exe" .\Signed\MassTransit.Tests.il /dll /key=.\MassTransit.snk /output=.\Signed\MassTransit.Tests.dll
+
+And, use the resulting assembly in my solution. This worked great. I would not advocate doing this on a regualar bassis, and certainly not before deploying to a prod environment - you probably want to solve this by addressing the problem head on. i.e. signing the MassTransit.Tests assembly and all the assemblies that it references.

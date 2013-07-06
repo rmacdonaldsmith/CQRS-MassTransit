@@ -1,0 +1,33 @@
+﻿@Master['MasterPage']
+
+@Section['Content']
+
+	@If.CommandSucceeded == false
+		There was an error processing the new election:
+		<p>@CommandErrorMessage
+	@EndIf
+	<p>Add a new election:
+    <form method="POST" action="/elections/newelection">
+      <label>Administrator Code</label>
+      <input type="text" name="AdministratorCode" value="mhmrasp"/>
+      <label>Company Code</label>
+      <input type="text" name="CompanyCode" value="mhm"/>
+	  <label>EmpNum</label>
+      <input type="text" name="ParticipantId" value="empnum"/>
+	  <label>Plan Code</label>
+      <input type="text" name="PlanCode" value="22"/>
+	  <label>Plan Year</label>
+      <input type="text" name="PlanYear" value="2012"/>
+	  <label>Benefit Code</label>
+      <input type="text" name="BenefitCode" value="MEDFSA"/>
+	  <label>Reason</label>
+      <input type="text" name="ElectionReason" value="new employee"/>
+	  <label>Election Amount</label>
+      <input type="text" name="ElectionAmount" value="1200"/>
+	  <label>Per Pay Period Amount</label>
+      <input type="text" name="PerPayPeriodAmount" value="100"/>
+      <input type="submit"/>
+    </form>
+	
+
+@EndSection

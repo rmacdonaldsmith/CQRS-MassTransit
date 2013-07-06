@@ -1,0 +1,77 @@
+﻿@model MHM.WinFlexOne.CQRS.Commands.DefineYearForPlan
+
+@{
+    ViewBag.Title = "DefinePlanYear";
+}
+
+<h2>Define a New Plan Year</h2>
+
+@Html.ValidationSummary(false)
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>DefineYearForPlan</legend>
+
+        <!--<div class="editor-label">
+            @Html.LabelFor(model => model.PlanId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PlanId)
+            @Html.ValidationMessageFor(model => model.PlanId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CompanyId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CompanyId)
+            @Html.ValidationMessageFor(model => model.CompanyId)
+        </div>-->
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Year)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Year)
+            @Html.ValidationMessageFor(model => model.Year)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Starts)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Starts)
+            @Html.ValidationMessageFor(model => model.Starts)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Ends)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Ends)
+            @Html.ValidationMessageFor(model => model.Ends)
+        </div>
+
+        <p>
+            <input type="submit" value="DefinePlanYear" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2013 sp1 (x64) (http://www.altova.com) by Pasquale M Fatino (Wageworks, Inc.) -->
+<xs:schema xmlns="http://tempuri.org/CommandDefinitions.xsd" xmlns:mstns="http://tempuri.org/CommandDefinitions.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:common="http://wageworks.com/SMB/v1.0/CommonTypes" targetNamespace="http://tempuri.org/CommandDefinitions.xsd" elementFormDefault="qualified" id="CommandDefinitions">
+	<!--<xs:import schemaLocation="Common.xsd" namespace="http://wageworks.com/SMB/v1.0/CommonTypes" />-->
+	<xs:simpleType name="CommandStatusEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Succeeded"/>
+			<xs:enumeration value="Failed"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="CommandResponse">
+		<xs:sequence>
+			<xs:element name="CommandId" type="xs:string"/>
+			<xs:element name="CommandStatus" type="CommandStatusEnum"/>
+			<xs:element name="ContainsException" type="xs:boolean"/>
+			<xs:element name="ExceptionDetail" type="xs:string" minOccurs="0"/>
+			<xs:element name="Message" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MakeAnElection">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:string"/>
+			<xs:element name="AdministratorCode" type="xs:string"/>
+			<xs:element name="CompanyCode" type="xs:string"/>
+			<xs:element name="ParticipantId" type="xs:string"/>
+			<xs:element name="PlanYearBenefitId" type="xs:string"/>
+			<xs:element name="ElectionReason" type="xs:string"/>
+			<xs:element name="ElectionAmount" type="xs:decimal"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MakeHsaElection">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:string"/>
+			<xs:element name="AdministratorCode" type="xs:string"/>
+			<xs:element name="CompanyCode" type="xs:string"/>
+			<xs:element name="ParticipantId" type="xs:string"/>
+			<xs:element name="PlanCode" type="xs:int"/>
+			<xs:element name="BenefitCode" type="xs:string"/>
+			<xs:element name="ElectionReason" type="xs:string"/>
+			<xs:element name="ElectionAmount" type="xs:decimal"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ChangeElectionAmount">
+		<xs:sequence>
+			<xs:element name="ElectionId" type="xs:string"/>
+			<xs:element name="PlanYearBenefitId" type="xs:string"/>
+			<xs:element name="NewElectionAmount" type="xs:decimal"/>
+			<xs:element name="QualifyingEvent" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TerminateElection">
+		<xs:sequence>
+			<xs:element name="ElectionId" type="xs:string"/>
+			<xs:element name="TerminationDate" type="xs:dateTime"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RegisterNewParticipant">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:string"/>
+			<xs:element name="AdministratorCode" type="xs:string"/>
+			<xs:element name="CompanyCode" type="xs:string"/>
+			<xs:element name="FirstName" type="xs:string"/>
+			<xs:element name="MiddleInitial" type="xs:string"/>
+			<xs:element name="LastName" type="xs:string"/>
+			<xs:element name="SsnHash" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ParticipantSubmitsNewClaim">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:string"/>
+			<xs:element name="ClaimType" type="xs:string"/>
+			<xs:element name="ClaimAmount" type="xs:decimal"/>
+			<xs:element name="ServiceStartDate" type="xs:date"/>
+			<xs:element name="ServiceEndDate" type="xs:date"/>
+			<xs:element name="ServiceProvider" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DefineNewBenefit">
+		<xs:sequence>
+			<xs:element name="BenefitId" type="xs:string"/>
+			<xs:element name="PlanId" type="xs:string"/>
+			<xs:element name="CompanyId" type="xs:string"/>
+			<xs:element name="BenefitType" type="xs:string"/>
+			<xs:element name="BenefitDescription" type="xs:string"/>
+			<xs:element name="HasMaxAmount" type="xs:boolean"/>
+			<xs:element name="MaxBenefitAmount" type="xs:decimal"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AssignBenefitToYear">
+		<xs:sequence>
+			<xs:element name="BenefitId" type="xs:string"/>
+			<xs:element name="PlanId" type="xs:string"/>
+			<xs:element name="PlanYear" type="xs:int"/>
+			<xs:element name="HasMaxAnnualAmount" type="xs:boolean"/>
+			<xs:element name="MaxAnnualAmount" type="xs:decimal"/>
+			<xs:element name="StartDate" type="xs:dateTime"/>
+			<xs:element name="CompanyId" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DefineYearForPlan">
+		<xs:sequence>
+			<xs:element name="PlanId" type="xs:string"/>
+			<xs:element name="CompanyId" type="xs:string"/>
+			<xs:element name="PlanYearId" type="xs:string"/>
+			<xs:element name="Year" type="xs:int"/>
+			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="Starts" type="xs:dateTime"/>
+			<xs:element name="Ends" type="xs:dateTime"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DefineNewPlan">
+		<xs:sequence>
+			<xs:element name="PlanId" type="xs:string"/>
+			<xs:element name="CompanyId" type="xs:string"/>
+			<xs:element name="PlanType" type="xs:string"/>
+			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="Description" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SubmitClaimRequest">
+		<xs:sequence>
+			<xs:element name="ClaimRequestId" type="xs:string"/>
+			<xs:element name="CompanyId" type="xs:string"/>
+			<xs:element name="ParticipantId" type="xs:string"/>
+			<xs:element name="DateOfTransaction" type="xs:dateTime"/>
+			<xs:element name="ProviderName" type="xs:string"/>
+			<xs:element name="ClaimType" type="xs:string"/>
+			<xs:element name="Amount" type="xs:decimal"/>
+			<xs:element name="Source" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RejectClaimRequest">
+		<xs:sequence>
+			<xs:element name="ClaimRequestId" type="xs:string"/>
+			<xs:element name="Reason" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="VerifyCardUse">
+		<xs:sequence>
+			<xs:element name="ClaimRequestId" type="xs:string"/>
+			<xs:element name="Comments"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="StartTimeout">
+		<xs:sequence>
+			<xs:element name="CorrelationId" type="xs:string"/>
+			<xs:element name="ElapsesInMS" type="xs:int"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DisburseClaim">
+		<xs:sequence>
+			<xs:element name="ClaimId" type="xs:string"/>
+			<xs:element name="ParticipantId" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

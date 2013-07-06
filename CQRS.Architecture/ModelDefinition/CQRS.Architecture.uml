@@ -1,0 +1,4140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+  dslVersion="1.0.0.0"
+  Id="b29a0d6e-1b19-4ec7-89f0-35d481f9a816"
+  name="CQRS.Architecture" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <appliedStereotypesInternal>
+    <stereotypeInstance
+      Id="db471597-65e3-47d1-a225-e77c65c4f731"
+      name="framework"
+      profile="StandardProfileL2" />
+    <stereotypeInstance
+      Id="a4c77e75-02b5-480c-aa23-591c4ae01e32"
+      name="modelLibrary"
+      profile="StandardProfileL2" />
+    <stereotypeInstance
+      Id="8df11521-1b5f-48bf-8e64-4d7dc023dba3"
+      name="metamodel"
+      profile="StandardProfileL3" />
+    <stereotypeInstance
+      Id="53546226-7369-4ee4-8218-ca2beb16e510"
+      name="systemModel"
+      profile="StandardProfileL3" />
+  </appliedStereotypesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="d2a34638-5f7d-4e28-81fb-31f1300c6b6c">
+      <profileInstance
+        Id="29c1bfce-4f45-43ce-b1a0-dbbc24dc1bd9"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <interaction
+        Id="42ced21e-5917-48da-9525-a5fe4fe54c9f"
+        name="TerminateElection - handling the command"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="2dd30162-da62-471a-8c8b-5cfc7b6b2719"
+            name="BehaviorExecutionSpecification7">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="d41fc99f-2f39-49c7-b08a-460edb99c6fc"
+                LastKnownName="CommandDispatcher"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="d9ead604-5771-4bf8-993e-1c228680de28"
+                LastKnownName="ExecutionOccurrenceSpecification14"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="e16d826e-e21e-4714-a83e-e7776a0211bc"
+                LastKnownName="ExecutionOccurrenceSpecification13"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="30a32b98-4a22-4829-ba97-0e275d3ecfa7"
+                LastKnownName="MessageOccurrenceSpecification24"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="71cc9f0e-6164-4001-a1fe-e90e038bb95b"
+                LastKnownName="MessageOccurrenceSpecification27"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="0da30f18-4f18-47ec-987b-8f6bbe34eaa0"
+                LastKnownName="MessageOccurrenceSpecification30"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="89dff4e3-c2a2-4805-9a3b-3f94c90260ea"
+                LastKnownName="MessageOccurrenceSpecification25"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="e16d826e-e21e-4714-a83e-e7776a0211bc"
+            name="ExecutionOccurrenceSpecification13">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="05b0c4ec-7fd2-476d-beed-b9fefae5a57a"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d41fc99f-2f39-49c7-b08a-460edb99c6fc"
+                LastKnownName="CommandDispatcher"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="30a32b98-4a22-4829-ba97-0e275d3ecfa7"
+            name="MessageOccurrenceSpecification24">
+            <covered>
+              <lifelineMoniker
+                Id="d41fc99f-2f39-49c7-b08a-460edb99c6fc"
+                LastKnownName="CommandDispatcher"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="c652fe80-79ff-4809-89bb-c28e56b001e1"
+            name="MessageOccurrenceSpecification23">
+            <covered>
+              <lifelineMoniker
+                Id="60affc22-b081-4d2e-af8a-cd681a95c3bb"
+                LastKnownName="CommandBus"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="0d7c11f1-7c4a-4301-ac73-91f2fc053106"
+            name="BehaviorExecutionSpecification8">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="fd3ce66b-fae3-44bc-8868-372a150ee23d"
+                LastKnownName="CreateElection CommandHandler"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="bc1b1349-b77e-44df-a0b7-9f8c31ed9a90"
+                LastKnownName="ExecutionOccurrenceSpecification16"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="6260ae3f-d0ba-472b-8484-0f5c06c61650"
+                LastKnownName="ExecutionOccurrenceSpecification15"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="3ba83781-9b69-44d7-a3f0-8872ded88a50"
+                LastKnownName="MessageOccurrenceSpecification28"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="80fb045d-f6cc-424b-a9e5-616d3a6d64d6"
+                LastKnownName="MessageOccurrenceSpecification47"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="950b837a-33ba-46e2-bf12-505aebe84013"
+                LastKnownName="MessageOccurrenceSpecification50"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="62206b56-b44a-4980-acf5-4b94543afa36"
+                LastKnownName="MessageOccurrenceSpecification57"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="3245b100-5d55-4cdb-a07b-7801a5f78f1b"
+                LastKnownName="MessageOccurrenceSpecification60"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="9dbc28c6-c6ce-4409-b8d1-d16d2d83e47a"
+                LastKnownName="MessageOccurrenceSpecification29"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="6260ae3f-d0ba-472b-8484-0f5c06c61650"
+            name="ExecutionOccurrenceSpecification15">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="62d25f89-94ac-4a7d-8caf-89edb49795a2"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="fd3ce66b-fae3-44bc-8868-372a150ee23d"
+                LastKnownName="CreateElection CommandHandler"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="71cc9f0e-6164-4001-a1fe-e90e038bb95b"
+            name="MessageOccurrenceSpecification27">
+            <covered>
+              <lifelineMoniker
+                Id="d41fc99f-2f39-49c7-b08a-460edb99c6fc"
+                LastKnownName="CommandDispatcher"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="3ba83781-9b69-44d7-a3f0-8872ded88a50"
+            name="MessageOccurrenceSpecification28">
+            <covered>
+              <lifelineMoniker
+                Id="fd3ce66b-fae3-44bc-8868-372a150ee23d"
+                LastKnownName="CreateElection CommandHandler"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="f11651e6-dd41-4e61-97aa-2dc95aed8cc4"
+            name="BehaviorExecutionSpecification13">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="3052477c-e986-4702-b07d-87b0b3ab1e79"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="ff006bef-069b-4a6f-869b-20844e8bf386"
+                LastKnownName="ExecutionOccurrenceSpecification26"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="82f97ed9-0740-48fd-82f4-d8a55b091efb"
+                LastKnownName="ExecutionOccurrenceSpecification25"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="0a191214-5bc5-4644-a3fa-0f940663066c"
+                LastKnownName="MessageOccurrenceSpecification48"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="e42e3b3c-a3bd-45a4-8b31-1ed4a7e0b4fe"
+                LastKnownName="MessageOccurrenceSpecification53"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="42baca94-82e7-410b-9232-b76505057a8b"
+                LastKnownName="MessageOccurrenceSpecification56"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="7fcf6af9-7dee-451a-962d-b02dfc2e8b73"
+                LastKnownName="MessageOccurrenceSpecification51"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="835bad51-9259-4c93-a483-4a25a68aa127"
+                LastKnownName="ExecutionOccurrenceSpecification27"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="0355bbf6-bd3c-4220-ae9b-190f29e67bca"
+                LastKnownName="ExecutionOccurrenceSpecification28"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="e89a1ffd-04bc-4a82-9115-6ccae43492a1"
+                LastKnownName="MessageOccurrenceSpecification49"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="82f97ed9-0740-48fd-82f4-d8a55b091efb"
+            name="ExecutionOccurrenceSpecification25">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="b30e2f43-8f00-4772-a23b-a0260822d5bb"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3052477c-e986-4702-b07d-87b0b3ab1e79"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="0a191214-5bc5-4644-a3fa-0f940663066c"
+            name="MessageOccurrenceSpecification48">
+            <covered>
+              <lifelineMoniker
+                Id="3052477c-e986-4702-b07d-87b0b3ab1e79"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="80fb045d-f6cc-424b-a9e5-616d3a6d64d6"
+            name="MessageOccurrenceSpecification47">
+            <covered>
+              <lifelineMoniker
+                Id="fd3ce66b-fae3-44bc-8868-372a150ee23d"
+                LastKnownName="CreateElection CommandHandler"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="0e4997c4-8ab8-439d-98f8-af0df4985c66"
+            name="BehaviorExecutionSpecification15">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="107be686-3190-4256-93a8-96979d8b1635"
+                LastKnownName="ElectionCreatedEvent"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="c01377cc-3e3f-4a57-83fa-7d0bcd442570"
+                LastKnownName="ExecutionOccurrenceSpecification30"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="cb34ccdc-dbf3-4331-afde-4512db86b94a"
+                LastKnownName="ExecutionOccurrenceSpecification29"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="41945225-65f5-4f0c-ae54-627c71ba8622"
+                LastKnownName="MessageOccurrenceSpecification54"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="f05f2057-dd26-40a0-a737-beb2ac9f061b"
+                LastKnownName="MessageOccurrenceSpecification55"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="cb34ccdc-dbf3-4331-afde-4512db86b94a"
+            name="ExecutionOccurrenceSpecification29">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="7b5438b1-ef96-4916-b64f-70e465b4833a"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="107be686-3190-4256-93a8-96979d8b1635"
+                LastKnownName="ElectionCreatedEvent"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e42e3b3c-a3bd-45a4-8b31-1ed4a7e0b4fe"
+            name="MessageOccurrenceSpecification53">
+            <covered>
+              <lifelineMoniker
+                Id="3052477c-e986-4702-b07d-87b0b3ab1e79"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="41945225-65f5-4f0c-ae54-627c71ba8622"
+            name="MessageOccurrenceSpecification54">
+            <covered>
+              <lifelineMoniker
+                Id="107be686-3190-4256-93a8-96979d8b1635"
+                LastKnownName="ElectionCreatedEvent"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="42baca94-82e7-410b-9232-b76505057a8b"
+            name="MessageOccurrenceSpecification56">
+            <covered>
+              <lifelineMoniker
+                Id="3052477c-e986-4702-b07d-87b0b3ab1e79"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f05f2057-dd26-40a0-a737-beb2ac9f061b"
+            name="MessageOccurrenceSpecification55">
+            <covered>
+              <lifelineMoniker
+                Id="107be686-3190-4256-93a8-96979d8b1635"
+                LastKnownName="ElectionCreatedEvent"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="c01377cc-3e3f-4a57-83fa-7d0bcd442570"
+            name="ExecutionOccurrenceSpecification30">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="360a0555-32fa-4327-a1fb-2621266fd38c"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="107be686-3190-4256-93a8-96979d8b1635"
+                LastKnownName="ElectionCreatedEvent"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="7fcf6af9-7dee-451a-962d-b02dfc2e8b73"
+            name="MessageOccurrenceSpecification51">
+            <covered>
+              <lifelineMoniker
+                Id="3052477c-e986-4702-b07d-87b0b3ab1e79"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="39087f64-a28a-4443-8d30-e81021fed091"
+            name="BehaviorExecutionSpecification14">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="3052477c-e986-4702-b07d-87b0b3ab1e79"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="0355bbf6-bd3c-4220-ae9b-190f29e67bca"
+                LastKnownName="ExecutionOccurrenceSpecification28"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="835bad51-9259-4c93-a483-4a25a68aa127"
+                LastKnownName="ExecutionOccurrenceSpecification27"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="5e088f0b-5872-4c9e-a666-15696430059a"
+                LastKnownName="MessageOccurrenceSpecification52"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="835bad51-9259-4c93-a483-4a25a68aa127"
+            name="ExecutionOccurrenceSpecification27">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="990cf495-36a9-489c-bbfd-d4efe23ad99a"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3052477c-e986-4702-b07d-87b0b3ab1e79"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="5e088f0b-5872-4c9e-a666-15696430059a"
+            name="MessageOccurrenceSpecification52">
+            <covered>
+              <lifelineMoniker
+                Id="3052477c-e986-4702-b07d-87b0b3ab1e79"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="0355bbf6-bd3c-4220-ae9b-190f29e67bca"
+            name="ExecutionOccurrenceSpecification28">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="12d832a8-4786-4d7a-8de1-a1d153ff54af"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3052477c-e986-4702-b07d-87b0b3ab1e79"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e89a1ffd-04bc-4a82-9115-6ccae43492a1"
+            name="MessageOccurrenceSpecification49">
+            <covered>
+              <lifelineMoniker
+                Id="3052477c-e986-4702-b07d-87b0b3ab1e79"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="950b837a-33ba-46e2-bf12-505aebe84013"
+            name="MessageOccurrenceSpecification50">
+            <covered>
+              <lifelineMoniker
+                Id="fd3ce66b-fae3-44bc-8868-372a150ee23d"
+                LastKnownName="CreateElection CommandHandler"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="ff006bef-069b-4a6f-869b-20844e8bf386"
+            name="ExecutionOccurrenceSpecification26">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="4a89f280-1a2f-4399-b133-6cfd1c4e1f1d"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3052477c-e986-4702-b07d-87b0b3ab1e79"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="bada81c0-23ae-44ea-a3e6-363b53bb4be4"
+            name="BehaviorExecutionSpecification16">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="2a2be9f6-3aa0-4da6-b1e2-b404a11027c5"
+                LastKnownName="Repository"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="6430c48d-cd92-4abd-b92d-66ccead2a718"
+                LastKnownName="ExecutionOccurrenceSpecification32"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="cb420dcb-3dd2-4e77-b5f1-c45d03c3fd7e"
+                LastKnownName="ExecutionOccurrenceSpecification31"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="f170ee84-f9f7-4daf-82f2-800356f1f2ca"
+                LastKnownName="MessageOccurrenceSpecification58"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="b044b2b4-4a65-48ba-9da6-fa0ca8c60e39"
+                LastKnownName="MessageOccurrenceSpecification61"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="d14d58ee-3542-47f6-95b0-fcf028b0655e"
+                LastKnownName="MessageOccurrenceSpecification64"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="83cb89d8-f95a-435f-a1b7-47a3ff538f33"
+                LastKnownName="MessageOccurrenceSpecification59"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="cb420dcb-3dd2-4e77-b5f1-c45d03c3fd7e"
+            name="ExecutionOccurrenceSpecification31">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="e8c2b750-e6da-4414-ba8e-2957ae30d8b1"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="2a2be9f6-3aa0-4da6-b1e2-b404a11027c5"
+                LastKnownName="Repository"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="62206b56-b44a-4980-acf5-4b94543afa36"
+            name="MessageOccurrenceSpecification57">
+            <covered>
+              <lifelineMoniker
+                Id="fd3ce66b-fae3-44bc-8868-372a150ee23d"
+                LastKnownName="CreateElection CommandHandler"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f170ee84-f9f7-4daf-82f2-800356f1f2ca"
+            name="MessageOccurrenceSpecification58">
+            <covered>
+              <lifelineMoniker
+                Id="2a2be9f6-3aa0-4da6-b1e2-b404a11027c5"
+                LastKnownName="Repository"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="c6db630d-a42a-41eb-91eb-ea0a851dfeca"
+            name="BehaviorExecutionSpecification17">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="c63f10f4-fa9f-486a-8b48-342ee9871e79"
+                LastKnownName="EventStore"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="a3712249-c6cb-4ae5-a1b6-8f6bcbf4c7d7"
+                LastKnownName="ExecutionOccurrenceSpecification34"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="c3b4b883-ddc8-4375-a15b-afa153eb29d5"
+                LastKnownName="ExecutionOccurrenceSpecification33"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="19b9cf43-a2d2-4f22-b0fa-4b6e6da42125"
+                LastKnownName="MessageOccurrenceSpecification62"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="eb9f7eb1-1e3c-42ab-9dc0-395a6d5e822d"
+                LastKnownName="MessageOccurrenceSpecification67"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="70c30231-1579-4aec-bab1-da346a6f8b8d"
+                LastKnownName="MessageOccurrenceSpecification63"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="c3b4b883-ddc8-4375-a15b-afa153eb29d5"
+            name="ExecutionOccurrenceSpecification33">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="b50772d4-d6a4-41d3-b43c-d3329714d088"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="c63f10f4-fa9f-486a-8b48-342ee9871e79"
+                LastKnownName="EventStore"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="19b9cf43-a2d2-4f22-b0fa-4b6e6da42125"
+            name="MessageOccurrenceSpecification62">
+            <covered>
+              <lifelineMoniker
+                Id="c63f10f4-fa9f-486a-8b48-342ee9871e79"
+                LastKnownName="EventStore"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="b044b2b4-4a65-48ba-9da6-fa0ca8c60e39"
+            name="MessageOccurrenceSpecification61">
+            <covered>
+              <lifelineMoniker
+                Id="2a2be9f6-3aa0-4da6-b1e2-b404a11027c5"
+                LastKnownName="Repository"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="e1f9585a-b2f6-4a31-a026-beacf261ebc7"
+            name="BehaviorExecutionSpecification19">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="c3a6a642-da79-4f37-877e-e1a20abfcd2f"
+                LastKnownName="EventBus"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="6dedad38-2348-4250-b90a-7ca2a5670e88"
+                LastKnownName="ExecutionOccurrenceSpecification38"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="9e51ee18-acd1-48c3-980d-4abbfe4299af"
+                LastKnownName="ExecutionOccurrenceSpecification37"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="66a1bce8-1a57-4953-8a7d-e051a221f95b"
+                LastKnownName="MessageOccurrenceSpecification68"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="9e51ee18-acd1-48c3-980d-4abbfe4299af"
+            name="ExecutionOccurrenceSpecification37">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="d4a2f4c4-dea7-4bd9-b773-475bc68ac16b"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="c3a6a642-da79-4f37-877e-e1a20abfcd2f"
+                LastKnownName="EventBus"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="eb9f7eb1-1e3c-42ab-9dc0-395a6d5e822d"
+            name="MessageOccurrenceSpecification67">
+            <covered>
+              <lifelineMoniker
+                Id="c63f10f4-fa9f-486a-8b48-342ee9871e79"
+                LastKnownName="EventStore"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="66a1bce8-1a57-4953-8a7d-e051a221f95b"
+            name="MessageOccurrenceSpecification68">
+            <covered>
+              <lifelineMoniker
+                Id="c3a6a642-da79-4f37-877e-e1a20abfcd2f"
+                LastKnownName="EventBus"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="70c30231-1579-4aec-bab1-da346a6f8b8d"
+            name="MessageOccurrenceSpecification63">
+            <covered>
+              <lifelineMoniker
+                Id="c63f10f4-fa9f-486a-8b48-342ee9871e79"
+                LastKnownName="EventStore"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d14d58ee-3542-47f6-95b0-fcf028b0655e"
+            name="MessageOccurrenceSpecification64">
+            <covered>
+              <lifelineMoniker
+                Id="2a2be9f6-3aa0-4da6-b1e2-b404a11027c5"
+                LastKnownName="Repository"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="a3712249-c6cb-4ae5-a1b6-8f6bcbf4c7d7"
+            name="ExecutionOccurrenceSpecification34">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="c528c2c5-19c2-4da6-9b86-c2299a8fd497"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="c63f10f4-fa9f-486a-8b48-342ee9871e79"
+                LastKnownName="EventStore"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="6dedad38-2348-4250-b90a-7ca2a5670e88"
+            name="ExecutionOccurrenceSpecification38">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="8cf5e58c-154e-4d82-b719-5345372aca09"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="c3a6a642-da79-4f37-877e-e1a20abfcd2f"
+                LastKnownName="EventBus"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="83cb89d8-f95a-435f-a1b7-47a3ff538f33"
+            name="MessageOccurrenceSpecification59">
+            <covered>
+              <lifelineMoniker
+                Id="2a2be9f6-3aa0-4da6-b1e2-b404a11027c5"
+                LastKnownName="Repository"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="3245b100-5d55-4cdb-a07b-7801a5f78f1b"
+            name="MessageOccurrenceSpecification60">
+            <covered>
+              <lifelineMoniker
+                Id="fd3ce66b-fae3-44bc-8868-372a150ee23d"
+                LastKnownName="CreateElection CommandHandler"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="6430c48d-cd92-4abd-b92d-66ccead2a718"
+            name="ExecutionOccurrenceSpecification32">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="c8ad14e8-7551-4369-9464-c8e46261ce27"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="2a2be9f6-3aa0-4da6-b1e2-b404a11027c5"
+                LastKnownName="Repository"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="0da30f18-4f18-47ec-987b-8f6bbe34eaa0"
+            name="MessageOccurrenceSpecification30">
+            <covered>
+              <lifelineMoniker
+                Id="d41fc99f-2f39-49c7-b08a-460edb99c6fc"
+                LastKnownName="CommandDispatcher"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="9dbc28c6-c6ce-4409-b8d1-d16d2d83e47a"
+            name="MessageOccurrenceSpecification29">
+            <covered>
+              <lifelineMoniker
+                Id="fd3ce66b-fae3-44bc-8868-372a150ee23d"
+                LastKnownName="CreateElection CommandHandler"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="bc1b1349-b77e-44df-a0b7-9f8c31ed9a90"
+            name="ExecutionOccurrenceSpecification16">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="a8055ef1-32d1-4e8e-9e3a-2e67386ee72f"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="fd3ce66b-fae3-44bc-8868-372a150ee23d"
+                LastKnownName="CreateElection CommandHandler"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="89dff4e3-c2a2-4805-9a3b-3f94c90260ea"
+            name="MessageOccurrenceSpecification25">
+            <covered>
+              <lifelineMoniker
+                Id="d41fc99f-2f39-49c7-b08a-460edb99c6fc"
+                LastKnownName="CommandDispatcher"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ac4e0676-3a6d-4e9d-be63-be1ff91eea51"
+            name="MessageOccurrenceSpecification26">
+            <covered>
+              <lifelineMoniker
+                Id="60affc22-b081-4d2e-af8a-cd681a95c3bb"
+                LastKnownName="CommandBus"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="d9ead604-5771-4bf8-993e-1c228680de28"
+            name="ExecutionOccurrenceSpecification14">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="e3abe149-6103-4b53-a284-37a83385ed15"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d41fc99f-2f39-49c7-b08a-460edb99c6fc"
+                LastKnownName="CommandDispatcher"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="60affc22-b081-4d2e-af8a-cd681a95c3bb"
+            name="CommandBus"
+            isActor="false"
+            lifelineDisplayName="CommandBus">
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="c652fe80-79ff-4809-89bb-c28e56b001e1"
+                LastKnownName="MessageOccurrenceSpecification23"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="ac4e0676-3a6d-4e9d-be63-be1ff91eea51"
+                LastKnownName="MessageOccurrenceSpecification26"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="d41fc99f-2f39-49c7-b08a-460edb99c6fc"
+            name="CommandDispatcher"
+            isActor="false"
+            lifelineDisplayName="CommandDispatcher">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="e16d826e-e21e-4714-a83e-e7776a0211bc"
+                LastKnownName="ExecutionOccurrenceSpecification13"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="d9ead604-5771-4bf8-993e-1c228680de28"
+                LastKnownName="ExecutionOccurrenceSpecification14"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="fd3ce66b-fae3-44bc-8868-372a150ee23d"
+            name="CreateElection CommandHandler"
+            isActor="false"
+            lifelineDisplayName="CreateElection CommandHandler">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="6260ae3f-d0ba-472b-8484-0f5c06c61650"
+                LastKnownName="ExecutionOccurrenceSpecification15"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="bc1b1349-b77e-44df-a0b7-9f8c31ed9a90"
+                LastKnownName="ExecutionOccurrenceSpecification16"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="3052477c-e986-4702-b07d-87b0b3ab1e79"
+            name="Election"
+            isActor="false"
+            lifelineDisplayName="Election">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="82f97ed9-0740-48fd-82f4-d8a55b091efb"
+                LastKnownName="ExecutionOccurrenceSpecification25"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="ff006bef-069b-4a6f-869b-20844e8bf386"
+                LastKnownName="ExecutionOccurrenceSpecification26"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="107be686-3190-4256-93a8-96979d8b1635"
+            name="ElectionCreatedEvent"
+            isActor="false"
+            lifelineDisplayName="ElectionCreatedEvent">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="cb34ccdc-dbf3-4331-afde-4512db86b94a"
+                LastKnownName="ExecutionOccurrenceSpecification29"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="c01377cc-3e3f-4a57-83fa-7d0bcd442570"
+                LastKnownName="ExecutionOccurrenceSpecification30"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="2a2be9f6-3aa0-4da6-b1e2-b404a11027c5"
+            name="Repository"
+            isActor="false"
+            lifelineDisplayName="Repository">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="cb420dcb-3dd2-4e77-b5f1-c45d03c3fd7e"
+                LastKnownName="ExecutionOccurrenceSpecification31"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="6430c48d-cd92-4abd-b92d-66ccead2a718"
+                LastKnownName="ExecutionOccurrenceSpecification32"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="c63f10f4-fa9f-486a-8b48-342ee9871e79"
+            name="EventStore"
+            isActor="false"
+            lifelineDisplayName="EventStore">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="c3b4b883-ddc8-4375-a15b-afa153eb29d5"
+                LastKnownName="ExecutionOccurrenceSpecification33"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="a3712249-c6cb-4ae5-a1b6-8f6bcbf4c7d7"
+                LastKnownName="ExecutionOccurrenceSpecification34"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="c3a6a642-da79-4f37-877e-e1a20abfcd2f"
+            name="EventBus"
+            isActor="false"
+            lifelineDisplayName="EventBus">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="9e51ee18-acd1-48c3-980d-4abbfe4299af"
+                LastKnownName="ExecutionOccurrenceSpecification37"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="6dedad38-2348-4250-b90a-7ca2a5670e88"
+                LastKnownName="ExecutionOccurrenceSpecification38"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="d897c0fc-85c6-48bd-9120-bd25c5be8e94"
+            name="Dispatch"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="c652fe80-79ff-4809-89bb-c28e56b001e1"
+                LastKnownName="MessageOccurrenceSpecification23"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="30a32b98-4a22-4829-ba97-0e275d3ecfa7"
+                LastKnownName="MessageOccurrenceSpecification24"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="43e98dd3-1033-4206-8ed4-5282f626095c"
+            name="Handle"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="71cc9f0e-6164-4001-a1fe-e90e038bb95b"
+                LastKnownName="MessageOccurrenceSpecification27"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="3ba83781-9b69-44d7-a3f0-8872ded88a50"
+                LastKnownName="MessageOccurrenceSpecification28"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="52da4075-6b87-4e34-b39f-2b76ddc0d1ee"
+            name="CreateElection"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="80fb045d-f6cc-424b-a9e5-616d3a6d64d6"
+                LastKnownName="MessageOccurrenceSpecification47"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="0a191214-5bc5-4644-a3fa-0f940663066c"
+                LastKnownName="MessageOccurrenceSpecification48"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="0ab53f7b-7e38-414b-a349-3725c9fa56d3"
+            name="&lt;&lt;create&gt;&gt;"
+            messageKind="Complete"
+            messageSort="CreateMessage"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e42e3b3c-a3bd-45a4-8b31-1ed4a7e0b4fe"
+                LastKnownName="MessageOccurrenceSpecification53"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="41945225-65f5-4f0c-ae54-627c71ba8622"
+                LastKnownName="MessageOccurrenceSpecification54"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="fb15e6ef-ab6a-4af1-a2fa-0a48a87316f7"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="f05f2057-dd26-40a0-a737-beb2ac9f061b"
+                LastKnownName="MessageOccurrenceSpecification55"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="42baca94-82e7-410b-9232-b76505057a8b"
+                LastKnownName="MessageOccurrenceSpecification56"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="bedbb063-0ef0-4b5c-83f0-1ba88f4a27ec"
+            name="ApplyChange"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="true">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="7fcf6af9-7dee-451a-962d-b02dfc2e8b73"
+                LastKnownName="MessageOccurrenceSpecification51"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="5e088f0b-5872-4c9e-a666-15696430059a"
+                LastKnownName="MessageOccurrenceSpecification52"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="ebcc5b38-ba53-4b96-add2-594ca9177f76"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e89a1ffd-04bc-4a82-9115-6ccae43492a1"
+                LastKnownName="MessageOccurrenceSpecification49"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="950b837a-33ba-46e2-bf12-505aebe84013"
+                LastKnownName="MessageOccurrenceSpecification50"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="c6fbf8f7-ad1c-46fa-bb36-9207e42653cc"
+            name="Save"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="62206b56-b44a-4980-acf5-4b94543afa36"
+                LastKnownName="MessageOccurrenceSpecification57"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="f170ee84-f9f7-4daf-82f2-800356f1f2ca"
+                LastKnownName="MessageOccurrenceSpecification58"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="376a1466-e826-4d87-a857-ef7cf05c174e"
+            name="Save"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="b044b2b4-4a65-48ba-9da6-fa0ca8c60e39"
+                LastKnownName="MessageOccurrenceSpecification61"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="19b9cf43-a2d2-4f22-b0fa-4b6e6da42125"
+                LastKnownName="MessageOccurrenceSpecification62"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="c965c368-ac5e-4433-bfbb-166cf86272d6"
+            name="PublishEvents"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="eb9f7eb1-1e3c-42ab-9dc0-395a6d5e822d"
+                LastKnownName="MessageOccurrenceSpecification67"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="66a1bce8-1a57-4953-8a7d-e051a221f95b"
+                LastKnownName="MessageOccurrenceSpecification68"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="5b397ff8-3a76-453a-a98c-3bd8f884beb5"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="70c30231-1579-4aec-bab1-da346a6f8b8d"
+                LastKnownName="MessageOccurrenceSpecification63"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d14d58ee-3542-47f6-95b0-fcf028b0655e"
+                LastKnownName="MessageOccurrenceSpecification64"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="118d542f-49c4-4a4d-8276-d23a2e58b2a0"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="83cb89d8-f95a-435f-a1b7-47a3ff538f33"
+                LastKnownName="MessageOccurrenceSpecification59"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="3245b100-5d55-4cdb-a07b-7801a5f78f1b"
+                LastKnownName="MessageOccurrenceSpecification60"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="c6b562d2-13fe-453a-aeb2-1eb129a48c70"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="9dbc28c6-c6ce-4409-b8d1-d16d2d83e47a"
+                LastKnownName="MessageOccurrenceSpecification29"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="0da30f18-4f18-47ec-987b-8f6bbe34eaa0"
+                LastKnownName="MessageOccurrenceSpecification30"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="3038ccfd-6ffb-4068-8c6c-c0f25227d152"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="89dff4e3-c2a2-4805-9a3b-3f94c90260ea"
+                LastKnownName="MessageOccurrenceSpecification25"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ac4e0676-3a6d-4e9d-be63-be1ff91eea51"
+                LastKnownName="MessageOccurrenceSpecification26"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="05b0c4ec-7fd2-476d-beed-b9fefae5a57a"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="e3abe149-6103-4b53-a284-37a83385ed15"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="62d25f89-94ac-4a7d-8caf-89edb49795a2"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="a8055ef1-32d1-4e8e-9e3a-2e67386ee72f"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="b30e2f43-8f00-4772-a23b-a0260822d5bb"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="4a89f280-1a2f-4399-b133-6cfd1c4e1f1d"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="990cf495-36a9-489c-bbfd-d4efe23ad99a"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="12d832a8-4786-4d7a-8de1-a1d153ff54af"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="7b5438b1-ef96-4916-b64f-70e465b4833a"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="360a0555-32fa-4327-a1fb-2621266fd38c"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="e8c2b750-e6da-4414-ba8e-2957ae30d8b1"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="c8ad14e8-7551-4369-9464-c8e46261ce27"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="b50772d4-d6a4-41d3-b43c-d3329714d088"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="c528c2c5-19c2-4da6-9b86-c2299a8fd497"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="d4a2f4c4-dea7-4bd9-b773-475bc68ac16b"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="8cf5e58c-154e-4d82-b719-5345372aca09"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="3d852e23-e4d3-474f-9cac-77642c4e8e0f"
+        name="CreateElectionEvent - handling the event"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="a1a2b912-b8b3-4c97-837e-424c0d939f7f"
+            name="BehaviorExecutionSpecification2">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="5c81e0e7-097f-4671-9dbf-f43ba93d4072"
+                LastKnownName="EventDispatcher"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="188631f3-ce9c-459b-8386-8c0a32b0e6f8"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="62ab6b29-c300-42dd-9e2d-486b363f3085"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="5c1e532c-bf97-4a05-afb2-69365aa840c8"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="62ab6b29-c300-42dd-9e2d-486b363f3085"
+            name="ExecutionOccurrenceSpecification3">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="6f847b4a-b495-4534-9a80-8ea3bf196dc7"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="5c81e0e7-097f-4671-9dbf-f43ba93d4072"
+                LastKnownName="EventDispatcher"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="5c1e532c-bf97-4a05-afb2-69365aa840c8"
+            name="MessageOccurrenceSpecification5">
+            <covered>
+              <lifelineMoniker
+                Id="5c81e0e7-097f-4671-9dbf-f43ba93d4072"
+                LastKnownName="EventDispatcher"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <lostFoundTarget
+            Id="e67ee3cf-5983-4091-a762-089396a2bca1"
+            name="LostFoundTarget1" />
+          <executionOccurrenceSpecification
+            Id="188631f3-ce9c-459b-8386-8c0a32b0e6f8"
+            name="ExecutionOccurrenceSpecification4">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="1bb7f970-e49c-4e68-b8bd-8c4b2de2d45a"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="5c81e0e7-097f-4671-9dbf-f43ba93d4072"
+                LastKnownName="EventDispatcher"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="9d3e92da-0e32-4f1b-ad27-d68296356cce"
+            name="Handle">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="1405ab07-a4e5-4612-a945-0cbd01f15f31"
+                LastKnownName="ElectionCreatedEventHandler"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="f4158594-ad17-42f7-a598-102e6045b194"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="a3bdcf5f-2079-4808-88b0-dfeae470ebac"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="2cb43fda-83ac-4340-8646-4f4e51c361f6"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="242f5208-db0d-4a92-abed-7ca44f8a4a58"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="5e0b4ce6-7f1a-48d6-8e04-8fd24cf6cd77"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="4f75fdcf-2d96-4973-b083-db8ca98e82cd"
+                LastKnownName="MessageOccurrenceSpecification14"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="ad5a9892-f074-4946-8376-0290cde5156e"
+                LastKnownName="MessageOccurrenceSpecification17"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="69b18347-5ef9-4ba6-b79d-1f70c30a2361"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="a3bdcf5f-2079-4808-88b0-dfeae470ebac"
+            name="ExecutionOccurrenceSpecification1">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="90051ab5-3230-4d7b-b23a-3026d39c8936"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1405ab07-a4e5-4612-a945-0cbd01f15f31"
+                LastKnownName="ElectionCreatedEventHandler"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="af5f8fab-e9d8-4b4f-ab7e-fefe08e7e8fb"
+            name="MessageOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="5c81e0e7-097f-4671-9dbf-f43ba93d4072"
+                LastKnownName="EventDispatcher"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="2cb43fda-83ac-4340-8646-4f4e51c361f6"
+            name="MessageOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="1405ab07-a4e5-4612-a945-0cbd01f15f31"
+                LastKnownName="ElectionCreatedEventHandler"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="f3b09af2-bac9-4c4e-af7b-831875e30b6f"
+            name="BehaviorExecutionSpecification3">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="ff44c3e2-5081-49ef-a964-9bd906753865"
+                LastKnownName="ElectionDto"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="a7153dcb-c011-412c-b83d-ad377eac471c"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="973a3fe9-c868-4b8c-94af-4560c44c1085"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="c403f72e-bb23-4067-a8d9-8daf6a39bfaa"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="b5dcc4a3-c669-403f-bf38-956370f3ba81"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="973a3fe9-c868-4b8c-94af-4560c44c1085"
+            name="ExecutionOccurrenceSpecification5">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="70d4d13f-cb5f-4c2f-af3c-f8fca154e53f"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ff44c3e2-5081-49ef-a964-9bd906753865"
+                LastKnownName="ElectionDto"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="c403f72e-bb23-4067-a8d9-8daf6a39bfaa"
+            name="MessageOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="ff44c3e2-5081-49ef-a964-9bd906753865"
+                LastKnownName="ElectionDto"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="242f5208-db0d-4a92-abed-7ca44f8a4a58"
+            name="MessageOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="1405ab07-a4e5-4612-a945-0cbd01f15f31"
+                LastKnownName="ElectionCreatedEventHandler"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="5e0b4ce6-7f1a-48d6-8e04-8fd24cf6cd77"
+            name="MessageOccurrenceSpecification9">
+            <covered>
+              <lifelineMoniker
+                Id="1405ab07-a4e5-4612-a945-0cbd01f15f31"
+                LastKnownName="ElectionCreatedEventHandler"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="b5dcc4a3-c669-403f-bf38-956370f3ba81"
+            name="MessageOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="ff44c3e2-5081-49ef-a964-9bd906753865"
+                LastKnownName="ElectionDto"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="a7153dcb-c011-412c-b83d-ad377eac471c"
+            name="ExecutionOccurrenceSpecification6">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="ce396ede-5397-415a-9337-cdb58fc93568"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ff44c3e2-5081-49ef-a964-9bd906753865"
+                LastKnownName="ElectionDto"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="cfca148f-472a-4b01-b0de-8e3df1fae27c"
+            name="BehaviorExecutionSpecification5">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="9038dfad-7ccd-4277-9fa2-2d9e0096e83b"
+                LastKnownName="Persistence Store"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="94c57a80-41c2-4c85-9971-6edbc23b111b"
+                LastKnownName="ExecutionOccurrenceSpecification10"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="1202fe39-5c82-47b8-8b3c-2a304936f05d"
+                LastKnownName="ExecutionOccurrenceSpecification9"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="2ecf1222-19fd-45bf-8cb6-adf0deac2e1e"
+                LastKnownName="MessageOccurrenceSpecification15"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="89a4120e-b0ef-4bbd-b260-e289d4696c17"
+                LastKnownName="MessageOccurrenceSpecification16"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="1202fe39-5c82-47b8-8b3c-2a304936f05d"
+            name="ExecutionOccurrenceSpecification9">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="22c3fec0-c5a7-46ba-b579-9d2159053c41"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="9038dfad-7ccd-4277-9fa2-2d9e0096e83b"
+                LastKnownName="Persistence Store"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="2ecf1222-19fd-45bf-8cb6-adf0deac2e1e"
+            name="MessageOccurrenceSpecification15">
+            <covered>
+              <lifelineMoniker
+                Id="9038dfad-7ccd-4277-9fa2-2d9e0096e83b"
+                LastKnownName="Persistence Store"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="4f75fdcf-2d96-4973-b083-db8ca98e82cd"
+            name="MessageOccurrenceSpecification14">
+            <covered>
+              <lifelineMoniker
+                Id="1405ab07-a4e5-4612-a945-0cbd01f15f31"
+                LastKnownName="ElectionCreatedEventHandler"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ad5a9892-f074-4946-8376-0290cde5156e"
+            name="MessageOccurrenceSpecification17">
+            <covered>
+              <lifelineMoniker
+                Id="1405ab07-a4e5-4612-a945-0cbd01f15f31"
+                LastKnownName="ElectionCreatedEventHandler"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="89a4120e-b0ef-4bbd-b260-e289d4696c17"
+            name="MessageOccurrenceSpecification16">
+            <covered>
+              <lifelineMoniker
+                Id="9038dfad-7ccd-4277-9fa2-2d9e0096e83b"
+                LastKnownName="Persistence Store"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="94c57a80-41c2-4c85-9971-6edbc23b111b"
+            name="ExecutionOccurrenceSpecification10">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="a73ddd23-d6da-4b12-90a8-28ac886dea71"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="9038dfad-7ccd-4277-9fa2-2d9e0096e83b"
+                LastKnownName="Persistence Store"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f6cfcf5c-3965-4f39-b3bf-c468002b8837"
+            name="MessageOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="5c81e0e7-097f-4671-9dbf-f43ba93d4072"
+                LastKnownName="EventDispatcher"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="69b18347-5ef9-4ba6-b79d-1f70c30a2361"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="1405ab07-a4e5-4612-a945-0cbd01f15f31"
+                LastKnownName="ElectionCreatedEventHandler"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="f4158594-ad17-42f7-a598-102e6045b194"
+            name="ExecutionOccurrenceSpecification2">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="08ab3451-ce79-49db-a22c-7c4a43b95e97"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1405ab07-a4e5-4612-a945-0cbd01f15f31"
+                LastKnownName="ElectionCreatedEventHandler"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="5c81e0e7-097f-4671-9dbf-f43ba93d4072"
+            name="EventDispatcher"
+            isActor="false"
+            lifelineDisplayName="EventDispatcher">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="62ab6b29-c300-42dd-9e2d-486b363f3085"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="188631f3-ce9c-459b-8386-8c0a32b0e6f8"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="af5f8fab-e9d8-4b4f-ab7e-fefe08e7e8fb"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="f6cfcf5c-3965-4f39-b3bf-c468002b8837"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="1405ab07-a4e5-4612-a945-0cbd01f15f31"
+            name="ElectionCreatedEventHandler"
+            isActor="false"
+            lifelineDisplayName="ElectionCreatedEventHandler">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="a3bdcf5f-2079-4808-88b0-dfeae470ebac"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="f4158594-ad17-42f7-a598-102e6045b194"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="ff44c3e2-5081-49ef-a964-9bd906753865"
+            name="ElectionDto"
+            isActor="false"
+            lifelineDisplayName="ElectionDto">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="973a3fe9-c868-4b8c-94af-4560c44c1085"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="a7153dcb-c011-412c-b83d-ad377eac471c"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="9038dfad-7ccd-4277-9fa2-2d9e0096e83b"
+            name="Persistence Store"
+            isActor="false"
+            lifelineDisplayName="Persistence Store">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="1202fe39-5c82-47b8-8b3c-2a304936f05d"
+                LastKnownName="ExecutionOccurrenceSpecification9"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="94c57a80-41c2-4c85-9971-6edbc23b111b"
+                LastKnownName="ExecutionOccurrenceSpecification10"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="609aaf8d-dd44-4de0-8123-4e5fe0d8514b"
+            name="ElectionCreatedEvent"
+            messageKind="Found"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <lostFoundTargetMoniker
+                Id="e67ee3cf-5983-4091-a762-089396a2bca1"
+                LastKnownName="LostFoundTarget1"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="5c1e532c-bf97-4a05-afb2-69365aa840c8"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="6ce9cfac-068b-4135-ab13-2e8d7e5e98d8"
+            name="Handle"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="af5f8fab-e9d8-4b4f-ab7e-fefe08e7e8fb"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="2cb43fda-83ac-4340-8646-4f4e51c361f6"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="f34f8acd-8303-43a7-a6eb-491b598dcebc"
+            name="&lt;&lt;create&gt;&gt;"
+            messageKind="Complete"
+            messageSort="CreateMessage"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="242f5208-db0d-4a92-abed-7ca44f8a4a58"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="c403f72e-bb23-4067-a8d9-8daf6a39bfaa"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="92dacba2-06bb-47ef-b3ad-8a46778025ae"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="b5dcc4a3-c669-403f-bf38-956370f3ba81"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="5e0b4ce6-7f1a-48d6-8e04-8fd24cf6cd77"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="52d206d7-ad75-4ee9-8ba7-2ebbc357e86c"
+            name="Insert"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="4f75fdcf-2d96-4973-b083-db8ca98e82cd"
+                LastKnownName="MessageOccurrenceSpecification14"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="2ecf1222-19fd-45bf-8cb6-adf0deac2e1e"
+                LastKnownName="MessageOccurrenceSpecification15"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="674451ed-0f28-4ffd-be28-4324c7a73c4c"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="89a4120e-b0ef-4bbd-b260-e289d4696c17"
+                LastKnownName="MessageOccurrenceSpecification16"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ad5a9892-f074-4946-8376-0290cde5156e"
+                LastKnownName="MessageOccurrenceSpecification17"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="36177e26-41a5-4a68-8d39-82963de96017"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="69b18347-5ef9-4ba6-b79d-1f70c30a2361"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="f6cfcf5c-3965-4f39-b3bf-c468002b8837"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="90051ab5-3230-4d7b-b23a-3026d39c8936"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="08ab3451-ce79-49db-a22c-7c4a43b95e97"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="6f847b4a-b495-4534-9a80-8ea3bf196dc7"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="1bb7f970-e49c-4e68-b8bd-8c4b2de2d45a"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="70d4d13f-cb5f-4c2f-af3c-f8fca154e53f"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="ce396ede-5397-415a-9337-cdb58fc93568"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="22c3fec0-c5a7-46ba-b579-9d2159053c41"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="a73ddd23-d6da-4b12-90a8-28ac886dea71"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="679839a9-337c-4230-8fd4-9a14e9a6936d"
+        name="TerminateElection"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="a13152c4-7213-4208-b2d9-779570147cd4"
+            name="BehaviorExecutionSpecification1">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="201523e1-3b20-4d91-a851-324309bf53e7"
+                LastKnownName="CommandDispatcher"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="3ca43622-d741-444c-9994-07de97b9b477"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="80e77c44-819d-46da-875d-7d6164993d93"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="b339fd01-94c8-4fdd-972c-ff395d77d59e"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="1a1db0cb-1cac-4f4a-892e-da048de091d3"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="ceabf6d6-f66c-45f9-b05e-a96d8dc8a1a0"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="80e77c44-819d-46da-875d-7d6164993d93"
+            name="ExecutionOccurrenceSpecification1">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="8c939e82-1694-4685-a7ac-01a6bf513ac6"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="201523e1-3b20-4d91-a851-324309bf53e7"
+                LastKnownName="CommandDispatcher"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="b339fd01-94c8-4fdd-972c-ff395d77d59e"
+            name="MessageOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="201523e1-3b20-4d91-a851-324309bf53e7"
+                LastKnownName="CommandDispatcher"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <lostFoundTarget
+            Id="df5b16e9-dab0-45cd-81af-15b5cd5b2537"
+            name="LostFoundTarget1" />
+          <behaviorExecutionSpecification
+            Id="a5ddc5b1-6420-462a-a92d-16ab255c3dd6"
+            name="BehaviorExecutionSpecification2">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="37f1c659-b9bb-4ac2-8f82-ed73edf7294e"
+                LastKnownName="TerminateElection CommandHandler"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="4b330e1e-95cb-4cb4-872c-07cb299dae95"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="62aa2971-45a3-46eb-8525-ba58a5b412d9"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="0a7ba0a3-4c19-4f0f-adbb-c6ef6917fa6c"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="a1675057-7d4d-422f-8efb-968c99eb8b11"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="e27e6196-a4a8-4818-80cd-8231be560d59"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="cfeb1253-fc56-4cf8-bcfb-7acb4958a448"
+                LastKnownName="MessageOccurrenceSpecification22"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="8d694a85-6d25-43a0-86e2-ddbee4251373"
+                LastKnownName="MessageOccurrenceSpecification25"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="6cbcb50a-9921-404d-9f2e-86795c783055"
+                LastKnownName="MessageOccurrenceSpecification32"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="430fb137-7140-4a28-8928-67e910418254"
+                LastKnownName="MessageOccurrenceSpecification35"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="24b85505-3695-4ca5-b256-e7c40e545117"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="62aa2971-45a3-46eb-8525-ba58a5b412d9"
+            name="ExecutionOccurrenceSpecification3">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="ec3caf2a-39ea-46b5-9e46-61d35b552da5"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="37f1c659-b9bb-4ac2-8f82-ed73edf7294e"
+                LastKnownName="TerminateElection CommandHandler"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="1a1db0cb-1cac-4f4a-892e-da048de091d3"
+            name="MessageOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="201523e1-3b20-4d91-a851-324309bf53e7"
+                LastKnownName="CommandDispatcher"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="0a7ba0a3-4c19-4f0f-adbb-c6ef6917fa6c"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="37f1c659-b9bb-4ac2-8f82-ed73edf7294e"
+                LastKnownName="TerminateElection CommandHandler"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="fe73bc5b-83ca-4c5e-81bf-0da2165755ed"
+            name="BehaviorExecutionSpecification3">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="aae0e0d9-9d1a-4257-9f94-6943e29c5718"
+                LastKnownName="Repository"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="78e792cd-928b-4a59-a492-21d365925011"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="53741143-e661-45d5-b399-8f09e7c3a0b9"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="a040593d-7c52-4336-bc96-9fc5736fc4aa"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="61130ce2-6a14-4e1c-a7b1-259d3676068c"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="356aba7c-db9e-4f1a-bc1e-7e8871143b63"
+                LastKnownName="MessageOccurrenceSpecification13"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="71c36ba7-ddc4-4548-a6e0-169648bd5dda"
+                LastKnownName="MessageOccurrenceSpecification14"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="1a5f90d8-87de-4530-945a-da39e50be5fb"
+                LastKnownName="MessageOccurrenceSpecification17"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="9f7bdf86-6900-4952-892f-928dc1c5b6c1"
+                LastKnownName="MessageOccurrenceSpecification18"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="de5ef9af-c65d-4afa-b28b-c76a4494e71c"
+                LastKnownName="MessageOccurrenceSpecification21"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="64c9ff63-767b-4c19-9d34-a36a88bfc25d"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="53741143-e661-45d5-b399-8f09e7c3a0b9"
+            name="ExecutionOccurrenceSpecification5">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="0a34ddca-964c-4011-958b-a202f292c1c6"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="aae0e0d9-9d1a-4257-9f94-6943e29c5718"
+                LastKnownName="Repository"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="a040593d-7c52-4336-bc96-9fc5736fc4aa"
+            name="MessageOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="aae0e0d9-9d1a-4257-9f94-6943e29c5718"
+                LastKnownName="Repository"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="a1675057-7d4d-422f-8efb-968c99eb8b11"
+            name="MessageOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="37f1c659-b9bb-4ac2-8f82-ed73edf7294e"
+                LastKnownName="TerminateElection CommandHandler"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="a75ddaae-6aa7-4789-b75d-6e659a62c158"
+            name="BehaviorExecutionSpecification4">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="ba3ea991-9530-42ae-8941-05ff0791d0ec"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="c3e9aa6f-427b-439f-bb18-deb762ce8ab6"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="745b04ce-9b75-4f7f-b8e0-b185077d2579"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="a7a479a4-9a55-4b2b-8e5d-3ae01fa10bac"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="05905efd-1a4e-45c0-b09d-2b1fe1164e9e"
+                LastKnownName="MessageOccurrenceSpecification12"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="745b04ce-9b75-4f7f-b8e0-b185077d2579"
+            name="ExecutionOccurrenceSpecification7">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="3bb0497d-f007-4598-a272-4b4ab81fb51f"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ba3ea991-9530-42ae-8941-05ff0791d0ec"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="61130ce2-6a14-4e1c-a7b1-259d3676068c"
+            name="MessageOccurrenceSpecification10">
+            <covered>
+              <lifelineMoniker
+                Id="aae0e0d9-9d1a-4257-9f94-6943e29c5718"
+                LastKnownName="Repository"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="a7a479a4-9a55-4b2b-8e5d-3ae01fa10bac"
+            name="MessageOccurrenceSpecification11">
+            <covered>
+              <lifelineMoniker
+                Id="ba3ea991-9530-42ae-8941-05ff0791d0ec"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="356aba7c-db9e-4f1a-bc1e-7e8871143b63"
+            name="MessageOccurrenceSpecification13">
+            <covered>
+              <lifelineMoniker
+                Id="aae0e0d9-9d1a-4257-9f94-6943e29c5718"
+                LastKnownName="Repository"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="05905efd-1a4e-45c0-b09d-2b1fe1164e9e"
+            name="MessageOccurrenceSpecification12">
+            <covered>
+              <lifelineMoniker
+                Id="ba3ea991-9530-42ae-8941-05ff0791d0ec"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="c3e9aa6f-427b-439f-bb18-deb762ce8ab6"
+            name="ExecutionOccurrenceSpecification8">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="cc7abca6-ea05-4399-9432-ad958c19d83f"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ba3ea991-9530-42ae-8941-05ff0791d0ec"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="ba0b01bd-9218-47f8-a46c-91938c8d228f"
+            name="BehaviorExecutionSpecification5">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="272ba800-b43b-4503-96a3-bdf4def38cfd"
+                LastKnownName="EventStore"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="29de4a29-9db0-4384-aedd-4337aa72a452"
+                LastKnownName="ExecutionOccurrenceSpecification10"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="17749b64-fdc9-41b4-afe3-7d2733527aa6"
+                LastKnownName="ExecutionOccurrenceSpecification9"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="82813c82-a4e1-43aa-b435-493e4336829c"
+                LastKnownName="MessageOccurrenceSpecification15"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="3149bc46-5359-49de-86b1-5018dc82c697"
+                LastKnownName="MessageOccurrenceSpecification16"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="17749b64-fdc9-41b4-afe3-7d2733527aa6"
+            name="ExecutionOccurrenceSpecification9">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="60fd2959-49da-42ca-a9f4-a61970ad4847"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="272ba800-b43b-4503-96a3-bdf4def38cfd"
+                LastKnownName="EventStore"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="82813c82-a4e1-43aa-b435-493e4336829c"
+            name="MessageOccurrenceSpecification15">
+            <covered>
+              <lifelineMoniker
+                Id="272ba800-b43b-4503-96a3-bdf4def38cfd"
+                LastKnownName="EventStore"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="71c36ba7-ddc4-4548-a6e0-169648bd5dda"
+            name="MessageOccurrenceSpecification14">
+            <covered>
+              <lifelineMoniker
+                Id="aae0e0d9-9d1a-4257-9f94-6943e29c5718"
+                LastKnownName="Repository"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="3149bc46-5359-49de-86b1-5018dc82c697"
+            name="MessageOccurrenceSpecification16">
+            <covered>
+              <lifelineMoniker
+                Id="272ba800-b43b-4503-96a3-bdf4def38cfd"
+                LastKnownName="EventStore"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="1a5f90d8-87de-4530-945a-da39e50be5fb"
+            name="MessageOccurrenceSpecification17">
+            <covered>
+              <lifelineMoniker
+                Id="aae0e0d9-9d1a-4257-9f94-6943e29c5718"
+                LastKnownName="Repository"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="29de4a29-9db0-4384-aedd-4337aa72a452"
+            name="ExecutionOccurrenceSpecification10">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="bd7e7906-0f07-4928-a1a9-ab144a040a39"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="272ba800-b43b-4503-96a3-bdf4def38cfd"
+                LastKnownName="EventStore"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="4caeecc5-44b8-42d6-aa63-a413a4d92666"
+            name="BehaviorExecutionSpecification6">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="ba3ea991-9530-42ae-8941-05ff0791d0ec"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="592567ea-1196-4de1-af18-7ee10c7d7f40"
+                LastKnownName="ExecutionOccurrenceSpecification12"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="fbfdb64c-472f-4e57-89b3-d634c2c6fbbc"
+                LastKnownName="ExecutionOccurrenceSpecification11"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="fa4d5398-aebd-4fa5-89b8-ea386b93470c"
+                LastKnownName="MessageOccurrenceSpecification19"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="4f02ce62-e4af-438b-bd43-35ec2bf21f05"
+                LastKnownName="MessageOccurrenceSpecification20"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="fbfdb64c-472f-4e57-89b3-d634c2c6fbbc"
+            name="ExecutionOccurrenceSpecification11">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="97b944a5-6151-47cf-bde5-6af315d3f371"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ba3ea991-9530-42ae-8941-05ff0791d0ec"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="9f7bdf86-6900-4952-892f-928dc1c5b6c1"
+            name="MessageOccurrenceSpecification18">
+            <covered>
+              <lifelineMoniker
+                Id="aae0e0d9-9d1a-4257-9f94-6943e29c5718"
+                LastKnownName="Repository"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="fa4d5398-aebd-4fa5-89b8-ea386b93470c"
+            name="MessageOccurrenceSpecification19">
+            <covered>
+              <lifelineMoniker
+                Id="ba3ea991-9530-42ae-8941-05ff0791d0ec"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="de5ef9af-c65d-4afa-b28b-c76a4494e71c"
+            name="MessageOccurrenceSpecification21">
+            <covered>
+              <lifelineMoniker
+                Id="aae0e0d9-9d1a-4257-9f94-6943e29c5718"
+                LastKnownName="Repository"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="4f02ce62-e4af-438b-bd43-35ec2bf21f05"
+            name="MessageOccurrenceSpecification20">
+            <covered>
+              <lifelineMoniker
+                Id="ba3ea991-9530-42ae-8941-05ff0791d0ec"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="592567ea-1196-4de1-af18-7ee10c7d7f40"
+            name="ExecutionOccurrenceSpecification12">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="e6b6c7ce-2a70-411e-a246-42314c09142f"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ba3ea991-9530-42ae-8941-05ff0791d0ec"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="64c9ff63-767b-4c19-9d34-a36a88bfc25d"
+            name="MessageOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="aae0e0d9-9d1a-4257-9f94-6943e29c5718"
+                LastKnownName="Repository"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e27e6196-a4a8-4818-80cd-8231be560d59"
+            name="MessageOccurrenceSpecification9">
+            <covered>
+              <lifelineMoniker
+                Id="37f1c659-b9bb-4ac2-8f82-ed73edf7294e"
+                LastKnownName="TerminateElection CommandHandler"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="78e792cd-928b-4a59-a492-21d365925011"
+            name="ExecutionOccurrenceSpecification6">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="eefab7f2-9e2f-406a-bc46-5c65b080436b"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="aae0e0d9-9d1a-4257-9f94-6943e29c5718"
+                LastKnownName="Repository"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="f0856794-570b-48d0-a570-b2ed0063543b"
+            name="BehaviorExecutionSpecification7">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="ba3ea991-9530-42ae-8941-05ff0791d0ec"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="06b0e163-151c-4e76-8650-41c17bc914be"
+                LastKnownName="ExecutionOccurrenceSpecification14"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="e2d9b72a-739f-42a0-acee-2dd82ff405c0"
+                LastKnownName="ExecutionOccurrenceSpecification13"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="12660129-cd1d-41de-ae89-bccab8191b2e"
+                LastKnownName="MessageOccurrenceSpecification23"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="ed591ed7-b2e8-428a-b323-f5bad6405676"
+                LastKnownName="MessageOccurrenceSpecification26"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="62b1b023-5e70-42f6-a425-3bc759e916b1"
+                LastKnownName="MessageOccurrenceSpecification29"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="e58eb77c-aef4-4c56-ae0b-f31df59405b1"
+                LastKnownName="MessageOccurrenceSpecification30"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="5c75febb-0908-4768-a65a-b47af166d35b"
+                LastKnownName="ExecutionOccurrenceSpecification17"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="26f92eed-482b-49a6-b098-1ee66d61b314"
+                LastKnownName="ExecutionOccurrenceSpecification18"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="3369d24a-0cfd-4682-ba78-7d64f673d088"
+                LastKnownName="MessageOccurrenceSpecification24"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="e2d9b72a-739f-42a0-acee-2dd82ff405c0"
+            name="ExecutionOccurrenceSpecification13">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="9561470f-ff68-43a9-93b7-82d9637fa66f"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ba3ea991-9530-42ae-8941-05ff0791d0ec"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="12660129-cd1d-41de-ae89-bccab8191b2e"
+            name="MessageOccurrenceSpecification23">
+            <covered>
+              <lifelineMoniker
+                Id="ba3ea991-9530-42ae-8941-05ff0791d0ec"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="cfeb1253-fc56-4cf8-bcfb-7acb4958a448"
+            name="MessageOccurrenceSpecification22">
+            <covered>
+              <lifelineMoniker
+                Id="37f1c659-b9bb-4ac2-8f82-ed73edf7294e"
+                LastKnownName="TerminateElection CommandHandler"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="60be8fcf-8cba-4620-9ab2-d9bfdd1ef558"
+            name="BehaviorExecutionSpecification8">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="3817bd77-1e97-4ee1-b4fc-7c12ad3250f1"
+                LastKnownName="ElectionTerminatedEvent"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="cd9248d2-3065-41c4-9a7d-a6f68bdf5ef9"
+                LastKnownName="ExecutionOccurrenceSpecification16"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="c69ea226-7543-46fd-9a3a-214865f22e1b"
+                LastKnownName="ExecutionOccurrenceSpecification15"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="2ff408bd-6d6a-4aae-87f3-a2a9f1ddcf18"
+                LastKnownName="MessageOccurrenceSpecification27"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="111e17d7-3028-46d1-bf9c-6b68b839911b"
+                LastKnownName="MessageOccurrenceSpecification28"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="c69ea226-7543-46fd-9a3a-214865f22e1b"
+            name="ExecutionOccurrenceSpecification15">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="c963c57b-0798-4c55-a318-216bd848f14c"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3817bd77-1e97-4ee1-b4fc-7c12ad3250f1"
+                LastKnownName="ElectionTerminatedEvent"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="2ff408bd-6d6a-4aae-87f3-a2a9f1ddcf18"
+            name="MessageOccurrenceSpecification27">
+            <covered>
+              <lifelineMoniker
+                Id="3817bd77-1e97-4ee1-b4fc-7c12ad3250f1"
+                LastKnownName="ElectionTerminatedEvent"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ed591ed7-b2e8-428a-b323-f5bad6405676"
+            name="MessageOccurrenceSpecification26">
+            <covered>
+              <lifelineMoniker
+                Id="ba3ea991-9530-42ae-8941-05ff0791d0ec"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="111e17d7-3028-46d1-bf9c-6b68b839911b"
+            name="MessageOccurrenceSpecification28">
+            <covered>
+              <lifelineMoniker
+                Id="3817bd77-1e97-4ee1-b4fc-7c12ad3250f1"
+                LastKnownName="ElectionTerminatedEvent"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="62b1b023-5e70-42f6-a425-3bc759e916b1"
+            name="MessageOccurrenceSpecification29">
+            <covered>
+              <lifelineMoniker
+                Id="ba3ea991-9530-42ae-8941-05ff0791d0ec"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="cd9248d2-3065-41c4-9a7d-a6f68bdf5ef9"
+            name="ExecutionOccurrenceSpecification16">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="f250cf83-411c-40c2-a84b-e6ec7f24dd69"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3817bd77-1e97-4ee1-b4fc-7c12ad3250f1"
+                LastKnownName="ElectionTerminatedEvent"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e58eb77c-aef4-4c56-ae0b-f31df59405b1"
+            name="MessageOccurrenceSpecification30">
+            <covered>
+              <lifelineMoniker
+                Id="ba3ea991-9530-42ae-8941-05ff0791d0ec"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="3829a93e-b651-4776-9f33-e91ce0d14801"
+            name="BehaviorExecutionSpecification9">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="ba3ea991-9530-42ae-8941-05ff0791d0ec"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="26f92eed-482b-49a6-b098-1ee66d61b314"
+                LastKnownName="ExecutionOccurrenceSpecification18"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="5c75febb-0908-4768-a65a-b47af166d35b"
+                LastKnownName="ExecutionOccurrenceSpecification17"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="b324c95e-0fd3-4e75-ae76-8ddcba13907b"
+                LastKnownName="MessageOccurrenceSpecification31"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="5c75febb-0908-4768-a65a-b47af166d35b"
+            name="ExecutionOccurrenceSpecification17">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="f6c798a2-4793-4976-944d-5ec10292ecfe"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ba3ea991-9530-42ae-8941-05ff0791d0ec"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="b324c95e-0fd3-4e75-ae76-8ddcba13907b"
+            name="MessageOccurrenceSpecification31">
+            <covered>
+              <lifelineMoniker
+                Id="ba3ea991-9530-42ae-8941-05ff0791d0ec"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="26f92eed-482b-49a6-b098-1ee66d61b314"
+            name="ExecutionOccurrenceSpecification18">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="607fbbae-cc9d-401f-aaba-0befa99a6366"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ba3ea991-9530-42ae-8941-05ff0791d0ec"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="3369d24a-0cfd-4682-ba78-7d64f673d088"
+            name="MessageOccurrenceSpecification24">
+            <covered>
+              <lifelineMoniker
+                Id="ba3ea991-9530-42ae-8941-05ff0791d0ec"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="8d694a85-6d25-43a0-86e2-ddbee4251373"
+            name="MessageOccurrenceSpecification25">
+            <covered>
+              <lifelineMoniker
+                Id="37f1c659-b9bb-4ac2-8f82-ed73edf7294e"
+                LastKnownName="TerminateElection CommandHandler"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="06b0e163-151c-4e76-8650-41c17bc914be"
+            name="ExecutionOccurrenceSpecification14">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="8d91c972-cc30-4fff-bbd9-fb11ab88711c"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ba3ea991-9530-42ae-8941-05ff0791d0ec"
+                LastKnownName="Election"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="589c4bbb-f20c-4b28-b1e2-a1623feed541"
+            name="BehaviorExecutionSpecification10">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="aae0e0d9-9d1a-4257-9f94-6943e29c5718"
+                LastKnownName="Repository"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="3a828aa7-9f53-4780-ab45-399d1536d850"
+                LastKnownName="ExecutionOccurrenceSpecification20"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="0ff4b7c8-2602-42c6-a602-56ccaa2579e0"
+                LastKnownName="ExecutionOccurrenceSpecification19"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="775efecd-eba7-4569-9ee4-af6cf52be089"
+                LastKnownName="MessageOccurrenceSpecification33"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="323cdeeb-0147-44d3-8128-15122793cf66"
+                LastKnownName="MessageOccurrenceSpecification36"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="18a14cf0-a9ba-4c77-9015-1d2752ce7b56"
+                LastKnownName="MessageOccurrenceSpecification39"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="31cc114b-14dc-4479-abe0-4ace238c12d3"
+                LastKnownName="MessageOccurrenceSpecification34"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="0ff4b7c8-2602-42c6-a602-56ccaa2579e0"
+            name="ExecutionOccurrenceSpecification19">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="eef8fcee-570e-4a07-8cc5-cda594abafe1"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="aae0e0d9-9d1a-4257-9f94-6943e29c5718"
+                LastKnownName="Repository"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="775efecd-eba7-4569-9ee4-af6cf52be089"
+            name="MessageOccurrenceSpecification33">
+            <covered>
+              <lifelineMoniker
+                Id="aae0e0d9-9d1a-4257-9f94-6943e29c5718"
+                LastKnownName="Repository"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="6cbcb50a-9921-404d-9f2e-86795c783055"
+            name="MessageOccurrenceSpecification32">
+            <covered>
+              <lifelineMoniker
+                Id="37f1c659-b9bb-4ac2-8f82-ed73edf7294e"
+                LastKnownName="TerminateElection CommandHandler"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="f86fd878-3774-4a03-99d6-b74df9f3c55e"
+            name="BehaviorExecutionSpecification11">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="272ba800-b43b-4503-96a3-bdf4def38cfd"
+                LastKnownName="EventStore"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="06e65998-b3dc-49bd-a565-832729c3cf42"
+                LastKnownName="ExecutionOccurrenceSpecification22"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="24185392-89f2-4352-a096-1a2fadb827c8"
+                LastKnownName="ExecutionOccurrenceSpecification21"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="17b6c492-c84b-495e-832b-abe49a8b5956"
+                LastKnownName="MessageOccurrenceSpecification37"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="c9a21e4f-6749-4c69-8153-ee9c48bf3988"
+                LastKnownName="MessageOccurrenceSpecification40"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="19caf4ac-b9d3-492b-8956-5a59941ecf10"
+                LastKnownName="MessageOccurrenceSpecification43"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="fd262a8c-3dff-40d5-bb08-e638381211ed"
+                LastKnownName="MessageOccurrenceSpecification38"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="24185392-89f2-4352-a096-1a2fadb827c8"
+            name="ExecutionOccurrenceSpecification21">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="0fe93ccd-96a8-4fd0-98b8-0dc1023dd2bf"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="272ba800-b43b-4503-96a3-bdf4def38cfd"
+                LastKnownName="EventStore"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="323cdeeb-0147-44d3-8128-15122793cf66"
+            name="MessageOccurrenceSpecification36">
+            <covered>
+              <lifelineMoniker
+                Id="aae0e0d9-9d1a-4257-9f94-6943e29c5718"
+                LastKnownName="Repository"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="17b6c492-c84b-495e-832b-abe49a8b5956"
+            name="MessageOccurrenceSpecification37">
+            <covered>
+              <lifelineMoniker
+                Id="272ba800-b43b-4503-96a3-bdf4def38cfd"
+                LastKnownName="EventStore"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="fc12add2-eabb-4380-94b8-994fb37cd2a0"
+            name="BehaviorExecutionSpecification12">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="66467983-a441-4d40-bea5-e6e174ab11af"
+                LastKnownName="EventBus"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="71cbd12a-7236-4fe8-b160-90d7d3adfa18"
+                LastKnownName="ExecutionOccurrenceSpecification24"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="49fe4eb7-9fb0-4aac-8d14-20153a8a391c"
+                LastKnownName="ExecutionOccurrenceSpecification23"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="faa0eb7d-b37a-43c0-a13f-cb5af29af8aa"
+                LastKnownName="MessageOccurrenceSpecification41"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="d2f73d8e-e7e4-4e80-a072-16046ec77ab0"
+                LastKnownName="MessageOccurrenceSpecification42"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="49fe4eb7-9fb0-4aac-8d14-20153a8a391c"
+            name="ExecutionOccurrenceSpecification23">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="c51304c3-6f33-4005-ac36-67dfbf62d603"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="66467983-a441-4d40-bea5-e6e174ab11af"
+                LastKnownName="EventBus"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="c9a21e4f-6749-4c69-8153-ee9c48bf3988"
+            name="MessageOccurrenceSpecification40">
+            <covered>
+              <lifelineMoniker
+                Id="272ba800-b43b-4503-96a3-bdf4def38cfd"
+                LastKnownName="EventStore"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="faa0eb7d-b37a-43c0-a13f-cb5af29af8aa"
+            name="MessageOccurrenceSpecification41">
+            <covered>
+              <lifelineMoniker
+                Id="66467983-a441-4d40-bea5-e6e174ab11af"
+                LastKnownName="EventBus"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="19caf4ac-b9d3-492b-8956-5a59941ecf10"
+            name="MessageOccurrenceSpecification43">
+            <covered>
+              <lifelineMoniker
+                Id="272ba800-b43b-4503-96a3-bdf4def38cfd"
+                LastKnownName="EventStore"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d2f73d8e-e7e4-4e80-a072-16046ec77ab0"
+            name="MessageOccurrenceSpecification42">
+            <covered>
+              <lifelineMoniker
+                Id="66467983-a441-4d40-bea5-e6e174ab11af"
+                LastKnownName="EventBus"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="71cbd12a-7236-4fe8-b160-90d7d3adfa18"
+            name="ExecutionOccurrenceSpecification24">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="34f92fb2-a136-46ba-be3f-d0592a954c9b"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="66467983-a441-4d40-bea5-e6e174ab11af"
+                LastKnownName="EventBus"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="18a14cf0-a9ba-4c77-9015-1d2752ce7b56"
+            name="MessageOccurrenceSpecification39">
+            <covered>
+              <lifelineMoniker
+                Id="aae0e0d9-9d1a-4257-9f94-6943e29c5718"
+                LastKnownName="Repository"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="fd262a8c-3dff-40d5-bb08-e638381211ed"
+            name="MessageOccurrenceSpecification38">
+            <covered>
+              <lifelineMoniker
+                Id="272ba800-b43b-4503-96a3-bdf4def38cfd"
+                LastKnownName="EventStore"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="06e65998-b3dc-49bd-a565-832729c3cf42"
+            name="ExecutionOccurrenceSpecification22">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="a5deb23d-5e86-4048-9172-29b6fbf0e7b3"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="272ba800-b43b-4503-96a3-bdf4def38cfd"
+                LastKnownName="EventStore"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="430fb137-7140-4a28-8928-67e910418254"
+            name="MessageOccurrenceSpecification35">
+            <covered>
+              <lifelineMoniker
+                Id="37f1c659-b9bb-4ac2-8f82-ed73edf7294e"
+                LastKnownName="TerminateElection CommandHandler"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="31cc114b-14dc-4479-abe0-4ace238c12d3"
+            name="MessageOccurrenceSpecification34">
+            <covered>
+              <lifelineMoniker
+                Id="aae0e0d9-9d1a-4257-9f94-6943e29c5718"
+                LastKnownName="Repository"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="3a828aa7-9f53-4780-ab45-399d1536d850"
+            name="ExecutionOccurrenceSpecification20">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="6de3b1eb-4acf-48f5-a739-4fdb23c7a400"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="aae0e0d9-9d1a-4257-9f94-6943e29c5718"
+                LastKnownName="Repository"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="24b85505-3695-4ca5-b256-e7c40e545117"
+            name="MessageOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="37f1c659-b9bb-4ac2-8f82-ed73edf7294e"
+                LastKnownName="TerminateElection CommandHandler"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ceabf6d6-f66c-45f9-b05e-a96d8dc8a1a0"
+            name="MessageOccurrenceSpecification5">
+            <covered>
+              <lifelineMoniker
+                Id="201523e1-3b20-4d91-a851-324309bf53e7"
+                LastKnownName="CommandDispatcher"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="4b330e1e-95cb-4cb4-872c-07cb299dae95"
+            name="ExecutionOccurrenceSpecification4">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="960a42bc-83d0-4316-993d-a133a4168f91"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="37f1c659-b9bb-4ac2-8f82-ed73edf7294e"
+                LastKnownName="TerminateElection CommandHandler"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="3ca43622-d741-444c-9994-07de97b9b477"
+            name="ExecutionOccurrenceSpecification2">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="023ae839-dbba-4687-b0c3-9f93dc2eb818"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="CQRS.Architecture.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="201523e1-3b20-4d91-a851-324309bf53e7"
+                LastKnownName="CommandDispatcher"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="201523e1-3b20-4d91-a851-324309bf53e7"
+            name="CommandDispatcher"
+            isActor="false"
+            lifelineDisplayName="CommandDispatcher">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="80e77c44-819d-46da-875d-7d6164993d93"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="3ca43622-d741-444c-9994-07de97b9b477"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="37f1c659-b9bb-4ac2-8f82-ed73edf7294e"
+            name="TerminateElection CommandHandler"
+            isActor="false"
+            lifelineDisplayName="TerminateElection CommandHandler">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="62aa2971-45a3-46eb-8525-ba58a5b412d9"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="4b330e1e-95cb-4cb4-872c-07cb299dae95"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="aae0e0d9-9d1a-4257-9f94-6943e29c5718"
+            name="Repository"
+            isActor="false"
+            lifelineDisplayName="Repository">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="53741143-e661-45d5-b399-8f09e7c3a0b9"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="78e792cd-928b-4a59-a492-21d365925011"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="0ff4b7c8-2602-42c6-a602-56ccaa2579e0"
+                LastKnownName="ExecutionOccurrenceSpecification19"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="3a828aa7-9f53-4780-ab45-399d1536d850"
+                LastKnownName="ExecutionOccurrenceSpecification20"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="ba3ea991-9530-42ae-8941-05ff0791d0ec"
+            name="Election"
+            isActor="false"
+            lifelineDisplayName="Election">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="745b04ce-9b75-4f7f-b8e0-b185077d2579"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="c3e9aa6f-427b-439f-bb18-deb762ce8ab6"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="fbfdb64c-472f-4e57-89b3-d634c2c6fbbc"
+                LastKnownName="ExecutionOccurrenceSpecification11"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="592567ea-1196-4de1-af18-7ee10c7d7f40"
+                LastKnownName="ExecutionOccurrenceSpecification12"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="e2d9b72a-739f-42a0-acee-2dd82ff405c0"
+                LastKnownName="ExecutionOccurrenceSpecification13"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="06b0e163-151c-4e76-8650-41c17bc914be"
+                LastKnownName="ExecutionOccurrenceSpecification14"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="272ba800-b43b-4503-96a3-bdf4def38cfd"
+            name="EventStore"
+            isActor="false"
+            lifelineDisplayName="EventStore">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="17749b64-fdc9-41b4-afe3-7d2733527aa6"
+                LastKnownName="ExecutionOccurrenceSpecification9"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="29de4a29-9db0-4384-aedd-4337aa72a452"
+                LastKnownName="ExecutionOccurrenceSpecification10"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="24185392-89f2-4352-a096-1a2fadb827c8"
+                LastKnownName="ExecutionOccurrenceSpecification21"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="06e65998-b3dc-49bd-a565-832729c3cf42"
+                LastKnownName="ExecutionOccurrenceSpecification22"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="3817bd77-1e97-4ee1-b4fc-7c12ad3250f1"
+            name="ElectionTerminatedEvent"
+            isActor="false"
+            lifelineDisplayName="ElectionTerminatedEvent">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="c69ea226-7543-46fd-9a3a-214865f22e1b"
+                LastKnownName="ExecutionOccurrenceSpecification15"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="cd9248d2-3065-41c4-9a7d-a6f68bdf5ef9"
+                LastKnownName="ExecutionOccurrenceSpecification16"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="66467983-a441-4d40-bea5-e6e174ab11af"
+            name="EventBus"
+            isActor="false"
+            lifelineDisplayName="EventBus">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="49fe4eb7-9fb0-4aac-8d14-20153a8a391c"
+                LastKnownName="ExecutionOccurrenceSpecification23"
+                LastKnownLocation="CQRS.Architecture.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="71cbd12a-7236-4fe8-b160-90d7d3adfa18"
+                LastKnownName="ExecutionOccurrenceSpecification24"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="165a7a87-658d-48fe-802c-a39f1fdd7d34"
+            name="Dispatch"
+            messageKind="Found"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <lostFoundTargetMoniker
+                Id="df5b16e9-dab0-45cd-81af-15b5cd5b2537"
+                LastKnownName="LostFoundTarget1"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="b339fd01-94c8-4fdd-972c-ff395d77d59e"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="6fa62f35-9bf5-479e-a402-b03af1247df6"
+            name="Handle"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="1a1db0cb-1cac-4f4a-892e-da048de091d3"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="0a7ba0a3-4c19-4f0f-adbb-c6ef6917fa6c"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="5d2f1780-a3cc-4813-98b2-2f89b3413b55"
+            name="GetById"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="a1675057-7d4d-422f-8efb-968c99eb8b11"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="a040593d-7c52-4336-bc96-9fc5736fc4aa"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="7321282e-f7d5-4551-b5a3-f87c65440e4f"
+            name="&lt;&lt;create&gt;&gt;"
+            messageKind="Complete"
+            messageSort="CreateMessage"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="61130ce2-6a14-4e1c-a7b1-259d3676068c"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="a7a479a4-9a55-4b2b-8e5d-3ae01fa10bac"
+                LastKnownName="MessageOccurrenceSpecification11"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="fc240cfb-2834-4de6-a117-ad846602293e"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="05905efd-1a4e-45c0-b09d-2b1fe1164e9e"
+                LastKnownName="MessageOccurrenceSpecification12"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="356aba7c-db9e-4f1a-bc1e-7e8871143b63"
+                LastKnownName="MessageOccurrenceSpecification13"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="f775e40f-3828-40da-abc1-be2f6f6ac0f6"
+            name="GetEvents"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="71c36ba7-ddc4-4548-a6e0-169648bd5dda"
+                LastKnownName="MessageOccurrenceSpecification14"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="82813c82-a4e1-43aa-b435-493e4336829c"
+                LastKnownName="MessageOccurrenceSpecification15"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="b46cf32b-8b05-412b-8938-b6e47bf0ddc1"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="3149bc46-5359-49de-86b1-5018dc82c697"
+                LastKnownName="MessageOccurrenceSpecification16"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="1a5f90d8-87de-4530-945a-da39e50be5fb"
+                LastKnownName="MessageOccurrenceSpecification17"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="8c8ef903-5b51-4bc6-a518-cd335dd5b141"
+            name="LoadFromHistory"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="9f7bdf86-6900-4952-892f-928dc1c5b6c1"
+                LastKnownName="MessageOccurrenceSpecification18"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="fa4d5398-aebd-4fa5-89b8-ea386b93470c"
+                LastKnownName="MessageOccurrenceSpecification19"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="b346fae1-bf97-4dd1-b660-317242b83a47"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="4f02ce62-e4af-438b-bd43-35ec2bf21f05"
+                LastKnownName="MessageOccurrenceSpecification20"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="de5ef9af-c65d-4afa-b28b-c76a4494e71c"
+                LastKnownName="MessageOccurrenceSpecification21"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="51569630-9c05-47e2-b82f-2aa551c16ea1"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="64c9ff63-767b-4c19-9d34-a36a88bfc25d"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e27e6196-a4a8-4818-80cd-8231be560d59"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="c01403d9-85dc-414c-8e37-2855834b6336"
+            name="TerminateElection"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="cfeb1253-fc56-4cf8-bcfb-7acb4958a448"
+                LastKnownName="MessageOccurrenceSpecification22"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="12660129-cd1d-41de-ae89-bccab8191b2e"
+                LastKnownName="MessageOccurrenceSpecification23"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="5c52b02a-2af9-4a87-a6f1-5c67a073483c"
+            name="&lt;&lt;create&gt;&gt;"
+            messageKind="Complete"
+            messageSort="CreateMessage"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ed591ed7-b2e8-428a-b323-f5bad6405676"
+                LastKnownName="MessageOccurrenceSpecification26"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="2ff408bd-6d6a-4aae-87f3-a2a9f1ddcf18"
+                LastKnownName="MessageOccurrenceSpecification27"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="b8c8002f-6371-474a-ab2c-26f89bfc3756"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="111e17d7-3028-46d1-bf9c-6b68b839911b"
+                LastKnownName="MessageOccurrenceSpecification28"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="62b1b023-5e70-42f6-a425-3bc759e916b1"
+                LastKnownName="MessageOccurrenceSpecification29"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="5d8316c6-416a-42e7-ab98-9a04e0626ebe"
+            name="Apply"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="true">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e58eb77c-aef4-4c56-ae0b-f31df59405b1"
+                LastKnownName="MessageOccurrenceSpecification30"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="b324c95e-0fd3-4e75-ae76-8ddcba13907b"
+                LastKnownName="MessageOccurrenceSpecification31"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="1ff8c502-d0f2-47f9-897b-0d4ce8e119c6"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="3369d24a-0cfd-4682-ba78-7d64f673d088"
+                LastKnownName="MessageOccurrenceSpecification24"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="8d694a85-6d25-43a0-86e2-ddbee4251373"
+                LastKnownName="MessageOccurrenceSpecification25"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="94f2df2f-bea4-4e3a-bfbb-b8c870ea8cf1"
+            name="Save"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="6cbcb50a-9921-404d-9f2e-86795c783055"
+                LastKnownName="MessageOccurrenceSpecification32"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="775efecd-eba7-4569-9ee4-af6cf52be089"
+                LastKnownName="MessageOccurrenceSpecification33"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="ce01539d-8db4-4f6b-ba75-37b9c7a0270f"
+            name="Save"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="323cdeeb-0147-44d3-8128-15122793cf66"
+                LastKnownName="MessageOccurrenceSpecification36"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="17b6c492-c84b-495e-832b-abe49a8b5956"
+                LastKnownName="MessageOccurrenceSpecification37"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="c0d758e1-8de3-4baf-a2f5-16e325076546"
+            name="PublishEvents"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="c9a21e4f-6749-4c69-8153-ee9c48bf3988"
+                LastKnownName="MessageOccurrenceSpecification40"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="faa0eb7d-b37a-43c0-a13f-cb5af29af8aa"
+                LastKnownName="MessageOccurrenceSpecification41"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="5cef0a98-b52b-413d-8d97-8287e5c37bfa"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d2f73d8e-e7e4-4e80-a072-16046ec77ab0"
+                LastKnownName="MessageOccurrenceSpecification42"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="19caf4ac-b9d3-492b-8956-5a59941ecf10"
+                LastKnownName="MessageOccurrenceSpecification43"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="10402462-28a5-4913-907a-50311b0a06c3"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="fd262a8c-3dff-40d5-bb08-e638381211ed"
+                LastKnownName="MessageOccurrenceSpecification38"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="18a14cf0-a9ba-4c77-9015-1d2752ce7b56"
+                LastKnownName="MessageOccurrenceSpecification39"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="c0058224-8304-4687-b41f-5ddfdeae1612"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="31cc114b-14dc-4479-abe0-4ace238c12d3"
+                LastKnownName="MessageOccurrenceSpecification34"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="430fb137-7140-4a28-8928-67e910418254"
+                LastKnownName="MessageOccurrenceSpecification35"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="663911b9-63ec-4a9a-acb6-2c3bf41b8dff"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="24b85505-3695-4ca5-b256-e7c40e545117"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ceabf6d6-f66c-45f9-b05e-a96d8dc8a1a0"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="CQRS.Architecture.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="8c939e82-1694-4685-a7ac-01a6bf513ac6"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="023ae839-dbba-4687-b0c3-9f93dc2eb818"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="ec3caf2a-39ea-46b5-9e46-61d35b552da5"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="960a42bc-83d0-4316-993d-a133a4168f91"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="0a34ddca-964c-4011-958b-a202f292c1c6"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="eefab7f2-9e2f-406a-bc46-5c65b080436b"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="3bb0497d-f007-4598-a272-4b4ab81fb51f"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="cc7abca6-ea05-4399-9432-ad958c19d83f"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="60fd2959-49da-42ca-a9f4-a61970ad4847"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="bd7e7906-0f07-4928-a1a9-ab144a040a39"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="97b944a5-6151-47cf-bde5-6af315d3f371"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="e6b6c7ce-2a70-411e-a246-42314c09142f"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="9561470f-ff68-43a9-93b7-82d9637fa66f"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="8d91c972-cc30-4fff-bbd9-fb11ab88711c"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="c963c57b-0798-4c55-a318-216bd848f14c"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="f250cf83-411c-40c2-a84b-e6ec7f24dd69"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="f6c798a2-4793-4976-944d-5ec10292ecfe"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="607fbbae-cc9d-401f-aaba-0befa99a6366"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="eef8fcee-570e-4a07-8cc5-cda594abafe1"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="6de3b1eb-4acf-48f5-a739-4fdb23c7a400"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="0fe93ccd-96a8-4fd0-98b8-0dc1023dd2bf"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="a5deb23d-5e86-4048-9172-29b6fbf0e7b3"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="c51304c3-6f33-4005-ac36-67dfbf62d603"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="34f92fb2-a136-46ba-be3f-d0592a954c9b"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4D862568-AA66-4195-95AD-D987D429AE86}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CQRS.NSB.UI.Web</RootNamespace>
+    <AssemblyName>CQRS.NSB.UI.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NServiceBusModelingInstallPath>$(registry:HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\10.0_Config\InstalledProducts\NServiceBus.Modeling@InstallPath)</NServiceBusModelingInstallPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NServiceBus">
+      <HintPath>..\packages\NServiceBus.3.2.0\lib\net40\NServiceBus.dll</HintPath>
+    </Reference>
+    <Reference Include="NServiceBus.Core">
+      <HintPath>..\packages\NServiceBus.3.2.0\lib\net40\NServiceBus.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Elections\CreateElectionSender.cs">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/CQRS.NSB/Element/C:\Source Code\CQRS\NServiceBus\CQRS.NSB\CQRS.NSB.slnbldr%252fafb98f5f-cbf0-4cd2-bf9c-147655ec29b4</SourceModelReference>
+      <ItemGuid>e1155195-662c-4fa0-874b-1e1dc4ecfa8d</ItemGuid>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\GeneratedCode\Elections\CreateElectionSender.cs">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/CQRS.NSB/Element/C:\Source Code\CQRS\NServiceBus\CQRS.NSB\CQRS.NSB.slnbldr%252f8d7ece1b-1f34-4ac7-bcdb-e441e70db23c</SourceModelReference>
+      <ItemGuid>ba731edc-92d1-4067-a2ee-224588f6b227</ItemGuid>
+    </Compile>
+    <Compile Include="Infrastructure\MessageConventions.cs">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/CQRS.NSB/Product/C:\Source Code\CQRS\NServiceBus\CQRS.NSB\CQRS.NSB.slnbldr%252fef1f688f-171b-40b7-a4ec-c67298b5d63c</SourceModelReference>
+      <ItemGuid>b891e761-081c-4e0f-b911-5bd4a1814479</ItemGuid>
+    </Compile>
+    <Compile Include="Infrastructure\WebGlobalInitialization.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/CQRS.NSB/Product/C:\Source Code\CQRS\NServiceBus\CQRS.NSB\CQRS.NSB.slnbldr%252fef1f688f-171b-40b7-a4ec-c67298b5d63c</SourceModelReference>
+      <ItemGuid>bbfc4016-2b80-40cc-9b13-fb48ae1681f2</ItemGuid>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/CQRS.NSB/Product/C:\Source Code\CQRS\NServiceBus\CQRS.NSB\CQRS.NSB.slnbldr%252fef1f688f-171b-40b7-a4ec-c67298b5d63c</SourceModelReference>
+      <ItemGuid>edc86231-e853-426c-9192-008cb1af00a5</ItemGuid>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Infrastructure\GeneratedCode\Config\MessageForwardingInCaseOfFaultConfig.config">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/CQRS.NSB/Product/C:\Source Code\CQRS\NServiceBus\CQRS.NSB\CQRS.NSB.slnbldr%252fef1f688f-171b-40b7-a4ec-c67298b5d63c</SourceModelReference>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ItemGuid>854bb95d-1055-4c42-a287-b927e0412ae6</ItemGuid>
+    </Content>
+    <Content Include="Infrastructure\GeneratedCode\Config\MsmqTransportConfig.config">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/CQRS.NSB/Product/C:\Source Code\CQRS\NServiceBus\CQRS.NSB\CQRS.NSB.slnbldr%252fef1f688f-171b-40b7-a4ec-c67298b5d63c</SourceModelReference>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ItemGuid>e0740695-2aeb-4f27-8f6c-befe053bd506</ItemGuid>
+    </Content>
+    <Content Include="Infrastructure\GeneratedCode\Config\UnicastBusConfig.config">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/CQRS.NSB/Product/C:\Source Code\CQRS\NServiceBus\CQRS.NSB\CQRS.NSB.slnbldr%252fef1f688f-171b-40b7-a4ec-c67298b5d63c</SourceModelReference>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ItemGuid>b8f16ca5-db19-4b05-9fa7-5d67aafc3b76</ItemGuid>
+    </Content>
+    <Content Include="Infrastructure\Logging.config">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/CQRS.NSB/Product/C:\Source Code\CQRS\NServiceBus\CQRS.NSB\CQRS.NSB.slnbldr%252fef1f688f-171b-40b7-a4ec-c67298b5d63c</SourceModelReference>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ItemGuid>8d3ae81d-a33b-43ad-9e3b-8302f5eeb37a</ItemGuid>
+    </Content>
+    <Content Include="packages.config">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/CQRS.NSB/Product/C:\Source Code\CQRS\NServiceBus\CQRS.NSB\CQRS.NSB.slnbldr%252fef1f688f-171b-40b7-a4ec-c67298b5d63c</SourceModelReference>
+      <ItemGuid>1dd69785-3bb0-4f36-a35e-26fb25ccbded</ItemGuid>
+    </Content>
+    <None Include="UI.Web.endpoints">
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/CQRS.NSB/Product/C:\Source Code\CQRS\NServiceBus\CQRS.NSB\CQRS.NSB.slnbldr%252fef1f688f-171b-40b7-a4ec-c67298b5d63c</SourceModelReference>
+      <ItemGuid>1b7ad1b2-351c-4a73-924f-13e41daaeff4</ItemGuid>
+    </None>
+    <None Include="Web.Release.Debug">
+      <DependentUpon>Web.config</DependentUpon>
+      <SourceModelReference>modelbus://Microsoft.VisualStudio.Patterning.Runtime.Store/CQRS.NSB/Product/C:\Source Code\CQRS\NServiceBus\CQRS.NSB\CQRS.NSB.slnbldr%252fef1f688f-171b-40b7-a4ec-c67298b5d63c</SourceModelReference>
+      <ItemGuid>114443da-413d-4b3c-8b6c-683c356556c1</ItemGuid>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CQRS.NSB.InternalMessages\CQRS.NSB.InternalMessages.csproj">
+      <Project>{7224EB3F-95F8-4A00-8873-6180F52D8EC9}</Project>
+      <Name>CQRS.NSB.InternalMessages</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>23960</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

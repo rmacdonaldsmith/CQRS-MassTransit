@@ -1,0 +1,9 @@
+﻿<p>Election Id: @Model.Id
+<p>Participant Id: @Model.ParticipantId
+<p>Plan Code: @Model.PlanCode
+<p>Plan Year: @Model.PlanYear
+<p>Benefit Code: @Model.BenefitCode
+<p>Election Amount: @Model.ElectionAmount
+<p>Per Pay Period Amount: @Model.PerPayPeriodAmount
+<p>Reason: @Model.ElectionReason
+<p>Terminated: @Model.IsTerminated

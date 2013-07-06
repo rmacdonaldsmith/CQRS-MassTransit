@@ -1,0 +1,26 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ output extension=".cs" #>
+<#
+
+string _TempPath = System.IO.Path.Combine(System.IO.Path.GetTempPath(), "DtoMessages.cs");
+//Determine path to XSD using relative path to the TT file
+string _XsdPath = Host.ResolvePath(@"..\\XSD");
+string _SvcUtilPath = string.Format(@"{0}\Microsoft SDKs\Windows\v7.0A\Bin\SvcUtil.exe", Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86));
+
+var _StartInfo = new System.Diagnostics.ProcessStartInfo( _SvcUtilPath,
+		string.Format( "\"{0}\\DtoDefinitions.xsd\" /target:code /out:{1} /n:*,MHM.WinFlexOne.CQRS.Dtos /dconly /ImportXmlTypes", _XsdPath, _TempPath ) );
+_StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+
+var _Process = System.Diagnostics.Process.Start( _StartInfo );
+_Process.WaitForExit();
+if ( _Process.ExitCode != 0 )
+{
+	throw new ApplicationException( "SvcUtil.exe failed with exit code " + _Process.ExitCode.ToString() );
+}
+
+//read the contents of the cs file (ie. the code) and delete the temp file.
+string _ClassFile = System.IO.File.ReadAllText(_TempPath);
+System.IO.File.Delete(_TempPath);
+
+#>
+<#= _ClassFile #>

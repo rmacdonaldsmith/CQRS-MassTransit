@@ -1,0 +1,10 @@
+﻿@Master['MasterPage']
+
+@Section['Content']
+	<p>Send a test message to the service bus:<p>
+	<ul>
+		<li><a href="send/command/createclaim">Send CreateClaim command</a></li>
+	</ul>
+	<p>
+
+@EndSection

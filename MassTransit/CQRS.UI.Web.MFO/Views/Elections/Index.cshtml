@@ -1,0 +1,63 @@
+﻿@model IEnumerable<MHM.WinFlexOne.CQRS.Dtos.ElectionDto>
+
+@{
+    ViewBag.Title = "Your Elections";
+}
+
+<h2>Your Elections</h2>
+
+@Html.ActionLink("Make an Election", "NewFsa", "Elections")
+
+@Html.ValidationSummary(false)
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayName("Plan Year")
+        </th>
+        <th>
+            @Html.DisplayName("Benefit")
+        </th>
+        <th>
+            @Html.DisplayName("Terminated")
+        </th>
+        <th>
+            @Html.DisplayName("Qualifying Event")
+        </th>
+        <th>
+            @Html.DisplayName("Election Amount")
+        </th>
+        <th>
+            @Html.DisplayName("Balance")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlanYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlanYearBenefitDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsTerminated)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QualifyingEvent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ElectionAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Balance)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { electionId=item.Id }) |
+            @Html.ActionLink("Terminate", "Terminate", new { electionId=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

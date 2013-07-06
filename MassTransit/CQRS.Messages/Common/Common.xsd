@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 sp1 (x64) (http://www.altova.com) by Pasquale M Fatino (Wageworks, Inc.) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="Identifier">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:string"/>
+			<xs:element name="Domain" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Identifier" type="Identifier"/>
+	<xs:complexType name="CorrelatedMessage">
+		<xs:sequence>
+			<xs:element name="CorrelationId" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="CorrelatedMessage" type="CorrelatedMessage"/>
+</xs:schema>

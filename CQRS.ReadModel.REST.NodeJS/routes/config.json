@@ -1,0 +1,7 @@
+{
+	"connection": {
+		"dbName": "wf1_read_model",
+		"host": "localhost",
+		"port": "27017"
+	}
+}

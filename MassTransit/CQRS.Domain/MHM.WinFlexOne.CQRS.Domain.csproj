@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FD211C6B-A3CB-4C16-B3F4-99BCD39788AC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MHM.WinFlexOne.CQRS.Domain</RootNamespace>
+    <AssemblyName>MHM.WinFlexOne.CQRS.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonDomain">
+      <HintPath>..\packages\CommonDomain.1.4.0\lib\net40\CommonDomain.dll</HintPath>
+    </Reference>
+    <Reference Include="EventStore, Version=3.0.0.0, Culture=neutral, PublicKeyToken=7735eb81c0bd9948, processorArchitecture=MSIL">
+      <HintPath>..\packages\EventStore.3.0.11326.44\lib\net40\EventStore.dll</HintPath>
+    </Reference>
+    <Reference Include="MassTransit, Version=2.7.2.0, Culture=neutral, PublicKeyToken=b8e0e9f2f1e657fa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MassTransit.2.7.1\lib\net40\MassTransit.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\thirdparty\Ninject\Core\v3.0.0.15\NET3.5\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\RestSharp.104.1\lib\net4\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AggregateRoot.cs" />
+    <Compile Include="AggregateStateBase.cs" />
+    <Compile Include="Benefit\AssignBenefitToYearCommandHandler.cs" />
+    <Compile Include="Benefit\Benefit.cs" />
+    <Compile Include="Benefit\BenefitState.cs" />
+    <Compile Include="Benefit\DefineNewBenefitCommandHandler.cs" />
+    <Compile Include="Benefit\PlanYearBenefit.cs" />
+    <Compile Include="Claims\ClaimRequest.cs" />
+    <Compile Include="Claims\ClaimRequestCommandHandler.cs" />
+    <Compile Include="Claims\ClaimRequestState.cs" />
+    <Compile Include="Claims\DisburseClaimCommandHandler.cs" />
+    <Compile Include="Claims\RejectClaimRequestCommandHandler.cs" />
+    <Compile Include="Claims\VerifyCardUseCommandHandler.cs" />
+    <Compile Include="CommandResponderBase.cs" />
+    <Compile Include="DomainEvents.cs" />
+    <Compile Include="DomainException.cs" />
+    <Compile Include="DomainExtensions.cs" />
+    <Compile Include="Election\ChangeElectionAmountCommandHandler.cs" />
+    <Compile Include="Election\Election.cs" />
+    <Compile Include="Election\ElectionState.cs" />
+    <Compile Include="Election\MakeAnElectionCommandHandler.cs" />
+    <Compile Include="Election\TerminateElectionCommandHandler.cs" />
+    <Compile Include="IAggregateRoot.cs" />
+    <Compile Include="Participant\Participant.cs" />
+    <Compile Include="Plan\DefineNewPlanCommandHandler.cs" />
+    <Compile Include="Plan\DefineYearForPlanCommandHandler.cs" />
+    <Compile Include="Plan\Plan.cs" />
+    <Compile Include="Plan\PlanState.cs" />
+    <Compile Include="Plan\PlanYear.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\Repository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{00471A83-210E-4394-84A1-E0AB81EC29D4}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CQRS.Interfaces.Services\MHM.WinflexOne.CQRS.Interfaces.Services.csproj">
+      <Project>{36BDA9DD-430A-40A1-ABD6-872123F94A71}</Project>
+      <Name>MHM.WinflexOne.CQRS.Interfaces.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CQRS.Interfaces\MHM.WinFlexOne.CQRS.Interfaces.csproj">
+      <Project>{230600C4-94FC-4C17-8D0D-0030D72EDDF1}</Project>
+      <Name>MHM.WinFlexOne.CQRS.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CQRS.Messages\MHM.WinFlexOne.CQRS.Messages.csproj">
+      <Project>{33E90437-CFD1-48B9-BFCC-23FB733B3591}</Project>
+      <Name>MHM.WinFlexOne.CQRS.Messages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CQRS\MHM.WinFlexOne.CQRS.Common.csproj">
+      <Project>{67B7F984-9016-40A5-A24E-B9D4DDFB0FBD}</Project>
+      <Name>MHM.WinFlexOne.CQRS.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Readme\EventStore.license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Readme\EventStore - Architectural Overview.docx" />
+    <None Include="App_Readme\EventStore - Transactional Integrity.docx" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

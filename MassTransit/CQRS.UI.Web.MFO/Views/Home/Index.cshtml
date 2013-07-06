@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+        </div>
+    </section>
+}
+<h3>Select from one of the following:</h3>
+<ol class="round">
+    <li class="one">
+        <h5>Elections</h5>
+        @Html.ActionLink("View and manage your elections here.", "Index", "Elections")
+    </li>
+
+    <li class="two">
+        <h5>Claims</h5>
+        @Html.ActionLink("View and submit your claims here.", "Index", "Claims")
+    </li>
+
+    <li class="three">
+        <h5>Enrollment</h5>
+        @Html.ActionLink("Make elections for benefits here.", "Index", "Enrollment")
+    </li>
+</ol>

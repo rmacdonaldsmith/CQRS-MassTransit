@@ -1,0 +1,23 @@
+﻿@using System.ComponentModel
+@model IEnumerable<MHM.WinFlexOne.CQRS.Dtos.BenefitDto>
+
+@{
+    ViewBag.Title = "Benefits Summary";
+    var grid = new WebGrid(Model);
+}
+
+<h2>Benefits Summary</h2>
+
+<p>
+    @Html.ActionLink("Define a new benefit here", "Create", "Benefits") 
+</p>
+
+@grid.GetHtml(columns: new []
+    {
+        grid.Column("Id"),
+        grid.Column("BenefitType"),
+        grid.Column("Description"),
+        grid.Column("HasMaxElectionAmount"),
+        grid.Column("MaxElectionAmount"),
+        grid.Column("PlanId"),
+    })

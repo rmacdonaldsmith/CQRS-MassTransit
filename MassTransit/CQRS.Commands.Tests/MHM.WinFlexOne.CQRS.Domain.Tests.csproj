@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AEFA9164-0506-48E5-B332-82BB56A48153}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MHM.WinFlexOne.CQRS.Domain.Tests</RootNamespace>
+    <AssemblyName>MHM.WinFlexOne.CQRS.Domain.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EventStore">
+      <HintPath>..\packages\EventStore.3.0.11326.44\lib\net40\EventStore.dll</HintPath>
+    </Reference>
+    <Reference Include="Magnum">
+      <HintPath>..\packages\Magnum.2.1.0\lib\NET40\Magnum.dll</HintPath>
+    </Reference>
+    <Reference Include="MassTransit, Version=2.7.0.0, Culture=neutral, PublicKeyToken=b8e0e9f2f1e657fa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MassTransit.2.7.1\lib\net40\MassTransit.dll</HintPath>
+    </Reference>
+    <Reference Include="MassTransit.Transports.MSMQ, Version=2.7.0.0, Culture=neutral, PublicKeyToken=b8e0e9f2f1e657fa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MassTransit.2.7.1\lib\net40\MassTransit.Transports.MSMQ.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\thirdparty\NUnit\2.5.10\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FakeBenefitsService.cs" />
+    <Compile Include="FakeCompaniesService.cs" />
+    <Compile Include="FakeElectionsService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestSpecs\Benefit\when_assigning_a_benefit_to_a_plan_year.cs" />
+    <Compile Include="TestSpecs\Benefit\when_defining_a_new_benefit.cs" />
+    <Compile Include="TestSpecs\Claim\when_a_claim_cannot_be_disbursed.cs" />
+    <Compile Include="TestSpecs\Claim\when_a_claim_exceeds_the_election_balance.cs" />
+    <Compile Include="TestSpecs\Claim\when_a_claim_is_disbursed.cs" />
+    <Compile Include="TestSpecs\Claim\when_a_claim_request_is_rejected.cs" />
+    <Compile Include="TestSpecs\Claim\when_manually_substantiating_a_claim_request.cs" />
+    <Compile Include="TestSpecs\Claim\when_submitting_a_claim_that_needs_substantiation.cs" />
+    <Compile Include="TestSpecs\Claim\when_submitting_a_new_claim_request_that_can_be_autosubstantiated.cs" />
+    <Compile Include="TestSpecs\Election\when_changing_the_election_amount.cs" />
+    <Compile Include="TestSpecs\Election\when_changing_the_election_amount_of_a_terminated_election.cs" />
+    <Compile Include="TestSpecs\Election\when_terminating_an_already_terminated_election.cs" />
+    <Compile Include="TestSpecs\Election\when_terminating_an_existing_election.cs" />
+    <Compile Include="TestFormatter.cs" />
+    <Compile Include="TestSpecs\Election\when_making_a_new_election.cs" />
+    <Compile Include="TestSpecs\Plan\when_defining_a_new_plan_year.cs" />
+    <Compile Include="TestSpecs\Plan\when_defining_a_new_plan_year_and_the_plan_year_already_exists.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{00471A83-210E-4394-84A1-E0AB81EC29D4}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CQRS.DomainTesting\CQRS.DomainTesting.csproj">
+      <Project>{D62D6814-5854-4596-96FA-51A84AECD7C3}</Project>
+      <Name>CQRS.DomainTesting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CQRS.Domain\MHM.WinFlexOne.CQRS.Domain.csproj">
+      <Project>{FD211C6B-A3CB-4C16-B3F4-99BCD39788AC}</Project>
+      <Name>MHM.WinFlexOne.CQRS.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CQRS.Events\MHM.WinFlexOne.CQRS.Events.csproj">
+      <Project>{7D5922DB-4EB9-43B1-BD0F-381B91BE8149}</Project>
+      <Name>MHM.WinFlexOne.CQRS.Events</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CQRS.Interfaces.Services\MHM.WinflexOne.CQRS.Interfaces.Services.csproj">
+      <Project>{36BDA9DD-430A-40A1-ABD6-872123F94A71}</Project>
+      <Name>MHM.WinflexOne.CQRS.Interfaces.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CQRS.Interfaces\MHM.WinFlexOne.CQRS.Interfaces.csproj">
+      <Project>{230600C4-94FC-4C17-8D0D-0030D72EDDF1}</Project>
+      <Name>MHM.WinFlexOne.CQRS.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CQRS.Messages\MHM.WinFlexOne.CQRS.Messages.csproj">
+      <Project>{33E90437-CFD1-48B9-BFCC-23FB733B3591}</Project>
+      <Name>MHM.WinFlexOne.CQRS.Messages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CQRS\MHM.WinFlexOne.CQRS.Common.csproj">
+      <Project>{67B7F984-9016-40A5-A24E-B9D4DDFB0FBD}</Project>
+      <Name>MHM.WinFlexOne.CQRS.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

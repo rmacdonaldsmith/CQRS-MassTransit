@@ -1,0 +1,53 @@
+﻿@model MHM.WinFlexOne.CQRS.Commands.DefineNewPlan
+
+@{
+    ViewBag.Title = "Define a New Plan";
+}
+
+<h2>Define a New Plan</h2>
+
+@Html.ValidationSummary(false)
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>DefineNewPlan</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PlanType)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("PlanType", (SelectList)ViewBag.PlanTypes)
+            @Html.ValidationMessageFor(model => model.PlanType)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Description)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Description)
+            @Html.ValidationMessageFor(model => model.Description)
+        </div>
+
+        <p>
+            <input type="submit" value="DefinePlan" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

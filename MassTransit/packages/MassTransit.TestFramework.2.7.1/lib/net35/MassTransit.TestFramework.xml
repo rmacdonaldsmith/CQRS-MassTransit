@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MassTransit.TestFramework</name>
+    </assembly>
+    <members>
+        <member name="T:MassTransit.TestFramework.Fixtures.EndpointTestFixture`1">
+            <summary>
+            Test fixture that tests a single endpoint, given
+            a transport factory. The transport factory needs to
+            have a default public c'tor. The endpoint is one-to-one
+            with the bus in this test fixture.
+            </summary>
+            <typeparam name="TTransportFactory">Type of transport factory to create the endpoint with</typeparam>
+        </member>
+        <member name="M:MassTransit.TestFramework.Fixtures.EndpointTestFixture`1.Setup">
+            <summary>
+            Sets up the endpoint factory by calling the configurator (see <see cref="M:MassTransit.TestFramework.Fixtures.EndpointTestFixture`1.ConfigureEndpointFactory(System.Action{MassTransit.EndpointConfigurators.EndpointFactoryConfigurator})"/>)
+            and sets a few defaults on the service bus factory.
+            </summary>
+        </member>
+        <member name="M:MassTransit.TestFramework.Fixtures.EndpointTestFixture`1.FixtureTeardown">
+            <summary>
+            Tears down the buses,
+            tears down the endpoint caches.
+            </summary>
+        </member>
+        <member name="M:MassTransit.TestFramework.Fixtures.EndpointTestFixture`1.#ctor">
+            <summary>
+            c'tor that sets up the endpoint configurator, its default settings,
+            and uses the class type parameter <see cref="!:TTransportFactory"/> 
+            as the transport for that endpoint.
+            </summary>
+        </member>
+        <member name="M:MassTransit.TestFramework.Fixtures.EndpointTestFixture`1.AddTransport``1">
+            <summary>
+            Add further transport factories to the endpoint configured as a 
+            result of this test fixture set up logic.
+            </summary>
+            <typeparam name="T">type of transport factory to add.</typeparam>
+        </member>
+        <member name="M:MassTransit.TestFramework.Fixtures.EndpointTestFixture`1.ConfigureEndpointFactory(System.Action{MassTransit.EndpointConfigurators.EndpointFactoryConfigurator})">
+            <summary>
+            Call this method from anytime before the test fixture set up
+            starts running (i.e. in the c'tor) to configure the endpoint factory.
+            </summary>
+            <param name="configure">The action that configures the endpoint factory configurator.</param>
+        </member>
+        <member name="M:MassTransit.TestFramework.Fixtures.EndpointTestFixture`1.SetupSagaRepository``1">
+            <summary>
+            Sets up a new in memory saga repository for the passed type of saga.
+            </summary>
+            <typeparam name="TSaga">The saga to test.</typeparam>
+            <returns>An instance of the saga repository.</returns>
+        </member>
+        <member name="F:MassTransit.TestFramework.Fixtures.EndpointTestFixture`1.EndpointFactoryConfigurator">
+            <summary>
+            Set this property to have custom [<see cref="T:NUnit.Framework.TestFixtureSetUpAttribute"/>] logic.
+            </summary>
+        </member>
+        <member name="M:MassTransit.TestFramework.Fixtures.EndpointTestFixture`1.SetupServiceBus(System.Uri,System.Action{MassTransit.BusConfigurators.ServiceBusConfigurator})">
+            <summary>
+            Call this method to set up a new service bus and add it to the <see cref="P:MassTransit.TestFramework.Fixtures.EndpointTestFixture`1.Buses"/> list.
+            </summary>
+            <param name="uri">The bus endpoint uri (its consumption point)</param>
+            <param name="configure">The configuration action, that allows you to configure the new
+            bus as you please.</param>
+            <returns>The new service bus that was configured.</returns>
+        </member>
+        <member name="M:MassTransit.TestFramework.Fixtures.EndpointTestFixture`1.SetupServiceBus(System.Uri)">
+            <summary>
+            See <see cref="M:MassTransit.TestFramework.Fixtures.EndpointTestFixture`1.SetupServiceBus(System.Uri,System.Action{MassTransit.BusConfigurators.ServiceBusConfigurator})"/>.
+            </summary>
+            <param name="uri">The uri to set the service bus up at.</param>
+            <returns>The service bus instance.</returns>
+        </member>
+        <member name="M:MassTransit.TestFramework.Fixtures.EndpointTestFixture`1.ConfigureServiceBus(System.Uri,MassTransit.BusConfigurators.ServiceBusConfigurator)">
+            <summary>
+            This method does nothing at all. Override (you don't need to call into the base)
+            to provide the default action to configure the buses newly created, with.
+            </summary>
+            <param name="uri">The uri that is passed from the configuration lambda of the bus.</param>
+            <param name="configurator">The service bus configurator.</param>
+        </member>
+        <member name="P:MassTransit.TestFramework.Fixtures.EndpointTestFixture`1.Buses">
+            <summary>
+            Gets the list of buses that are created in this test fixture. Call 
+            <see cref="M:MassTransit.TestFramework.Fixtures.EndpointTestFixture`1.SetupServiceBus(System.Uri,System.Action{MassTransit.BusConfigurators.ServiceBusConfigurator})"/>
+            to create more of them
+            </summary>
+        </member>
+        <member name="P:MassTransit.TestFramework.Fixtures.EndpointTestFixture`1.EndpointCache">
+            <summary>
+            Gets the endpoint cache implementation used in this test. Is set up
+            during the [TestFixtureSetUp] phase  aka. [Given] phase.
+            </summary>
+        </member>
+        <member name="T:MassTransit.TestFramework.Fixtures.TwoBusTestFixture`1">
+            <summary>
+            <para>WARN: this bus test fixture DOES NOT call <see cref="M:MassTransit.TestFramework.Fixtures.EndpointTestFixture`1.ConfigureServiceBus(System.Uri,MassTransit.BusConfigurators.ServiceBusConfigurator)"/></para>
+            <para>Test fixture that creates two buses, one "remote" and one "local". Of course, both are in-memory;
+            but this test fixture makes sure that the two buses uses the same loopback router, while still having 
+            a non-loopback transport factory.</para>
+            </summary>
+            <typeparam name="TTransportFactory"></typeparam>
+        </member>
+        <member name="M:MassTransit.TestFramework.Fixtures.TwoBusTestFixture`1.TwoBusTestFixtureSetup">
+            <summary>
+            Sets up the remote and local bus and their target coordinators/subscription
+            routers.
+            </summary>
+        </member>
+        <member name="M:MassTransit.TestFramework.Fixtures.TwoBusTestFixture`1.TwoBusTestFixtureTeardown">
+            <summary>
+            Makes remote and local bus = null.
+            </summary>
+        </member>
+        <member name="M:MassTransit.TestFramework.Fixtures.TwoBusTestFixture`1.ConfigureLocalBus(MassTransit.BusConfigurators.ServiceBusConfigurator)">
+            <summary>
+            You can override to configure the local bus; but if you don't call base method,
+            you will not get the subscription loopback router.
+            </summary>
+            <param name="configurator"></param>
+        </member>
+        <member name="M:MassTransit.TestFramework.Fixtures.TwoBusTestFixture`1.ConfigureRemoteBus(MassTransit.BusConfigurators.ServiceBusConfigurator)">
+            <summary>
+            You can override to configure the remote bus; but if you don't call base method,
+            you will not get the subscription loopback router.
+            </summary>
+            <param name="configurator"></param>
+        </member>
+        <member name="P:MassTransit.TestFramework.Fixtures.TwoBusTestFixture`1.LocalUri">
+            <summary>
+            Gets or sets the local uri, i.e. the bus endpoint for the local bus. Set this property in the c'tor of your
+            subclassing test fixture.
+            </summary>
+        </member>
+        <member name="P:MassTransit.TestFramework.Fixtures.TwoBusTestFixture`1.RemoteUri">
+            <summary>
+            Gets or sets the remote uri, i.e. the bus endpoint for the remote bus. Set this property in the c'tor of your
+            subclassing test fixture.
+            </summary>
+        </member>
+        <member name="P:MassTransit.TestFramework.Fixtures.TwoBusTestFixture`1.LocalBus">
+            <summary>
+            Gets the local bus. Is null when c'tor runs.
+            </summary>
+        </member>
+        <member name="P:MassTransit.TestFramework.Fixtures.TwoBusTestFixture`1.RemoteBus">
+            <summary>
+            Gets the remote bus. Is null when c'tor runs.
+            </summary>
+        </member>
+        <member name="T:MassTransit.TestFramework.Future`1">
+            <summary>
+            A future object that supports both callbacks and asynchronous waits once a future value becomes available.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+    </members>
+</doc>

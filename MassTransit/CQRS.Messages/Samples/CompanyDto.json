@@ -1,0 +1,58 @@
+{
+	"CompanyDto": {
+		"Id": "be8ffbd0-c140-4ec1-82bd-fc2955000b23",
+		"CoCode": "MHMR",
+		"AdmCode": "MHMRASP",
+		"CompanyName": "MHM Resources",
+		"ExtensionData": null,
+		"Plans": [
+			{
+				"Id": "be8ffbd0-c140-4ec1-82bd-fc2955000b24",
+				"ExtensionData": null,
+				"PlanType": "Section 125 - FSA",
+				"Name": "FSA Plan",
+				"Description": "FSA plan",
+				"PlanYears": [
+					{
+						"Id": "be8ffbd0-c140-4ec1-82bd-fc2955000b26",
+						"ExtensionData": null,
+						"Name": "2012 FSA Plan",
+						"Year": 2012,
+						"Starts": "2012-01-01T00:00:47Z",
+						"Ends": "2012-12-31T23:30:47Z"
+					}, {
+						"Id": "be8ffbd0-c140-4ec1-82bd-fc2955000b27",
+						"ExtensionData": null,
+						"Name": "2013 FSA Plan",
+						"Year": 2013,
+						"Starts": "2013-01-01T00:00:47Z",
+						"Ends": "2013-12-31T23:30:47Z"
+					}
+				]
+			}, {
+				"Id": "be8ffbd0-c140-4ec1-82bd-fc2955000b25",
+				"ExtensionData": null,
+				"PlanType": "Section 105 - HRA",
+				"Name": "HRA Plan",
+				"Description": "HRA Plan",
+				"PlanYears": [
+					{
+						"Id": "be8ffbd0-c140-4ec1-82bd-fc2955000b28",
+						"ExtensionData": null,
+						"Name": "HRA 2012 Plan",
+						"Year": 2012,
+						"Starts": "2012-01-01T00:00:47Z",
+						"Ends": "2012-12-31T23:30:47Z"
+					}, {
+						"Id": "be8ffbd0-c140-4ec1-82bd-fc2955000b29",
+						"ExtensionData": null,
+						"Name": "HRA 2013 Plan",
+						"Year": 2013,
+						"Starts": "2013-01-01T00:00:47Z",
+						"Ends": "2013-12-31T23:30:47Z"
+					}
+				]
+			}
+		]
+	}
+}

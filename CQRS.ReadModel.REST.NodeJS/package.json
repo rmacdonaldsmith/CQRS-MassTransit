@@ -1,0 +1,9 @@
+{
+	"name": "MHM.WinFlexOne.CQRS.ReadModel.NodeJS",
+	"description": "A RESTful API to expose the data in our read model.",
+	"version": "0.0.1",
+	"private": "true",
+	"dependencies": {
+		"express": "3.x"
+	}
+}

@@ -1,0 +1,61 @@
+﻿@model MHM.WinFlexOne.CQRS.Commands.AssignBenefitToYear
+
+@{
+    ViewBag.Title = "AssignToYear";
+}
+
+<h2>Assign Benefit To Year</h2>
+
+@Html.ValidationSummary(false)
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>AssignBenefitToYear</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PlanYear)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("PlanYear", (SelectList)ViewBag.PlanYears)
+            @Html.ValidationMessageFor(model => model.PlanYear)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HasMaxAnnualAmount)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HasMaxAnnualAmount)
+            @Html.ValidationMessageFor(model => model.HasMaxAnnualAmount)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MaxAnnualAmount)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MaxAnnualAmount)
+            @Html.ValidationMessageFor(model => model.MaxAnnualAmount)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.StartDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.StartDate)
+            @Html.ValidationMessageFor(model => model.StartDate)
+        </div>
+            @Html.Hidden("CompanyId", (string)ViewBag.CompanyId)
+        <p>
+            <input type="submit" value="AssignToYear" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "List")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
