@@ -65,13 +65,17 @@
       <Project>{00471A83-210E-4394-84A1-E0AB81EC29D4}</Project>
       <Name>Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CQRS.Domain\MHM.WinFlexOne.CQRS.Domain.csproj">
+    <ProjectReference Include="..\CQRS.Domain\CQRS.Domain.csproj">
       <Project>{FD211C6B-A3CB-4C16-B3F4-99BCD39788AC}</Project>
-      <Name>MHM.WinFlexOne.CQRS.Domain</Name>
+      <Name>CQRS.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CQRS.Interfaces\MHM.WinFlexOne.CQRS.Interfaces.csproj">
+    <ProjectReference Include="..\CQRS.Interfaces\CQRS.Interfaces.csproj">
       <Project>{230600C4-94FC-4C17-8D0D-0030D72EDDF1}</Project>
-      <Name>MHM.WinFlexOne.CQRS.Interfaces</Name>
+      <Name>CQRS.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CQRS\CQRS.Common.csproj">
+      <Project>{67B7F984-9016-40A5-A24E-B9D4DDFB0FBD}</Project>
+      <Name>CQRS.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

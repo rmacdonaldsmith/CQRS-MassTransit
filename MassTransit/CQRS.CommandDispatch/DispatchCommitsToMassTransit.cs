@@ -3,7 +3,7 @@ using EventStore.Dispatcher;
 using MassTransit;
 using log4net;
 
-namespace MHM.WinFlexOne.CQRS.CommandDispatch
+namespace CQRS.CommandDispatch
 {
     public class DispatchCommitsToMassTransit : IDispatchCommits
     {

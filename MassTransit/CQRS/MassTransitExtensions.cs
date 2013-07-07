@@ -2,7 +2,7 @@
 using System.Threading;
 using MassTransit;
 
-namespace MHM.WinFlexOne.CQRS
+namespace CQRS.Common
 {
     public static class MassTransitExtensions
     {

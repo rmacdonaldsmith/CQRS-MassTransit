@@ -1,6 +1,6 @@
-﻿using MHM.WinFlexOne.CQRS.Interfaces.Events;
+﻿using CQRS.Interfaces.Events;
 
-namespace MHM.WinFlexOne.CQRS.Events
+namespace CQRS.Messages.Events
 {
     public partial class ElectionTerminatedEvent : IEvent
     {

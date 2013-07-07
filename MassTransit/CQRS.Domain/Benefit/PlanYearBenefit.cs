@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Common;
 
-namespace MHM.WinFlexOne.CQRS.Domain.Benefit
+namespace CQRS.Domain.Benefit
 {
     public class PlanYearBenefit
     {

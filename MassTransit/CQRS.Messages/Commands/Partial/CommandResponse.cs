@@ -1,6 +1,6 @@
-﻿using MHM.WinFlexOne.CQRS.Interfaces;
+﻿using CQRS.Interfaces;
 
-namespace MHM.WinFlexOne.CQRS.Commands
+namespace CQRS.Commands
 {
     public partial class CommandResponse : IMessage
     {

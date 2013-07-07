@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using CQRS.DomainTesting;
-using MHM.WinFlexOne.CQRS.Interfaces.Commands;
+using CQRS.Interfaces.Commands;
 
-namespace MHM.WinFlexOne.CQRS.Domain.Tests
+namespace CQRS.Domain.Tests
 {
     public class TestFormatter
     {

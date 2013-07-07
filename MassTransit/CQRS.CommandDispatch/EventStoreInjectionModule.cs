@@ -1,19 +1,20 @@
 ﻿using System.Linq;
 using System.Reflection;
 using Autofac;
+using CQRS.Common;
+using CQRS.Common.EventPersistence;
+using CQRS.Interfaces.Events;
+using CQRS.Messages.Events;
 using EventStore;
 using EventStore.Dispatcher;
 using EventStore.Logging.Log4Net;
 using EventStore.Serialization;
-using MHM.WinFlexOne.CQRS.EventPersistence;
-using MHM.WinFlexOne.CQRS.Events;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
 using MassTransit;
 using MongoDB.Bson.Serialization;
 using log4net;
 using Module = Autofac.Module;
 
-namespace MHM.WinFlexOne.CQRS.CommandDispatch
+namespace CQRS.CommandDispatch
 {
     public class EventStoreInjectionModule : Module
     {

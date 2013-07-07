@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Web.Mvc;
-using MHM.WinFlexOne.CQRS.Commands;
+using CQRS.Commands;
 
 namespace CQRS.UI.Web.MFO.Models
 {

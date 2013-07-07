@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using MHM.WinflexOne.CQRS.Interfaces.Services.ReadModel;
+using CQRS.Interfaces.Services.ReadModel;
 using RestSharp;
 
 namespace CQRS.ReadModel.Client

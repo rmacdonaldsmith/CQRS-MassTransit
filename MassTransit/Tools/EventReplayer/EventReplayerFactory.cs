@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using Autofac;
 using Autofac.Core;
+using CQRS.Interfaces.Events;
 using EventStore;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
 using MongoDB.Driver;
 
 namespace EventReplayer

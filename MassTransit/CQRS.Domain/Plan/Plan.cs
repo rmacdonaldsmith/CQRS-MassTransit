@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Events;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
+using CQRS.Commands;
+using CQRS.Interfaces.Events;
+using CQRS.Messages.Events;
 
-namespace MHM.WinFlexOne.CQRS.Domain.Plan
+namespace CQRS.Domain.Plan
 {
     public class Plan : AggregateRoot
     {

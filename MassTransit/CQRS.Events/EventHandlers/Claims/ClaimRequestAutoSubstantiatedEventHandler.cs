@@ -1,9 +1,10 @@
-﻿using MHM.WinFlexOne.CQRS.Dtos;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
+﻿using CQRS.Interfaces.Events;
+using CQRS.Messages.Events;
+using MHM.WinFlexOne.CQRS.Dtos;
 using MassTransit;
 using MongoDB.Driver;
 
-namespace MHM.WinFlexOne.CQRS.Events.EventHandlers.Claims
+namespace CQRS.Events.EventHandlers.Claims
 {
     public class ClaimRequestAutoSubstantiatedEventHandler : Handles<ClaimRequestAutoSubstantiatedEvent>, Consumes<ClaimRequestAutoSubstantiatedEvent>.All
     {

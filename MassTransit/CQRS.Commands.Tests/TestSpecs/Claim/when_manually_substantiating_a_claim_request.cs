@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using CQRS.Commands;
+using CQRS.Domain.Claims;
+using CQRS.Domain.Repositories;
 using CQRS.DomainTesting;
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Domain.Claims;
-using MHM.WinFlexOne.CQRS.Domain.Repositories;
-using MHM.WinFlexOne.CQRS.Events;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
+using CQRS.Interfaces.Events;
+using CQRS.Messages.Events;
 
-namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Claim
+namespace CQRS.Domain.Tests.TestSpecs.Claim
 {
     public class when_manually_substantiating_a_claim_request : EventSpecification<VerifyCardUse>
     {
@@ -53,6 +53,7 @@ namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Claim
                     new CardUseVerifiedEvent
                         {
                             ClaimRequestId = _claimRequestId,
+                            Version = 1
                         }
                 };
         }

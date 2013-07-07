@@ -1,9 +1,9 @@
 ﻿using System;
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Domain.Repositories;
-using MHM.WinFlexOne.CQRS.Interfaces.Commands;
+using CQRS.Commands;
+using CQRS.Domain.Repositories;
+using CQRS.Interfaces.Commands;
 
-namespace MHM.WinFlexOne.CQRS.Domain.Claims
+namespace CQRS.Domain.Claims
 {
     public class VerifyCardUseCommandHandler : CommandResponderBase<VerifyCardUse>, Handles<VerifyCardUse>
     {

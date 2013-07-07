@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
+using CQRS.Commands;
+using CQRS.Common;
 using CQRS.DomainTesting;
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
+using CQRS.Interfaces.Events;
 using NUnit.Framework;
 
-namespace MHM.WinFlexOne.CQRS.TimeoutService.Tests
+namespace CQRS.TimeoutService.Tests
 {
     [TestFixture]
     public class TimeoutRegistryTests

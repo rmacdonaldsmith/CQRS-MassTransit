@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using MHM.WinFlexOne.CQRS.Domain;
-using MHM.WinFlexOne.CQRS.Domain.Repositories;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
+using CQRS.Domain;
+using CQRS.Domain.Repositories;
+using CQRS.Interfaces.Events;
 
 namespace CQRS.DomainTesting
 {

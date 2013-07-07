@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using MHM.WinFlexOne.CQRS.Events;
+using CQRS.Messages.Events;
 using MassTransit;
 using MassTransit.Saga;
 using MassTransit.Services.Timeout.Messages;

@@ -1,6 +1,6 @@
 using System;
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Interfaces.Commands;
+using CQRS.Commands;
+using CQRS.Interfaces.Commands;
 
 namespace CQRS.UI.Web.Nancy.Services
 {

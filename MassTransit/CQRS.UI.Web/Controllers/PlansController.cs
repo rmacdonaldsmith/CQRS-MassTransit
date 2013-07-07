@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
-using CQRS.UI.Web.Infrastructure;
-using MHM.WinFlexOne.CQRS.Client;
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinflexOne.CQRS.Interfaces.Services.ReadModel;
+using CQRS.Commands;
+using CQRS.Common.Client;
+using CQRS.Interfaces.Services.ReadModel;
 
 namespace CQRS.UI.Web.EFO.Controllers
 {

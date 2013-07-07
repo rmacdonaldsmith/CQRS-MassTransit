@@ -4,11 +4,11 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 using CQRS.DomainTesting;
-using MHM.WinFlexOne.CQRS.Interfaces.Commands;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
+using CQRS.Interfaces.Commands;
+using CQRS.Interfaces.Events;
 using NUnit.Framework;
 
-namespace MHM.WinFlexOne.CQRS.TimeoutService.Tests
+namespace CQRS.TimeoutService.Tests
 {
     public abstract class TimeoutSpecification<TCommand> where TCommand : ICommand
     {
@@ -32,7 +32,7 @@ namespace MHM.WinFlexOne.CQRS.TimeoutService.Tests
         /// The command handler that will initialize the domin object and invoke the command on the domain object
         /// </summary>
         /// <returns></returns>
-        public abstract Interfaces.Commands.Handles<TCommand> OnHandler();
+        public abstract global::CQRS.Interfaces.Commands.Handles<TCommand> OnHandler();
 
         /// <summary>
         /// The events that we expect to the generated when the command is applied to the domain object

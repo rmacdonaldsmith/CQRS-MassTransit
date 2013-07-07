@@ -1,8 +1,6 @@
-﻿using System;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
-using MassTransit;
+﻿using CQRS.Interfaces.Events;
 
-namespace MHM.WinFlexOne.CQRS.Events
+namespace CQRS.Messages.Events
 {
     public partial class CardUseVerifiedEvent : IEvent
     {

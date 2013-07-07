@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Diagnostics;
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Events;
+using CQRS.Commands;
+using CQRS.Messages.Events;
 using Magnum.StateMachine;
 using MassTransit;
 using MassTransit.Saga;

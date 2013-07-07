@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
+using CQRS.Commands;
+using CQRS.Domain.Claims;
+using CQRS.Domain.Repositories;
 using CQRS.DomainTesting;
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Domain.Claims;
-using MHM.WinFlexOne.CQRS.Domain.Repositories;
+using CQRS.Interfaces.Events;
+using CQRS.Messages.Events;
 using MHM.WinFlexOne.CQRS.Dtos;
-using MHM.WinFlexOne.CQRS.Events;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
 
-namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Claim
+namespace CQRS.Domain.Tests.TestSpecs.Claim
 {
     public class when_submitting_a_claim_that_needs_substantiation : EventSpecification<SubmitClaimRequest>
     {
@@ -76,6 +74,7 @@ namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Claim
                             ParticipantId = _participantId,
                             ProviderName = "provider name",
                             Reason = "Claim request amount is not recognised as a copay amount. Participant must substantiate this card use",
+                            Version = 1
                         }
                 };
         }

@@ -1,4 +1,4 @@
-﻿using MHM.WinFlexOne.CQRS.Interfaces;
+﻿using CQRS.Interfaces;
 
 namespace MHM.WinFlexOne.CQRS.Dtos
 {

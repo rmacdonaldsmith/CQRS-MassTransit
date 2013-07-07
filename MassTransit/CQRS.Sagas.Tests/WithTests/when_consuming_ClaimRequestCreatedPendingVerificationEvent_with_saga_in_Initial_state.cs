@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using MHM.WinFlexOne.CQRS.Events;
+using CQRS.Messages.Events;
 using MassTransit.Services.Timeout.Messages;
 using MassTransit.Testing;
 using MassTransit.Testing.TestInstanceConfigurators;

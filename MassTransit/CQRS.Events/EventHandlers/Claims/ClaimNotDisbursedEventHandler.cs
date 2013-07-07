@@ -1,8 +1,9 @@
-﻿using MHM.WinFlexOne.CQRS.Interfaces.Events;
+﻿using CQRS.Interfaces.Events;
+using CQRS.Messages.Events;
 using MassTransit;
 using MongoDB.Driver;
 
-namespace MHM.WinFlexOne.CQRS.Events.EventHandlers.Claims
+namespace CQRS.Events.EventHandlers.Claims
 {
     public class ClaimNotDisbursedEventHandler : Handles<ClaimNotDisbursedEvent>, Consumes<ClaimNotDisbursedEvent>.All
     {

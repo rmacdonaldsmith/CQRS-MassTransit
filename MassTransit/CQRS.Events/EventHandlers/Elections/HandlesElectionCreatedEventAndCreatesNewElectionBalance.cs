@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using CQRS.Interfaces.Events;
+using CQRS.Messages.Events;
 using MHM.WinFlexOne.CQRS.Dtos;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
 using MassTransit;
 using MongoDB.Driver;
 
-namespace MHM.WinFlexOne.CQRS.Events.EventHandlers.Elections
+namespace CQRS.Events.EventHandlers.Elections
 {
     public class HandlesElectionCreatedEventAndCreatesNewElectionBalance : Handles<ElectionMadeEvent>, Consumes<ElectionMadeEvent>.All
     {

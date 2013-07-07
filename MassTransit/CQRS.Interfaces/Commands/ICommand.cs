@@ -1,4 +1,4 @@
-namespace MHM.WinFlexOne.CQRS.Interfaces.Commands
+namespace CQRS.Interfaces.Commands
 {
     public interface ICommand : IMessage
     {

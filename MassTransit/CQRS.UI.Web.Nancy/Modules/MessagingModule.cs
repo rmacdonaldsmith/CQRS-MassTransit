@@ -1,4 +1,4 @@
-﻿using MHM.WinFlexOne.CQRS.Commands;
+﻿using CQRS.Commands;
 using MassTransit;
 using Nancy;
 

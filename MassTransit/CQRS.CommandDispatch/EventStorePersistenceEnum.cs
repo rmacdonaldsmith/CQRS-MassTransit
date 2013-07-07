@@ -1,4 +1,4 @@
-﻿namespace MHM.WinFlexOne.CQRS.CommandDispatch
+﻿namespace CQRS.CommandDispatch
 {
     public enum EventStorePersistenceEnum
     {

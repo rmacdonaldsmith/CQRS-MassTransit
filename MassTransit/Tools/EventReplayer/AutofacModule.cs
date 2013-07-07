@@ -2,13 +2,13 @@
 using System.Linq;
 using System.Reflection;
 using Autofac;
+using CQRS.Events.EventHandlers.Elections;
+using CQRS.Interfaces.Events;
+using CQRS.Messages.Events;
 using Common;
 using EventStore;
 using EventStore.Logging.Log4Net;
 using EventStore.Serialization;
-using MHM.WinFlexOne.CQRS.Events;
-using MHM.WinFlexOne.CQRS.Events.EventHandlers.Elections;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
 using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
 using Module = Autofac.Module;

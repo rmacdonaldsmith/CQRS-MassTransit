@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
+using CQRS.Commands;
+using CQRS.Domain.Plan;
+using CQRS.Domain.Repositories;
 using CQRS.DomainTesting;
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Domain.Plan;
-using MHM.WinFlexOne.CQRS.Domain.Repositories;
-using MHM.WinFlexOne.CQRS.Events;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
+using CQRS.Interfaces.Events;
+using CQRS.Messages.Events;
 
-namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Plan
+namespace CQRS.Domain.Tests.TestSpecs.Plan
 {
     public class when_defining_a_new_plan_year : EventSpecification<DefineYearForPlan>
     {
@@ -39,7 +37,7 @@ namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Plan
 
         public override Interfaces.Commands.Handles<DefineYearForPlan> BuildCommandHandler()
         {
-            return new DefineYearForPlanCommandHandler(new Repository<Domain.Plan.Plan>(EventStore));
+            return new DefineYearForPlanCommandHandler(new Repository<global::CQRS.Domain.Plan.Plan>(EventStore));
         }
 
         public override IEnumerable<IEvent> Then()
@@ -54,7 +52,7 @@ namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Plan
                             PlanId = _planId,
                             PlanYearId = _planYearId,
                             Starts = new DateTime(2013,1,1),
-                            Version = 0,
+                            Version = 1,
                             Year = 2013,
                         },
                 };

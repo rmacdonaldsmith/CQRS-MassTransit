@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using CQRS.Commands;
 using CQRS.DomainTesting;
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Events;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
+using CQRS.Interfaces.Events;
+using CQRS.Messages.Events;
 
-namespace MHM.WinFlexOne.CQRS.TimeoutService.Tests
+namespace CQRS.TimeoutService.Tests
 {
     public class when_registering_a_new_timeout : EventSpecification<StartTimeout>
     {
@@ -27,7 +27,7 @@ namespace MHM.WinFlexOne.CQRS.TimeoutService.Tests
                 };
         }
 
-        public override Interfaces.Commands.Handles<StartTimeout> BuildCommandHandler()
+        public override global::CQRS.Interfaces.Commands.Handles<StartTimeout> BuildCommandHandler()
         {
             var timeoutRegistry = new TimeoutRegistry(EventStore, @event => { });
             return new StartTimeoutCommandHandler(timeoutRegistry);

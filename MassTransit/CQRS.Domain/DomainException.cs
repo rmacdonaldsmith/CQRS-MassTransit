@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace MHM.WinFlexOne.CQRS.Domain
+namespace CQRS.Domain
 {
     public class DomainException : Exception
     {

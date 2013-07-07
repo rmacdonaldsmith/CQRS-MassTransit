@@ -81,13 +81,13 @@
     <Compile Include="SagaSpecification.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CQRS.Interfaces\MHM.WinFlexOne.CQRS.Interfaces.csproj">
+    <ProjectReference Include="..\CQRS.Interfaces\CQRS.Interfaces.csproj">
       <Project>{230600C4-94FC-4C17-8D0D-0030D72EDDF1}</Project>
-      <Name>MHM.WinFlexOne.CQRS.Interfaces</Name>
+      <Name>CQRS.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CQRS.Messages\MHM.WinFlexOne.CQRS.Messages.csproj">
+    <ProjectReference Include="..\CQRS.Messages\CQRS.Messages.csproj">
       <Project>{33E90437-CFD1-48B9-BFCC-23FB733B3591}</Project>
-      <Name>MHM.WinFlexOne.CQRS.Messages</Name>
+      <Name>CQRS.Messages</Name>
     </ProjectReference>
     <ProjectReference Include="..\CQRS.Sagas\CQRS.Sagas.csproj">
       <Project>{DAFB1FE8-7674-4C78-8CEC-57FAA98300C4}</Project>

@@ -1,7 +1,7 @@
 ﻿using Autofac;
+using CQRS.Common.Client;
+using CQRS.Interfaces.Services.ReadModel;
 using CQRS.ReadModel.Client;
-using MHM.WinFlexOne.CQRS.Client;
-using MHM.WinflexOne.CQRS.Interfaces.Services.ReadModel;
 using MassTransit;
 using MongoDB.Driver;
 

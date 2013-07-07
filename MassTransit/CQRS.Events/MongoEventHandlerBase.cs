@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
+using CQRS.Interfaces.Events;
 using MongoDB.Driver;
 using log4net;
 
-namespace MHM.WinFlexOne.CQRS.Events
+namespace CQRS.Events
 {
     public abstract class MongoEventHandlerBase<TEvent, TDto> : Handles<TEvent> where TEvent : IEvent
     {

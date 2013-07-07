@@ -1,13 +1,12 @@
 ﻿using System.Configuration;
 using Autofac;
-using MHM.WinFlexOne.CQRS.Events.EventHandlers;
-using MHM.WinFlexOne.CQRS.Events.EventHandlers.Elections;
+using CQRS.Events.EventHandlers.Elections;
 using Magnum.Extensions;
 using MassTransit;
 using MassTransit.Log4NetIntegration;
 using MongoDB.Driver;
 
-namespace MHM.WinFlexOne.CQRS.EventDispatch.AutofacModules
+namespace CQRS.EventDispatch.AutofacModules
 {
     public class EventHandlersInjectionModule : Module
     {

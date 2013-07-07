@@ -1,9 +1,10 @@
+using CQRS.Interfaces.Events;
+using CQRS.Messages.Events;
 using MHM.WinFlexOne.CQRS.Dtos;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
 using MassTransit;
 using MongoDB.Driver;
 
-namespace MHM.WinFlexOne.CQRS.Events.EventHandlers.Benefits
+namespace CQRS.Events.EventHandlers.Benefits
 {
     public sealed class NewBenefitDefinedEventHandler : Handles<NewBenefitDefinedEvent>, Consumes<NewBenefitDefinedEvent>.All
     {

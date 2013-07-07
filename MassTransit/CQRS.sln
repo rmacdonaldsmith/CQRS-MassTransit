@@ -1,38 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHM.WinFlexOne.CQRS.Common", "CQRS\MHM.WinFlexOne.CQRS.Common.csproj", "{67B7F984-9016-40A5-A24E-B9D4DDFB0FBD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHM.WinFlexOne.CQRS.Tests", "CQRS.Tests\MHM.WinFlexOne.CQRS.Tests.csproj", "{273849A1-9138-40F3-AB43-CFB38C97E44F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHM.WinFlexOne.CQRS.AcceptanceTests", "CQRS.AcceptanceTests\MHM.WinFlexOne.CQRS.AcceptanceTests.csproj", "{E4D83933-B6A3-4F7C-9D9A-2433D065A06C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHM.WinFlexOne.CQRS.Messages", "CQRS.Messages\MHM.WinFlexOne.CQRS.Messages.csproj", "{33E90437-CFD1-48B9-BFCC-23FB733B3591}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHM.WinFlexOne.CQRS.Interfaces", "CQRS.Interfaces\MHM.WinFlexOne.CQRS.Interfaces.csproj", "{230600C4-94FC-4C17-8D0D-0030D72EDDF1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHM.WinFlexOne.CQRS.Domain", "CQRS.Domain\MHM.WinFlexOne.CQRS.Domain.csproj", "{FD211C6B-A3CB-4C16-B3F4-99BCD39788AC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.UI.Web.EFO", "CQRS.UI.Web\CQRS.UI.Web.EFO.csproj", "{25C8F58E-994E-4C26-8795-5D3AC6F29CBB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.UI.Web.Nancy", "CQRS.UI.Web.Nancy\CQRS.UI.Web.Nancy.csproj", "{317BD19A-8E2D-44A1-8CE3-35E5576DC5A2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHM.WinFlexOne.CQRS.CommandDispatch", "CQRS.CommandDispatch\MHM.WinFlexOne.CQRS.CommandDispatch.csproj", "{B6C09555-9403-4482-8357-9481229A1100}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.MassTransit.TestClient", "CQRS.MassTransit.TestClient\CQRS.MassTransit.TestClient.csproj", "{855E3806-9694-410D-B2B3-12EC64A51005}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHM.WinFlexOne.CQRS.Events", "CQRS.Events\MHM.WinFlexOne.CQRS.Events.csproj", "{7D5922DB-4EB9-43B1-BD0F-381B91BE8149}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHM.WinFlexOne.CQRS.EventDispatch", "CQRS.EventDispatch\MHM.WinFlexOne.CQRS.EventDispatch.csproj", "{1DA48518-4139-4A8C-BA06-F5083D61304B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHM.WinFlexOne.CQRS.Domain.Tests", "CQRS.Commands.Tests\MHM.WinFlexOne.CQRS.Domain.Tests.csproj", "{AEFA9164-0506-48E5-B332-82BB56A48153}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHM.WinFlexOne.CQRS.ReadModel.REST", "CQRS.ReadModel.REST\MHM.WinFlexOne.CQRS.ReadModel.REST.csproj", "{8055CEBF-0541-4CDB-95CA-E45B54D93E6E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHM.WinflexOne.CQRS.Interfaces.Services", "CQRS.Interfaces.Services\MHM.WinflexOne.CQRS.Interfaces.Services.csproj", "{36BDA9DD-430A-40A1-ABD6-872123F94A71}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{00471A83-210E-4394-84A1-E0AB81EC29D4}"
-EndProject
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F32C5A28-5E4B-4C40-88AC-7E5C9513AA9B}"
 	ProjectSection(SolutionItems) = preProject
 		CQRS.slnbldr = CQRS.slnbldr
@@ -48,6 +16,44 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{7B4963
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{D6ABD02B-8426-47BE-A0E1-C41050636043}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Architecture", "Architecture", "{D31A0FCD-48D8-43D6-A6D2-CB84229F1732}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{064FB5D6-B60C-4EF7-9442-3F85E8D3D4CE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DomainTesting", "DomainTesting", "{2B4CB6E1-0A3D-4633-B787-90E6B9F761F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Common", "CQRS\CQRS.Common.csproj", "{67B7F984-9016-40A5-A24E-B9D4DDFB0FBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Tests", "CQRS.Tests\CQRS.Tests.csproj", "{273849A1-9138-40F3-AB43-CFB38C97E44F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.AcceptanceTests", "CQRS.AcceptanceTests\CQRS.AcceptanceTests.csproj", "{E4D83933-B6A3-4F7C-9D9A-2433D065A06C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Messages", "CQRS.Messages\CQRS.Messages.csproj", "{33E90437-CFD1-48B9-BFCC-23FB733B3591}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Interfaces", "CQRS.Interfaces\CQRS.Interfaces.csproj", "{230600C4-94FC-4C17-8D0D-0030D72EDDF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Domain", "CQRS.Domain\CQRS.Domain.csproj", "{FD211C6B-A3CB-4C16-B3F4-99BCD39788AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.UI.Web.EFO", "CQRS.UI.Web\CQRS.UI.Web.EFO.csproj", "{25C8F58E-994E-4C26-8795-5D3AC6F29CBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.UI.Web.Nancy", "CQRS.UI.Web.Nancy\CQRS.UI.Web.Nancy.csproj", "{317BD19A-8E2D-44A1-8CE3-35E5576DC5A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.CommandDispatch", "CQRS.CommandDispatch\CQRS.CommandDispatch.csproj", "{B6C09555-9403-4482-8357-9481229A1100}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.MassTransit.TestClient", "CQRS.MassTransit.TestClient\CQRS.MassTransit.TestClient.csproj", "{855E3806-9694-410D-B2B3-12EC64A51005}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Events", "CQRS.Events\CQRS.Events.csproj", "{7D5922DB-4EB9-43B1-BD0F-381B91BE8149}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.EventDispatch", "CQRS.EventDispatch\CQRS.EventDispatch.csproj", "{1DA48518-4139-4A8C-BA06-F5083D61304B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Domain.Tests", "CQRS.Commands.Tests\CQRS.Domain.Tests.csproj", "{AEFA9164-0506-48E5-B332-82BB56A48153}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.ReadModel.REST", "CQRS.ReadModel.REST\CQRS.ReadModel.REST.csproj", "{8055CEBF-0541-4CDB-95CA-E45B54D93E6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Interfaces.Services", "CQRS.Interfaces.Services\CQRS.Interfaces.Services.csproj", "{36BDA9DD-430A-40A1-ABD6-872123F94A71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{00471A83-210E-4394-84A1-E0AB81EC29D4}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.UI.Web.MFO", "CQRS.UI.Web.MFO\CQRS.UI.Web.MFO.csproj", "{146E9CE8-73B9-421E-B8E0-CC68B7F926D8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.ReadModel.Client", "CQRS.ReadModel.Client\CQRS.ReadModel.Client.csproj", "{B6186DC0-6669-4346-A68A-C62A37924B4D}"
@@ -58,152 +64,25 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Sagas", "CQRS.Sagas\CQ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Sagas.Tests", "CQRS.Sagas.Tests\CQRS.Sagas.Tests.csproj", "{2EE262EA-1B4B-42F5-9C93-8114F077E0C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHM.WinFlexOne.CQRS.TimeoutService", "CQRS.TimeoutService\MHM.WinFlexOne.CQRS.TimeoutService.csproj", "{E9C4C0BD-5378-41A4-9BA6-7387E4E3DE09}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.TimeoutService", "CQRS.TimeoutService\CQRS.TimeoutService.csproj", "{E9C4C0BD-5378-41A4-9BA6-7387E4E3DE09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHM.WinFlexOne.CQRS.TimeoutService.Tests", "CQRS.TimeoutService.Tests\MHM.WinFlexOne.CQRS.TimeoutService.Tests.csproj", "{B7C212E1-B246-4CC0-BF00-A5F78FD23D2E}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Architecture", "Architecture", "{D31A0FCD-48D8-43D6-A6D2-CB84229F1732}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.TimeoutService.Tests", "CQRS.TimeoutService.Tests\CQRS.TimeoutService.Tests.csproj", "{B7C212E1-B246-4CC0-BF00-A5F78FD23D2E}"
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "CQRS.Architecture", "CQRS.Architecture\CQRS.Architecture.modelproj", "{213C1F2E-0C8B-436C-8B4B-46EB1A0F467D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHM.WinFlexOne.CQRS.Events.Tests", "MHM.WinFlexOne.CQRS\MHM.WinFlexOne.CQRS.Events.Tests.csproj", "{C467E98E-DE6F-4829-AF6C-A282365DFE92}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Events.Tests", "MHM.WinFlexOne.CQRS\CQRS.Events.Tests.csproj", "{C467E98E-DE6F-4829-AF6C-A282365DFE92}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Domain.ClaimsContext", "CQRS.Domain.ClaimsContext\CQRS.Domain.ClaimsContext.csproj", "{F1CE2DE5-EC48-4161-BBDE-52BD4ED4DF28}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Domain.ClaimsContext.Tests", "CQRS.Domain.ClaimsContext.Tests\CQRS.Domain.ClaimsContext.Tests.csproj", "{D1F02BCF-E0B8-46A4-A5F0-55BD5E36777A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{064FB5D6-B60C-4EF7-9442-3F85E8D3D4CE}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventReplayer", "Tools\EventReplayer\EventReplayer.csproj", "{5A6F689E-4A8D-4B37-B589-06F0FECAF1BC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventReplayer.Tests", "Tools\EventReplayer.Tests\EventReplayer.Tests.csproj", "{0E8155B6-5815-4FCF-A913-BFA468793EC3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DomainTesting", "DomainTesting", "{2B4CB6E1-0A3D-4633-B787-90E6B9F761F8}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.DomainTesting", "CQRS.DomainTesting\CQRS.DomainTesting.csproj", "{D62D6814-5854-4596-96FA-51A84AECD7C3}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 31
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://idevtfs01:8080/tfs/winflexcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = CQRS.AcceptanceTests\\MHM.WinFlexOne.CQRS.AcceptanceTests.csproj
-		SccProjectName1 = CQRS.AcceptanceTests
-		SccLocalPath1 = CQRS.AcceptanceTests
-		SccProjectUniqueName2 = CQRS.Tests\\MHM.WinFlexOne.CQRS.Tests.csproj
-		SccProjectName2 = CQRS.Tests
-		SccLocalPath2 = CQRS.Tests
-		SccProjectUniqueName3 = CQRS.Messages\\MHM.WinFlexOne.CQRS.Messages.csproj
-		SccProjectTopLevelParentUniqueName3 = CQRS.sln
-		SccProjectName3 = CQRS.Messages
-		SccLocalPath3 = CQRS.Messages
-		SccProjectUniqueName4 = CQRS.Interfaces\\MHM.WinFlexOne.CQRS.Interfaces.csproj
-		SccProjectTopLevelParentUniqueName4 = CQRS.sln
-		SccProjectName4 = CQRS.Interfaces
-		SccLocalPath4 = CQRS.Interfaces
-		SccProjectUniqueName5 = CQRS.Domain\\MHM.WinFlexOne.CQRS.Domain.csproj
-		SccProjectTopLevelParentUniqueName5 = CQRS.sln
-		SccProjectName5 = CQRS.Domain
-		SccLocalPath5 = CQRS.Domain
-		SccProjectUniqueName6 = CQRS.UI.Web.Nancy\\CQRS.UI.Web.Nancy.csproj
-		SccProjectTopLevelParentUniqueName6 = CQRS.sln
-		SccProjectName6 = CQRS.UI.Web.Nancy
-		SccLocalPath6 = CQRS.UI.Web.Nancy
-		SccProjectUniqueName7 = CQRS.CommandDispatch\\MHM.WinFlexOne.CQRS.CommandDispatch.csproj
-		SccProjectTopLevelParentUniqueName7 = CQRS.sln
-		SccProjectName7 = CQRS.CommandDispatch
-		SccLocalPath7 = CQRS.CommandDispatch
-		SccProjectUniqueName8 = CQRS.MassTransit.TestClient\\CQRS.MassTransit.TestClient.csproj
-		SccProjectName8 = CQRS.MassTransit.TestClient
-		SccLocalPath8 = CQRS.MassTransit.TestClient
-		SccProjectUniqueName9 = CQRS.Events\\MHM.WinFlexOne.CQRS.Events.csproj
-		SccProjectTopLevelParentUniqueName9 = CQRS.sln
-		SccProjectName9 = CQRS.Events
-		SccLocalPath9 = CQRS.Events
-		SccProjectUniqueName10 = CQRS.EventDispatch\\MHM.WinFlexOne.CQRS.EventDispatch.csproj
-		SccProjectTopLevelParentUniqueName10 = CQRS.sln
-		SccProjectName10 = CQRS.EventDispatch
-		SccLocalPath10 = CQRS.EventDispatch
-		SccProjectUniqueName11 = CQRS.Commands.Tests\\MHM.WinFlexOne.CQRS.Domain.Tests.csproj
-		SccProjectTopLevelParentUniqueName11 = CQRS.sln
-		SccProjectName11 = CQRS.Commands.Tests
-		SccLocalPath11 = CQRS.Commands.Tests
-		SccProjectUniqueName12 = CQRS.ReadModel.REST\\MHM.WinFlexOne.CQRS.ReadModel.REST.csproj
-		SccProjectTopLevelParentUniqueName12 = CQRS.sln
-		SccProjectName12 = CQRS.ReadModel.REST
-		SccLocalPath12 = CQRS.ReadModel.REST
-		SccProjectUniqueName13 = CQRS.Interfaces.Services\\MHM.WinflexOne.CQRS.Interfaces.Services.csproj
-		SccProjectTopLevelParentUniqueName13 = CQRS.sln
-		SccProjectName13 = CQRS.Interfaces.Services
-		SccLocalPath13 = CQRS.Interfaces.Services
-		SccProjectUniqueName14 = CQRS\\MHM.WinFlexOne.CQRS.Common.csproj
-		SccProjectName14 = CQRS
-		SccLocalPath14 = CQRS
-		SccProjectUniqueName15 = Common\\Common.csproj
-		SccProjectName15 = Common
-		SccLocalPath15 = Common
-		SccProjectUniqueName16 = CQRS.UI.Web\\CQRS.UI.Web.EFO.csproj
-		SccProjectTopLevelParentUniqueName16 = CQRS.sln
-		SccProjectName16 = CQRS.UI.Web
-		SccLocalPath16 = CQRS.UI.Web
-		SccProjectUniqueName17 = CQRS.UI.Web.MFO\\CQRS.UI.Web.MFO.csproj
-		SccProjectTopLevelParentUniqueName17 = CQRS.sln
-		SccProjectName17 = CQRS.UI.Web.MFO
-		SccLocalPath17 = CQRS.UI.Web.MFO
-		SccProjectUniqueName18 = CQRS.ReadModel.Client\\CQRS.ReadModel.Client.csproj
-		SccProjectTopLevelParentUniqueName18 = CQRS.sln
-		SccProjectName18 = CQRS.ReadModel.Client
-		SccLocalPath18 = CQRS.ReadModel.Client
-		SccProjectUniqueName19 = CQRS.ReadModel.Client.TestApp\\CQRS.ReadModel.Client.TestApp.csproj
-		SccProjectTopLevelParentUniqueName19 = CQRS.sln
-		SccProjectName19 = CQRS.ReadModel.Client.TestApp
-		SccLocalPath19 = CQRS.ReadModel.Client.TestApp
-		SccProjectUniqueName20 = CQRS.Sagas\\CQRS.Sagas.csproj
-		SccProjectTopLevelParentUniqueName20 = CQRS.sln
-		SccProjectName20 = CQRS.Sagas
-		SccLocalPath20 = CQRS.Sagas
-		SccProjectUniqueName21 = CQRS.Sagas.Tests\\CQRS.Sagas.Tests.csproj
-		SccProjectTopLevelParentUniqueName21 = CQRS.sln
-		SccProjectName21 = CQRS.Sagas.Tests
-		SccLocalPath21 = CQRS.Sagas.Tests
-		SccProjectUniqueName22 = CQRS.TimeoutService\\MHM.WinFlexOne.CQRS.TimeoutService.csproj
-		SccProjectTopLevelParentUniqueName22 = CQRS.sln
-		SccProjectName22 = CQRS.TimeoutService
-		SccLocalPath22 = CQRS.TimeoutService
-		SccProjectUniqueName23 = CQRS.TimeoutService.Tests\\MHM.WinFlexOne.CQRS.TimeoutService.Tests.csproj
-		SccProjectTopLevelParentUniqueName23 = CQRS.sln
-		SccProjectName23 = CQRS.TimeoutService.Tests
-		SccLocalPath23 = CQRS.TimeoutService.Tests
-		SccProjectUniqueName24 = CQRS.Architecture\\CQRS.Architecture.modelproj
-		SccProjectTopLevelParentUniqueName24 = CQRS.sln
-		SccProjectName24 = CQRS.Architecture
-		SccLocalPath24 = CQRS.Architecture
-		SccProjectUniqueName25 = MHM.WinFlexOne.CQRS\\MHM.WinFlexOne.CQRS.Events.Tests.csproj
-		SccProjectTopLevelParentUniqueName25 = CQRS.sln
-		SccProjectName25 = MHM.WinFlexOne.CQRS
-		SccLocalPath25 = MHM.WinFlexOne.CQRS
-		SccProjectUniqueName26 = CQRS.Domain.ClaimsContext\\CQRS.Domain.ClaimsContext.csproj
-		SccProjectTopLevelParentUniqueName26 = CQRS.sln
-		SccProjectName26 = CQRS.Domain.ClaimsContext
-		SccLocalPath26 = CQRS.Domain.ClaimsContext
-		SccProjectUniqueName27 = CQRS.Domain.ClaimsContext.Tests\\CQRS.Domain.ClaimsContext.Tests.csproj
-		SccProjectTopLevelParentUniqueName27 = CQRS.sln
-		SccProjectName27 = CQRS.Domain.ClaimsContext.Tests
-		SccLocalPath27 = CQRS.Domain.ClaimsContext.Tests
-		SccProjectUniqueName28 = Tools\\EventReplayer\\EventReplayer.csproj
-		SccProjectTopLevelParentUniqueName28 = CQRS.sln
-		SccProjectName28 = Tools/EventReplayer
-		SccLocalPath28 = Tools\\EventReplayer
-		SccProjectUniqueName29 = Tools\\EventReplayer.Tests\\EventReplayer.Tests.csproj
-		SccProjectTopLevelParentUniqueName29 = CQRS.sln
-		SccProjectName29 = Tools/EventReplayer.Tests
-		SccLocalPath29 = Tools\\EventReplayer.Tests
-		SccProjectUniqueName30 = CQRS.DomainTesting\\CQRS.DomainTesting.csproj
-		SccProjectTopLevelParentUniqueName30 = CQRS.sln
-		SccProjectName30 = CQRS.DomainTesting
-		SccLocalPath30 = CQRS.DomainTesting
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -518,27 +397,27 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{25C8F58E-994E-4C26-8795-5D3AC6F29CBB} = {DDDB0CD0-E933-4102-8076-705C620211ED}
+		{317BD19A-8E2D-44A1-8CE3-35E5576DC5A2} = {DDDB0CD0-E933-4102-8076-705C620211ED}
+		{146E9CE8-73B9-421E-B8E0-CC68B7F926D8} = {DDDB0CD0-E933-4102-8076-705C620211ED}
+		{7D5922DB-4EB9-43B1-BD0F-381B91BE8149} = {40CCB657-37C3-4868-81CF-1BEAF9145FE0}
+		{8055CEBF-0541-4CDB-95CA-E45B54D93E6E} = {40CCB657-37C3-4868-81CF-1BEAF9145FE0}
+		{B6186DC0-6669-4346-A68A-C62A37924B4D} = {40CCB657-37C3-4868-81CF-1BEAF9145FE0}
+		{C8C2EE61-5CA7-4AB6-86B2-41DE090D0635} = {40CCB657-37C3-4868-81CF-1BEAF9145FE0}
+		{C467E98E-DE6F-4829-AF6C-A282365DFE92} = {40CCB657-37C3-4868-81CF-1BEAF9145FE0}
+		{33E90437-CFD1-48B9-BFCC-23FB733B3591} = {2468DB50-E993-4D41-8490-C8B3461E6A24}
 		{230600C4-94FC-4C17-8D0D-0030D72EDDF1} = {2468DB50-E993-4D41-8490-C8B3461E6A24}
 		{36BDA9DD-430A-40A1-ABD6-872123F94A71} = {2468DB50-E993-4D41-8490-C8B3461E6A24}
-		{33E90437-CFD1-48B9-BFCC-23FB733B3591} = {2468DB50-E993-4D41-8490-C8B3461E6A24}
-		{AEFA9164-0506-48E5-B332-82BB56A48153} = {7B4963DD-C19B-4187-B7C1-F22E93B354A6}
 		{FD211C6B-A3CB-4C16-B3F4-99BCD39788AC} = {7B4963DD-C19B-4187-B7C1-F22E93B354A6}
+		{AEFA9164-0506-48E5-B332-82BB56A48153} = {7B4963DD-C19B-4187-B7C1-F22E93B354A6}
 		{DAFB1FE8-7674-4C78-8CEC-57FAA98300C4} = {7B4963DD-C19B-4187-B7C1-F22E93B354A6}
 		{2EE262EA-1B4B-42F5-9C93-8114F077E0C1} = {7B4963DD-C19B-4187-B7C1-F22E93B354A6}
 		{F1CE2DE5-EC48-4161-BBDE-52BD4ED4DF28} = {7B4963DD-C19B-4187-B7C1-F22E93B354A6}
 		{D1F02BCF-E0B8-46A4-A5F0-55BD5E36777A} = {7B4963DD-C19B-4187-B7C1-F22E93B354A6}
-		{317BD19A-8E2D-44A1-8CE3-35E5576DC5A2} = {DDDB0CD0-E933-4102-8076-705C620211ED}
-		{25C8F58E-994E-4C26-8795-5D3AC6F29CBB} = {DDDB0CD0-E933-4102-8076-705C620211ED}
-		{146E9CE8-73B9-421E-B8E0-CC68B7F926D8} = {DDDB0CD0-E933-4102-8076-705C620211ED}
-		{1DA48518-4139-4A8C-BA06-F5083D61304B} = {D6ABD02B-8426-47BE-A0E1-C41050636043}
 		{B6C09555-9403-4482-8357-9481229A1100} = {D6ABD02B-8426-47BE-A0E1-C41050636043}
+		{1DA48518-4139-4A8C-BA06-F5083D61304B} = {D6ABD02B-8426-47BE-A0E1-C41050636043}
 		{E9C4C0BD-5378-41A4-9BA6-7387E4E3DE09} = {D6ABD02B-8426-47BE-A0E1-C41050636043}
 		{B7C212E1-B246-4CC0-BF00-A5F78FD23D2E} = {D6ABD02B-8426-47BE-A0E1-C41050636043}
-		{8055CEBF-0541-4CDB-95CA-E45B54D93E6E} = {40CCB657-37C3-4868-81CF-1BEAF9145FE0}
-		{7D5922DB-4EB9-43B1-BD0F-381B91BE8149} = {40CCB657-37C3-4868-81CF-1BEAF9145FE0}
-		{B6186DC0-6669-4346-A68A-C62A37924B4D} = {40CCB657-37C3-4868-81CF-1BEAF9145FE0}
-		{C8C2EE61-5CA7-4AB6-86B2-41DE090D0635} = {40CCB657-37C3-4868-81CF-1BEAF9145FE0}
-		{C467E98E-DE6F-4829-AF6C-A282365DFE92} = {40CCB657-37C3-4868-81CF-1BEAF9145FE0}
 		{213C1F2E-0C8B-436C-8B4B-46EB1A0F467D} = {D31A0FCD-48D8-43D6-A6D2-CB84229F1732}
 		{5A6F689E-4A8D-4B37-B589-06F0FECAF1BC} = {064FB5D6-B60C-4EF7-9442-3F85E8D3D4CE}
 		{0E8155B6-5815-4FCF-A913-BFA468793EC3} = {064FB5D6-B60C-4EF7-9442-3F85E8D3D4CE}

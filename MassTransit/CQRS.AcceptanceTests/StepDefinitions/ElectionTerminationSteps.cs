@@ -1,7 +1,6 @@
-﻿using NUnit.Framework;
-using TechTalk.SpecFlow;
+﻿using TechTalk.SpecFlow;
 
-namespace MHM.WinFlexOne.CQRS.AcceptanceTests.StepDefinitions
+namespace CQRS.AcceptanceTests.StepDefinitions
 {
     [Binding]
     public class ElectionTerminationSteps

@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using CQRS.Interfaces.Events;
+using CQRS.Messages.Events;
 using MHM.WinFlexOne.CQRS.Dtos;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
 using MassTransit;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
 
-namespace MHM.WinFlexOne.CQRS.Events.EventHandlers
+namespace CQRS.Events.EventHandlers
 {
     public class NewPlanYearAssignedEventHandler : Handles<NewPlanYearAssignedEvent>, Consumes<NewPlanYearAssignedEvent>.All
     {

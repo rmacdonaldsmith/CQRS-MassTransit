@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using CQRS.Interfaces.Events;
 using EventStore;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
 
-namespace MHM.WinFlexOne.CQRS.EventPersistence
+namespace CQRS.Common.EventPersistence
 {
     public class ConcreteEventStore : IEventStore
     {

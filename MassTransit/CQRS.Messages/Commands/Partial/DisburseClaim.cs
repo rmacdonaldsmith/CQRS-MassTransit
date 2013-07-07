@@ -1,6 +1,6 @@
-﻿using MHM.WinFlexOne.CQRS.Interfaces.Commands;
+﻿using CQRS.Interfaces.Commands;
 
-namespace MHM.WinFlexOne.CQRS.Commands
+namespace CQRS.Commands
 {
     public partial class DisburseClaim : ICommand
     {

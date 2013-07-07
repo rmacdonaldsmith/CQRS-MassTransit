@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using CQRS.Commands;
+using CQRS.Domain.Plan;
+using CQRS.Domain.Repositories;
 using CQRS.DomainTesting;
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Domain.Plan;
-using MHM.WinFlexOne.CQRS.Domain.Repositories;
-using MHM.WinFlexOne.CQRS.Events;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
+using CQRS.Interfaces.Events;
+using CQRS.Messages.Events;
 
-namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Plan
+namespace CQRS.Domain.Tests.TestSpecs.Plan
 {
     public class when_defining_a_new_plan_year_and_the_plan_year_already_exists : EventSpecification<DefineYearForPlan>
     {
@@ -50,7 +50,7 @@ namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Plan
 
         public override Interfaces.Commands.Handles<DefineYearForPlan> BuildCommandHandler()
         {
-            return new DefineYearForPlanCommandHandler(new Repository<Domain.Plan.Plan>(EventStore));
+            return new DefineYearForPlanCommandHandler(new Repository<global::CQRS.Domain.Plan.Plan>(EventStore));
         }
 
         public override IEnumerable<IEvent> Then()

@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using MHM.WinFlexOne.CQRS.Events;
-using MHM.WinFlexOne.CQRS.Events.EventHandlers.Claims;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
+using CQRS.Events.EventHandlers.Claims;
+using CQRS.Interfaces.Events;
+using CQRS.Messages.Events;
 using MongoDB.Driver;
 using NUnit.Framework;
 
-namespace MHM.WinFlexOne.CQRS
+namespace CQRS.Events.Tests
 {
     [TestFixture]
     public class ClaimDisbursedEventTests

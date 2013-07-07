@@ -8,8 +8,8 @@
     <ProjectGuid>{FD211C6B-A3CB-4C16-B3F4-99BCD39788AC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MHM.WinFlexOne.CQRS.Domain</RootNamespace>
-    <AssemblyName>MHM.WinFlexOne.CQRS.Domain</AssemblyName>
+    <RootNamespace>CQRS.Domain</RootNamespace>
+    <AssemblyName>CQRS.Domain</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
@@ -99,21 +99,21 @@
       <Project>{00471A83-210E-4394-84A1-E0AB81EC29D4}</Project>
       <Name>Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CQRS.Interfaces.Services\MHM.WinflexOne.CQRS.Interfaces.Services.csproj">
+    <ProjectReference Include="..\CQRS.Interfaces.Services\CQRS.Interfaces.Services.csproj">
       <Project>{36BDA9DD-430A-40A1-ABD6-872123F94A71}</Project>
-      <Name>MHM.WinflexOne.CQRS.Interfaces.Services</Name>
+      <Name>CQRS.Interfaces.Services</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CQRS.Interfaces\MHM.WinFlexOne.CQRS.Interfaces.csproj">
+    <ProjectReference Include="..\CQRS.Interfaces\CQRS.Interfaces.csproj">
       <Project>{230600C4-94FC-4C17-8D0D-0030D72EDDF1}</Project>
-      <Name>MHM.WinFlexOne.CQRS.Interfaces</Name>
+      <Name>CQRS.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CQRS.Messages\MHM.WinFlexOne.CQRS.Messages.csproj">
+    <ProjectReference Include="..\CQRS.Messages\CQRS.Messages.csproj">
       <Project>{33E90437-CFD1-48B9-BFCC-23FB733B3591}</Project>
-      <Name>MHM.WinFlexOne.CQRS.Messages</Name>
+      <Name>CQRS.Messages</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CQRS\MHM.WinFlexOne.CQRS.Common.csproj">
+    <ProjectReference Include="..\CQRS\CQRS.Common.csproj">
       <Project>{67B7F984-9016-40A5-A24E-B9D4DDFB0FBD}</Project>
-      <Name>MHM.WinFlexOne.CQRS.Common</Name>
+      <Name>CQRS.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

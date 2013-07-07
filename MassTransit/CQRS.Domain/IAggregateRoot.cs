@@ -1,4 +1,4 @@
-﻿namespace MHM.WinFlexOne.CQRS.Domain
+﻿namespace CQRS.Domain
 {
     public interface IAggregateRoot
     {

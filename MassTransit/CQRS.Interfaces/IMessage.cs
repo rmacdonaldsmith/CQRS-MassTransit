@@ -1,4 +1,4 @@
-﻿namespace MHM.WinFlexOne.CQRS.Interfaces
+﻿namespace CQRS.Interfaces
 {
     public interface IMessage
     {

@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using CQRS.Commands;
+using CQRS.Domain.Election;
+using CQRS.Domain.Repositories;
 using CQRS.DomainTesting;
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Domain.Election;
-using MHM.WinFlexOne.CQRS.Domain.Repositories;
+using CQRS.Interfaces.Events;
+using CQRS.Interfaces.Services.ReadModel;
+using CQRS.Messages.Events;
 using MHM.WinFlexOne.CQRS.Dtos;
-using MHM.WinFlexOne.CQRS.Events;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
-using MHM.WinflexOne.CQRS.Interfaces.Services.ReadModel;
 using NUnit.Framework;
 
-namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Election
+namespace CQRS.Domain.Tests.TestSpecs.Election
 {
     [TestFixture]
     public class when_making_a_new_election : EventSpecification<MakeAnElection>
@@ -50,7 +50,7 @@ namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Election
                             PlanYear = DateTime.Today.Year,
                         },
                 };
-            return new MakeAnElectionCommandHandler(new Repository<Domain.Election.Election>(EventStore), benefitsService);
+            return new MakeAnElectionCommandHandler(new Repository<global::CQRS.Domain.Election.Election>(EventStore), benefitsService);
         }
 
         public override IEnumerable<IEvent> Then()
@@ -64,6 +64,7 @@ namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Election
                                  ElectionReason = "reason",
                                  Id = m_electionId.ToString(),
                                  PerPayPeriodAmount = 0,
+                                 Version = 1
                              };
         }
 

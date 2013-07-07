@@ -8,8 +8,8 @@
     <ProjectGuid>{B6C09555-9403-4482-8357-9481229A1100}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MHM.WinFlexOne.CQRS.CommandDispatch</RootNamespace>
-    <AssemblyName>MHM.WinFlexOne.CQRS.CommandDispatch</AssemblyName>
+    <RootNamespace>CQRS.CommandDispatch</RootNamespace>
+    <AssemblyName>CQRS.CommandDispatch</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -127,21 +127,21 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CQRS.Domain\MHM.WinFlexOne.CQRS.Domain.csproj">
+    <ProjectReference Include="..\CQRS.Domain\CQRS.Domain.csproj">
       <Project>{FD211C6B-A3CB-4C16-B3F4-99BCD39788AC}</Project>
-      <Name>MHM.WinFlexOne.CQRS.Domain</Name>
+      <Name>CQRS.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CQRS.Interfaces.Services\MHM.WinflexOne.CQRS.Interfaces.Services.csproj">
+    <ProjectReference Include="..\CQRS.Interfaces.Services\CQRS.Interfaces.Services.csproj">
       <Project>{36BDA9DD-430A-40A1-ABD6-872123F94A71}</Project>
-      <Name>MHM.WinflexOne.CQRS.Interfaces.Services</Name>
+      <Name>CQRS.Interfaces.Services</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CQRS.Interfaces\MHM.WinFlexOne.CQRS.Interfaces.csproj">
+    <ProjectReference Include="..\CQRS.Interfaces\CQRS.Interfaces.csproj">
       <Project>{230600C4-94FC-4C17-8D0D-0030D72EDDF1}</Project>
-      <Name>MHM.WinFlexOne.CQRS.Interfaces</Name>
+      <Name>CQRS.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CQRS.Messages\MHM.WinFlexOne.CQRS.Messages.csproj">
+    <ProjectReference Include="..\CQRS.Messages\CQRS.Messages.csproj">
       <Project>{33E90437-CFD1-48B9-BFCC-23FB733B3591}</Project>
-      <Name>MHM.WinFlexOne.CQRS.Messages</Name>
+      <Name>CQRS.Messages</Name>
     </ProjectReference>
     <ProjectReference Include="..\CQRS.ReadModel.Client\CQRS.ReadModel.Client.csproj">
       <Project>{B6186DC0-6669-4346-A68A-C62A37924B4D}</Project>
@@ -151,9 +151,9 @@
       <Project>{DAFB1FE8-7674-4C78-8CEC-57FAA98300C4}</Project>
       <Name>CQRS.Sagas</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CQRS\MHM.WinFlexOne.CQRS.Common.csproj">
+    <ProjectReference Include="..\CQRS\CQRS.Common.csproj">
       <Project>{67B7F984-9016-40A5-A24E-B9D4DDFB0FBD}</Project>
-      <Name>MHM.WinFlexOne.CQRS.Common</Name>
+      <Name>CQRS.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

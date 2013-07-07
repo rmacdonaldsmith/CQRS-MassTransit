@@ -1,11 +1,12 @@
 ﻿using System.Linq;
+using CQRS.Interfaces.Events;
+using CQRS.Messages.Events;
 using MHM.WinFlexOne.CQRS.Dtos;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
 using MassTransit;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
 
-namespace MHM.WinFlexOne.CQRS.Events.EventHandlers.Claims
+namespace CQRS.Events.EventHandlers.Claims
 {
     public sealed class CardUseVerifiedEventHandler : Handles<CardUseVerifiedEvent>, Consumes<CardUseVerifiedEvent>.All
     {

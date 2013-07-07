@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using CQRS.Interfaces.Services.ReadModel;
 using MHM.WinFlexOne.CQRS.Dtos;
-using MHM.WinflexOne.CQRS.Interfaces.Services.ReadModel;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
 using RestSharp;

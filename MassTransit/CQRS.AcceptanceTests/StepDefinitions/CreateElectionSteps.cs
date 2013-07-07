@@ -1,12 +1,15 @@
-﻿using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Domain.Election;
-using MHM.WinFlexOne.CQRS.Domain.Repositories;
-using MHM.WinFlexOne.CQRS.Events;
+﻿using CQRS.Commands;
+using CQRS.Common;
+using CQRS.Domain;
+using CQRS.Domain.Election;
+using CQRS.Domain.Repositories;
+using CQRS.Events;
+using CQRS.Messages.Events;
 using NUnit.Framework;
 using Rhino.Mocks;
 using TechTalk.SpecFlow;
 
-namespace MHM.WinFlexOne.CQRS.AcceptanceTests.StepDefinitions
+namespace CQRS.AcceptanceTests.StepDefinitions
 {
     [Binding]
     public class CreateElectionSteps

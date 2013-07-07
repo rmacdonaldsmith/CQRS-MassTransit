@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using CQRS.Commands;
+using CQRS.Domain.Election;
+using CQRS.Domain.Repositories;
 using CQRS.DomainTesting;
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Domain.Election;
-using MHM.WinFlexOne.CQRS.Domain.Repositories;
+using CQRS.Interfaces.Events;
+using CQRS.Interfaces.Services.ReadModel;
+using CQRS.Messages.Events;
 using MHM.WinFlexOne.CQRS.Dtos;
-using MHM.WinFlexOne.CQRS.Events;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
-using MHM.WinflexOne.CQRS.Interfaces.Services.ReadModel;
 
-namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Election
+namespace CQRS.Domain.Tests.TestSpecs.Election
 {
     public class when_changing_the_election_amount : EventSpecification<ChangeElectionAmount>
     {
@@ -54,7 +54,7 @@ namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Election
                     PlanYear = DateTime.Today.Year,
                 },
             };
-            return new ChangeElectionAmountCommandHandler(new Repository<Domain.Election.Election>(EventStore), benefitsService);
+            return new ChangeElectionAmountCommandHandler(new Repository<global::CQRS.Domain.Election.Election>(EventStore), benefitsService);
         }
 
         public override IEnumerable<IEvent> Then()
@@ -65,7 +65,7 @@ namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Election
                     NewElectionAmount = 1000,
                     NewPerPayPeriodAmount = 10,
                     QualifyingEvent = "Work",
-                    Version = 0,
+                    Version = 1,
                 };
         }
 

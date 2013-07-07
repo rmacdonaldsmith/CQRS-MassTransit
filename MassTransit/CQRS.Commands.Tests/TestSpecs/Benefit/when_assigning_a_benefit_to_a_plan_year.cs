@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
+using CQRS.Commands;
+using CQRS.Domain.Benefit;
+using CQRS.Domain.Repositories;
 using CQRS.DomainTesting;
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Domain.Benefit;
-using MHM.WinFlexOne.CQRS.Domain.Repositories;
-using MHM.WinFlexOne.CQRS.Events;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
+using CQRS.Interfaces.Events;
+using CQRS.Messages.Events;
 
-namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Benefit
+namespace CQRS.Domain.Tests.TestSpecs.Benefit
 {
     public class when_assigning_a_benefit_to_a_plan_year : EventSpecification<AssignBenefitToYear>
     {
@@ -45,7 +43,7 @@ namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Benefit
 
         public override Interfaces.Commands.Handles<AssignBenefitToYear> BuildCommandHandler()
         {
-            var repository = new Repository<Domain.Benefit.Benefit>(EventStore);
+            var repository = new Repository<global::CQRS.Domain.Benefit.Benefit>(EventStore);
 
             return new AssignBenefitToYearCommandHandler(repository);
         }
@@ -59,6 +57,7 @@ namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Benefit
                     MaxAnnualAmount = 1000,
                     PlanYear = 2013,
                     StartDate = new DateTime(2013, 1, 1),
+                    Version = 1
                 };
         }
 

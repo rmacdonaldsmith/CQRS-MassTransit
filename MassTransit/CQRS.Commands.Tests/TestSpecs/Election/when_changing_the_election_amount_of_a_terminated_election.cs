@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
+using CQRS.Commands;
+using CQRS.Domain.Election;
+using CQRS.Domain.Repositories;
 using CQRS.DomainTesting;
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Domain.Election;
-using MHM.WinFlexOne.CQRS.Domain.Repositories;
+using CQRS.Interfaces.Events;
+using CQRS.Interfaces.Services.ReadModel;
+using CQRS.Messages.Events;
 using MHM.WinFlexOne.CQRS.Dtos;
-using MHM.WinFlexOne.CQRS.Events;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
-using MHM.WinflexOne.CQRS.Interfaces.Services.ReadModel;
 
-namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Election
+namespace CQRS.Domain.Tests.TestSpecs.Election
 {
     public class when_changing_the_election_amount_of_a_terminated_election : EventSpecification<ChangeElectionAmount>
     {
@@ -53,7 +51,7 @@ namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Election
 
         public override Interfaces.Commands.Handles<ChangeElectionAmount> BuildCommandHandler()
         {
-            var repository = new Repository<Domain.Election.Election>(EventStore);
+            var repository = new Repository<global::CQRS.Domain.Election.Election>(EventStore);
             IBenefitsReadModel benefitsService = new FakeBenefitsService
                 {
                     FakeGetPlanYearBenefit = benefitId => new PlanYearBenefitDto

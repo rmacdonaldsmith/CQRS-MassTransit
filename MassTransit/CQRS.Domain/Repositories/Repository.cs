@@ -1,6 +1,8 @@
 ﻿using System;
+using CQRS.Common;
+using MHM.WinFlexOne.CQRS;
 
-namespace MHM.WinFlexOne.CQRS.Domain.Repositories
+namespace CQRS.Domain.Repositories
 {
     public class Repository<T> : IRepository<T> where T : AggregateRoot, new()
     {

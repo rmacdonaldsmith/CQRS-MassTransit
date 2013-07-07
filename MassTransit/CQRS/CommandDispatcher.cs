@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using MHM.WinFlexOne.CQRS.Interfaces.Commands;
+using CQRS.Interfaces.Commands;
 
-namespace MHM.WinFlexOne.CQRS
+namespace CQRS.Common
 {
     public class CommandDispatcher : ICommandDispatcher
     {

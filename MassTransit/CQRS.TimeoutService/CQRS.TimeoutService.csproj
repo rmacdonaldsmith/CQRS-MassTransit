@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{230600C4-94FC-4C17-8D0D-0030D72EDDF1}</ProjectGuid>
+    <ProjectGuid>{E9C4C0BD-5378-41A4-9BA6-7387E4E3DE09}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MHM.WinFlexOne.CQRS.Interfaces</RootNamespace>
-    <AssemblyName>MHM.WinFlexOne.CQRS.Interfaces</AssemblyName>
+    <RootNamespace>CQRS.TimeoutService</RootNamespace>
+    <AssemblyName>CQRS.TimeoutService</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
@@ -35,17 +35,49 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Magnum">
+      <HintPath>..\packages\Magnum.2.1.0\lib\NET40\Magnum.dll</HintPath>
+    </Reference>
+    <Reference Include="MassTransit">
+      <HintPath>..\packages\MassTransit.2.7.1\lib\net40\MassTransit.dll</HintPath>
+    </Reference>
+    <Reference Include="MassTransit.Transports.MSMQ">
+      <HintPath>..\packages\MassTransit.2.7.1\lib\net40\MassTransit.Transports.MSMQ.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\Handles.cs" />
-    <Compile Include="Events\IEvent.cs" />
-    <Compile Include="Events\Handles.cs" />
-    <Compile Include="Commands\ICommand.cs" />
-    <Compile Include="IDomainEvent.cs" />
-    <Compile Include="IMessage.cs" />
+    <Compile Include="StartTimeoutCommandHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TimeoutRegistry.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{00471A83-210E-4394-84A1-E0AB81EC29D4}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CQRS.Interfaces\CQRS.Interfaces.csproj">
+      <Project>{230600C4-94FC-4C17-8D0D-0030D72EDDF1}</Project>
+      <Name>CQRS.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CQRS.Messages\CQRS.Messages.csproj">
+      <Project>{33E90437-CFD1-48B9-BFCC-23FB733B3591}</Project>
+      <Name>CQRS.Messages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CQRS\CQRS.Common.csproj">
+      <Project>{67B7F984-9016-40A5-A24E-B9D4DDFB0FBD}</Project>
+      <Name>CQRS.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

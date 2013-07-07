@@ -4,7 +4,7 @@ using MassTransit;
 using log4net;
 using log4net.Config;
 
-namespace MHM.WinFlexOne.CQRS.CommandDispatch
+namespace CQRS.CommandDispatch
 {
     class Program
     {

@@ -1,5 +1,5 @@
 ﻿using System;
-using MHM.WinFlexOne.CQRS.Interfaces.Commands;
+using CQRS.Interfaces.Commands;
 
 namespace MHM.WinFlexOne.CQRS.Messages.Faults
 {

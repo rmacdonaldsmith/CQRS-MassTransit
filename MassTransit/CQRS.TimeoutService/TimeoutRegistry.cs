@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Timers;
+using CQRS.Commands;
+using CQRS.Common;
+using CQRS.Messages.Events;
 using Common;
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Events;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
-using MassTransit.Services.Timeout.Messages;
 
-namespace MHM.WinFlexOne.CQRS.TimeoutService
+namespace CQRS.TimeoutService
 {
     public class TimeoutRegistry
     {

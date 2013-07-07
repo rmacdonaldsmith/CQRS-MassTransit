@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
+using CQRS.Commands;
 using CQRS.UI.Web.Nancy.Models;
 using CQRS.UI.Web.Nancy.Services;
-using MHM.WinFlexOne.CQRS.Commands;
 using MassTransit;
 using Nancy;
 using Nancy.ModelBinding;

@@ -1,5 +1,4 @@
-﻿using MHM.WinFlexOne.CQRS.Interfaces;
-using MHM.WinFlexOne.CQRS.Interfaces.Commands;
+﻿using CQRS.Interfaces.Commands;
 
 namespace CQRS.Tests.Commands
 {

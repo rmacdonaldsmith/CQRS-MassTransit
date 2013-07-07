@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using CQRS.Commands;
+using CQRS.Domain.Claims;
+using CQRS.Domain.Repositories;
 using CQRS.DomainTesting;
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Domain.Claims;
-using MHM.WinFlexOne.CQRS.Domain.Repositories;
+using CQRS.Interfaces.Events;
+using CQRS.Messages.Events;
 using MHM.WinFlexOne.CQRS.Dtos;
-using MHM.WinFlexOne.CQRS.Events;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
 
-namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Claim
+namespace CQRS.Domain.Tests.TestSpecs.Claim
 {
     public class when_a_claim_is_disbursed : EventSpecification<DisburseClaim>
     {
@@ -67,7 +67,8 @@ namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Claim
                             ClaimAmount = _claimAmount,
                             ClaimId = _claimId,
                             DisbursementAmount = _claimAmount,
-                            ElectionId = "election2"
+                            ElectionId = "election2",
+                            Version = 1
                         }
                 };
         }

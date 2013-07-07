@@ -2,7 +2,7 @@
 using log4net;
 using ILog = EventStore.Logging.ILog;
 
-namespace MHM.WinFlexOne.CQRS.CommandDispatch
+namespace CQRS.CommandDispatch
 {
     //EventStore.Logging.Log4Net was compiled with a reference to log4net v1.2.10
     //MassTransit.Log4NetIntegration was compiled with a reference to log4net v1.2.11

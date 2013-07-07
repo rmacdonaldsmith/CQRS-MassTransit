@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq.Expressions;
 
-namespace MHM.WinFlexOne.CQRS
+namespace CQRS.Common
 {
     public class DelegateAdjuster
     {

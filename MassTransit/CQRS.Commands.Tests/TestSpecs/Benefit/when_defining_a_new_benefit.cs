@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using CQRS.Commands;
+using CQRS.Domain.Benefit;
+using CQRS.Domain.Repositories;
 using CQRS.DomainTesting;
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Domain.Benefit;
-using MHM.WinFlexOne.CQRS.Domain.Repositories;
-using MHM.WinFlexOne.CQRS.Events;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
+using CQRS.Interfaces.Events;
+using CQRS.Messages.Events;
 
-namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Benefit
+namespace CQRS.Domain.Tests.TestSpecs.Benefit
 {
     public class when_defining_a_new_benefit : EventSpecification<DefineNewBenefit>
     {
@@ -35,7 +35,7 @@ namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Benefit
 
         public override Interfaces.Commands.Handles<DefineNewBenefit> BuildCommandHandler()
         {
-            var repository = new Repository<Domain.Benefit.Benefit>(EventStore);
+            var repository = new Repository<global::CQRS.Domain.Benefit.Benefit>(EventStore);
 
             return new DefineNewBenefitCommandHandler(repository);
         }
@@ -50,7 +50,7 @@ namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Benefit
                     HasMaxElectionAmount = true,
                     MaxElectionAmount = 1500,
                     PlanId = _planId.ToString(),
-                    Version = 0,
+                    Version = 1,
                 };
         }
 

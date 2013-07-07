@@ -1,18 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
+using CQRS.Commands;
+using CQRS.Domain.Claims;
+using CQRS.Domain.Repositories;
 using CQRS.DomainTesting;
-using Common;
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Domain.Claims;
-using MHM.WinFlexOne.CQRS.Domain.Repositories;
+using CQRS.Interfaces.Events;
+using CQRS.Messages.Events;
 using MHM.WinFlexOne.CQRS.Dtos;
-using MHM.WinFlexOne.CQRS.Events;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
 
-namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Claim
+namespace CQRS.Domain.Tests.TestSpecs.Claim
 {
     public sealed class when_submitting_a_new_claim_request_that_can_be_autosubstantiated : EventSpecification<SubmitClaimRequest>
     {
@@ -76,6 +73,7 @@ namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Claim
                             DateOfTransaction = _transactionDate,
                             ParticipantId = _participantId,
                             ProviderName = "provider name",
+                            Version = 1
                         },
                 };
         }

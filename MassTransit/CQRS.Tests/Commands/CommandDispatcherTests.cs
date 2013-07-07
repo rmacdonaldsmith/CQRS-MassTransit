@@ -1,8 +1,6 @@
 ﻿using System;
-using MHM.WinFlexOne.CQRS;
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Interfaces;
-using MHM.WinFlexOne.CQRS.Interfaces.Commands;
+using CQRS.Common;
+using CQRS.Interfaces.Commands;
 using NUnit.Framework;
 using Rhino.Mocks;
 

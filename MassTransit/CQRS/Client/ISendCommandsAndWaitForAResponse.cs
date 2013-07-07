@@ -1,7 +1,7 @@
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Interfaces.Commands;
+using CQRS.Commands;
+using CQRS.Interfaces.Commands;
 
-namespace MHM.WinFlexOne.CQRS.Client
+namespace CQRS.Common.Client
 {
     public interface ISendCommandsAndWaitForAResponse
     {

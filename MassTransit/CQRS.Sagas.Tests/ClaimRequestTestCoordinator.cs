@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Events;
+using CQRS.Commands;
+using CQRS.Messages.Events;
 using MassTransit;
 using MassTransit.Services.Timeout.Messages;
 

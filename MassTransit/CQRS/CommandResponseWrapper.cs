@@ -1,9 +1,9 @@
 ﻿using System;
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Interfaces.Commands;
+using CQRS.Commands;
+using CQRS.Interfaces.Commands;
 using MassTransit;
 
-namespace MHM.WinFlexOne.CQRS
+namespace CQRS.Common
 {
     public class CommandResponseWrapper<TCommand> : Consumes<TCommand>.Context where TCommand : class, ICommand
     {

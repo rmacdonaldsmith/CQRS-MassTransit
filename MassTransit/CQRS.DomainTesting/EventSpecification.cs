@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using MHM.WinFlexOne.CQRS.Interfaces.Commands;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
+using CQRS.Interfaces.Commands;
+using CQRS.Interfaces.Events;
 using NUnit.Framework;
 
 namespace CQRS.DomainTesting
@@ -28,7 +28,7 @@ namespace CQRS.DomainTesting
         /// The command handler that will initialize the domin object and invoke the command on the domain object
         /// </summary>
         /// <returns></returns>
-        public abstract MHM.WinFlexOne.CQRS.Interfaces.Commands.Handles<TCommand> BuildCommandHandler();
+        public abstract Interfaces.Commands.Handles<TCommand> BuildCommandHandler();
 
         /// <summary>
         /// The events that we expect to the generated when the command is applied to the domain object

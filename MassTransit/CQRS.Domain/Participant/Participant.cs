@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
+using CQRS.Interfaces.Events;
 
-namespace MHM.WinFlexOne.CQRS.Domain.Participant
+namespace CQRS.Domain.Participant
 {
     public class Participant : AggregateRoot
     {

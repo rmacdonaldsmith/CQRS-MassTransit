@@ -8,7 +8,7 @@ string _XsdPath = Host.ResolvePath(@"..\\XSD");
 string _SvcUtilPath = string.Format(@"{0}\Microsoft SDKs\Windows\v7.0A\Bin\SvcUtil.exe", Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86));
 
 var _StartInfo = new System.Diagnostics.ProcessStartInfo( _SvcUtilPath,
-		string.Format( "\"{0}\\EventDefinitions.xsd\" /target:code /out:{1} /n:*,MHM.WinFlexOne.CQRS.Events /dconly /ImportXmlTypes", _XsdPath, _TempPath ) );
+		string.Format( "\"{0}\\EventDefinitions.xsd\" /target:code /out:{1} /n:*,CQRS.Messages.Events /dconly /ImportXmlTypes", _XsdPath, _TempPath ) );
 _StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
 
 var _Process = System.Diagnostics.Process.Start( _StartInfo );

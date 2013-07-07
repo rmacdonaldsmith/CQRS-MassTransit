@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
+using CQRS.Common;
+using CQRS.Interfaces.Events;
+using MHM.WinFlexOne.CQRS;
 
-namespace MHM.WinFlexOne.CQRS.Events
+namespace CQRS.Events
 {
     public interface IEventPublisher
     {

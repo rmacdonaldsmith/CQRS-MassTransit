@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{273849A1-9138-40F3-AB43-CFB38C97E44F}</ProjectGuid>
+    <ProjectGuid>{230600C4-94FC-4C17-8D0D-0030D72EDDF1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MHM.WinFlexOne.CQRS.Tests</RootNamespace>
-    <AssemblyName>MHM.WinFlexOne.CQRS.Tests</AssemblyName>
+    <RootNamespace>CQRS.Interfaces</RootNamespace>
+    <AssemblyName>CQRS.Interfaces</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
@@ -35,41 +35,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\thirdparty\nunit\2.5.10\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="Rhino.Mocks">
-      <HintPath>..\thirdparty\Hibernating Rhinos\RhinoMocks\RhinoMocks.3.6.1\Rhino.Mocks.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\CommandDispatcherTests.cs" />
-    <Compile Include="Commands\TestCommandNoReturn.cs" />
-    <Compile Include="Commands\TestCommandHandler.cs" />
-    <Compile Include="Commands\TestCommandReturns.cs" />
+    <Compile Include="Commands\Handles.cs" />
+    <Compile Include="Events\IEvent.cs" />
+    <Compile Include="Events\Handles.cs" />
+    <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="IDomainEvent.cs" />
+    <Compile Include="IMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CQRS.Interfaces\MHM.WinFlexOne.CQRS.Interfaces.csproj">
-      <Project>{230600C4-94FC-4C17-8D0D-0030D72EDDF1}</Project>
-      <Name>MHM.WinFlexOne.CQRS.Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CQRS.Messages\MHM.WinFlexOne.CQRS.Messages.csproj">
-      <Project>{33E90437-CFD1-48B9-BFCC-23FB733B3591}</Project>
-      <Name>MHM.WinFlexOne.CQRS.Messages</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CQRS\MHM.WinFlexOne.CQRS.Common.csproj">
-      <Project>{67B7F984-9016-40A5-A24E-B9D4DDFB0FBD}</Project>
-      <Name>MHM.WinFlexOne.CQRS.Common</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

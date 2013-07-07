@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MHM.WinflexOne.CQRS.Interfaces.Services.ReadModel
+namespace CQRS.Interfaces.Services.ReadModel
 {
     public interface IClaimTypesReadModel
     {

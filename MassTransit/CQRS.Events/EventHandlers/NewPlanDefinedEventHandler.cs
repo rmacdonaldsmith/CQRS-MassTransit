@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
+using CQRS.Interfaces.Events;
+using CQRS.Messages.Events;
 using MHM.WinFlexOne.CQRS.Dtos;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
 using MassTransit;
 using MongoDB.Driver;
 
-namespace MHM.WinFlexOne.CQRS.Events.EventHandlers
+namespace CQRS.Events.EventHandlers
 {
     public class NewPlanDefinedEventHandler : Handles<NewPlanDefinedEvent>, Consumes<NewPlanDefinedEvent>.All
     {

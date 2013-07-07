@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Domain.Election;
-using MHM.WinFlexOne.CQRS.Interfaces;
-using MHM.WinFlexOne.CQRS.Interfaces.Commands;
+using CQRS.Commands;
+using CQRS.Common;
+using CQRS.Domain.Election;
 using MassTransit;
 using MassTransit.Pipeline;
 
-namespace MHM.WinFlexOne.CQRS.CommandDispatch
+namespace CQRS.CommandDispatch
 {
     public class ConsumerFactory<T> : IConsumerFactory<T> where T : class
     {

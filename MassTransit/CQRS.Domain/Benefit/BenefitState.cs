@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using CQRS.Interfaces.Events;
+using CQRS.Messages.Events;
 using Common;
-using MHM.WinFlexOne.CQRS.Events;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
 
-namespace MHM.WinFlexOne.CQRS.Domain.Benefit
+namespace CQRS.Domain.Benefit
 {
     public class BenefitState : AggregateStateBase
     {

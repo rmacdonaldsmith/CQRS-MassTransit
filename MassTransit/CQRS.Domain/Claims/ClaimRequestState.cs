@@ -1,8 +1,8 @@
 ﻿using System;
+using CQRS.Messages.Events;
 using Common;
-using MHM.WinFlexOne.CQRS.Events;
 
-namespace MHM.WinFlexOne.CQRS.Domain.Claims
+namespace CQRS.Domain.Claims
 {
     public sealed class ClaimRequestState : AggregateStateBase
     {

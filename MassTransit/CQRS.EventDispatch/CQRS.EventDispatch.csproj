@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{5A6F689E-4A8D-4B37-B589-06F0FECAF1BC}</ProjectGuid>
+    <ProjectGuid>{1DA48518-4139-4A8C-BA06-F5083D61304B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EventReplayer</RootNamespace>
-    <AssemblyName>EventReplayer</AssemblyName>
+    <RootNamespace>CQRS.EventDispatch</RootNamespace>
+    <AssemblyName>CQRS.EventDispatch</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -40,46 +40,45 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Autofac">
-      <HintPath>..\..\packages\Autofac.2.6.3.862\lib\NET40\Autofac.dll</HintPath>
+      <HintPath>..\packages\Autofac.2.6.3.862\lib\NET40\Autofac.dll</HintPath>
     </Reference>
     <Reference Include="Autofac.Configuration">
-      <HintPath>..\..\packages\Autofac.2.6.3.862\lib\NET40\Autofac.Configuration.dll</HintPath>
-    </Reference>
-    <Reference Include="EventStore">
-      <HintPath>..\..\packages\EventStore.3.0.11326.44\lib\net40\EventStore.dll</HintPath>
-    </Reference>
-    <Reference Include="EventStore.Logging.Log4Net">
-      <HintPath>..\..\thirdparty\EventStore\EventStore.Logging.Log4Net.3.0.11326.44\lib\net40\EventStore.Logging.Log4Net.dll</HintPath>
-    </Reference>
-    <Reference Include="EventStore.Persistence.MongoPersistence">
-      <HintPath>..\..\thirdparty\EventStore\EventStore.Persistence.MongoPersistence.3.0.11326.44\lib\net40\EventStore.Persistence.MongoPersistence.dll</HintPath>
-    </Reference>
-    <Reference Include="EventStore.Serialization.Json">
-      <HintPath>..\..\thirdparty\EventStore\EventStore.Serialization.Json.3.0.11326.44\lib\net40\EventStore.Serialization.Json.dll</HintPath>
+      <HintPath>..\packages\Autofac.2.6.3.862\lib\NET40\Autofac.Configuration.dll</HintPath>
     </Reference>
     <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\thirdparty\log4net\1.2.10\log4net.dll</HintPath>
+      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="Magnum">
-      <HintPath>..\..\packages\Magnum.2.1.0\lib\NET40\Magnum.dll</HintPath>
+    <Reference Include="Magnum, Version=2.1.0.0, Culture=neutral, PublicKeyToken=b800c4cfcdeea87b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Magnum.2.1.0\lib\NET40\Magnum.dll</HintPath>
     </Reference>
-    <Reference Include="MassTransit">
-      <HintPath>..\..\packages\MassTransit.2.7.1\lib\net40\MassTransit.dll</HintPath>
+    <Reference Include="MassTransit, Version=2.7.0.0, Culture=neutral, PublicKeyToken=b8e0e9f2f1e657fa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MassTransit.2.7.1\lib\net40\MassTransit.dll</HintPath>
+    </Reference>
+    <Reference Include="MassTransit.AutofacIntegration, Version=2.7.0.0, Culture=neutral, PublicKeyToken=b8e0e9f2f1e657fa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MassTransit.Autofac.2.7.1\lib\net40\MassTransit.AutofacIntegration.dll</HintPath>
+    </Reference>
+    <Reference Include="MassTransit.Log4NetIntegration, Version=2.7.0.0, Culture=neutral, PublicKeyToken=b8e0e9f2f1e657fa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MassTransit.Log4Net.2.7.1\lib\net40\MassTransit.Log4NetIntegration.dll</HintPath>
     </Reference>
     <Reference Include="MassTransit.Transports.MSMQ">
-      <HintPath>..\..\packages\MassTransit.2.7.1\lib\net40\MassTransit.Transports.MSMQ.dll</HintPath>
+      <HintPath>..\packages\MassTransit.2.7.1\lib\net40\MassTransit.Transports.MSMQ.dll</HintPath>
     </Reference>
-    <Reference Include="MongoDB.Bson, Version=1.3.1.4349, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+    <Reference Include="MassTransit.Transports.RabbitMq, Version=2.7.0.0, Culture=neutral, PublicKeyToken=b8e0e9f2f1e657fa, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\thirdparty\MongoDb\mongocsharpdriver.1.3.0.4309\MongoDB.Bson.dll</HintPath>
+      <HintPath>..\packages\MassTransit.RabbitMQ.2.7.1\lib\net40\MassTransit.Transports.RabbitMq.dll</HintPath>
     </Reference>
     <Reference Include="MongoDB.Driver, Version=1.3.1.4349, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\thirdparty\MongoDb\mongocsharpdriver.1.3.0.4309\MongoDB.Driver.dll</HintPath>
+      <HintPath>..\thirdparty\MongoDb\mongocsharpdriver.1.6.1\lib\net35\MongoDB.Driver.dll</HintPath>
     </Reference>
-    <Reference Include="NDesk.Options">
-      <HintPath>..\..\packages\NDesk.Options.0.2.1\lib\NDesk.Options.dll</HintPath>
+    <Reference Include="RabbitMQ.Client, Version=3.0.2.0, Culture=neutral, PublicKeyToken=89e7d7c5feba84ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\RabbitMQ.Client.3.0.2\lib\net30\RabbitMQ.Client.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -92,39 +91,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EventReplayerFactory.cs" />
-    <Compile Include="IEventReplayer.cs" />
-    <Compile Include="AutofacModule.cs" />
-    <Compile Include="MongoEventReplayer.cs" />
+    <Compile Include="AutofacModules\EventHandlersInjectionModule.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Common\Common.csproj">
-      <Project>{00471A83-210E-4394-84A1-E0AB81EC29D4}</Project>
-      <Name>Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\CQRS.Events\CQRS.Events.csproj">
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CQRS.Events\CQRS.Events.csproj">
       <Project>{7D5922DB-4EB9-43B1-BD0F-381B91BE8149}</Project>
       <Name>CQRS.Events</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\CQRS.Interfaces\CQRS.Interfaces.csproj">
+    <ProjectReference Include="..\CQRS.Interfaces\CQRS.Interfaces.csproj">
       <Project>{230600C4-94FC-4C17-8D0D-0030D72EDDF1}</Project>
       <Name>CQRS.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\CQRS.Messages\CQRS.Messages.csproj">
+    <ProjectReference Include="..\CQRS.Messages\CQRS.Messages.csproj">
       <Project>{33E90437-CFD1-48B9-BFCC-23FB733B3591}</Project>
       <Name>CQRS.Messages</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_Readme\EventStore.license.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
-    <None Include="App_Readme\EventStore - Architectural Overview.docx" />
-    <None Include="App_Readme\EventStore - Transactional Integrity.docx" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

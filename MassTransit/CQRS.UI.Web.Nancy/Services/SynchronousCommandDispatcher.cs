@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Threading;
-using MHM.WinFlexOne.CQRS;
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Interfaces.Commands;
+using CQRS.Commands;
+using CQRS.Common;
+using CQRS.Interfaces.Commands;
 using MassTransit;
 
 namespace CQRS.UI.Web.Nancy.Services

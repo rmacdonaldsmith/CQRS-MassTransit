@@ -1,4 +1,4 @@
-﻿namespace MHM.WinFlexOne.CQRS.Interfaces.Events
+﻿namespace CQRS.Interfaces.Events
 {
     public interface IEvent : IMessage
     {

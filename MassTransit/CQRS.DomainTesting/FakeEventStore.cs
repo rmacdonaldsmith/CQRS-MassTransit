@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
+using CQRS.Interfaces.Events;
 
 namespace CQRS.DomainTesting
 {

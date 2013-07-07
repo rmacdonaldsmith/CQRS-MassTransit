@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Configuration;
 using Autofac;
-using MHM.WinFlexOne.CQRS.EventDispatch.AutofacModules;
-using MHM.WinFlexOne.CQRS.Events;
-using MHM.WinFlexOne.CQRS.Events.EventHandlers;
-using MHM.WinFlexOne.CQRS.Events.EventHandlers.Elections;
+using CQRS.EventDispatch.AutofacModules;
+using CQRS.Events.EventHandlers.Elections;
+using CQRS.Messages.Events;
 using MassTransit;
 using MongoDB.Driver;
 using log4net;
 using log4net.Config;
 
-namespace MHM.WinFlexOne.CQRS.EventDispatch
+namespace CQRS.EventDispatch
 {
     class Program
     {

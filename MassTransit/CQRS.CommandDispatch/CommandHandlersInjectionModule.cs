@@ -1,14 +1,14 @@
 ﻿using System.Configuration;
 using Autofac;
+using CQRS.Domain.Election;
+using CQRS.Domain.Repositories;
+using CQRS.Interfaces.Services.ReadModel;
 using CQRS.ReadModel.Client;
-using MHM.WinFlexOne.CQRS.Domain.Election;
-using MHM.WinFlexOne.CQRS.Domain.Repositories;
-using MHM.WinflexOne.CQRS.Interfaces.Services.ReadModel;
 using Magnum.Extensions;
 using MassTransit;
 using MongoDB.Driver;
 
-namespace MHM.WinFlexOne.CQRS.CommandDispatch
+namespace CQRS.CommandDispatch
 {
     public class CommandHandlersInjectionModule : Module
     {

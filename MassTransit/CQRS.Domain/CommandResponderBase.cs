@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq.Expressions;
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Interfaces.Commands;
+using CQRS.Commands;
+using CQRS.Interfaces.Commands;
 using MassTransit;
 
-namespace MHM.WinFlexOne.CQRS.Domain
+namespace CQRS.Domain
 {
     public abstract class CommandResponderBase<TCommand> : Consumes<TCommand>.Context where TCommand : class, ICommand
     {

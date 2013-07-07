@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using MHM.WinFlexOne.CQRS.Interfaces.Commands;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
+using CQRS.Interfaces.Commands;
+using CQRS.Interfaces.Events;
 using NUnit.Framework;
 
 namespace CQRS.Sagas.Tests

@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
+using CQRS.Commands;
+using CQRS.Domain.Claims;
+using CQRS.Domain.Repositories;
 using CQRS.DomainTesting;
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Domain.Claims;
-using MHM.WinFlexOne.CQRS.Domain.Repositories;
+using CQRS.Interfaces.Events;
+using CQRS.Messages.Events;
 using MHM.WinFlexOne.CQRS.Dtos;
-using MHM.WinFlexOne.CQRS.Events;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
 
-namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Claim
+namespace CQRS.Domain.Tests.TestSpecs.Claim
 {
     public class when_a_claim_exceeds_the_election_balance : EventSpecification<DisburseClaim>
     {
@@ -72,7 +70,8 @@ namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Claim
                             ClaimType = _claimType,
                             Reason = string.Format(
                             "Your remaining election balance is {0} which is not enough to cover your claim for {1}", 
-                            _electionBalance, _claimAmount)
+                            _electionBalance, _claimAmount),
+                            Version = 1
                         }
                 };
         }

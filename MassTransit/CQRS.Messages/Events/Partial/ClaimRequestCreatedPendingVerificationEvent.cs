@@ -1,8 +1,8 @@
 ﻿using System;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
+using CQRS.Interfaces.Events;
 using MassTransit;
 
-namespace MHM.WinFlexOne.CQRS.Events
+namespace CQRS.Messages.Events
 {
     public partial class ClaimRequestCreatedPendingVerificationEvent : IEvent, CorrelatedBy<Guid>
     {

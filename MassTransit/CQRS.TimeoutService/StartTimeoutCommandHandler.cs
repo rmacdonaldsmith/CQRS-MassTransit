@@ -1,9 +1,10 @@
-﻿using MHM.WinFlexOne.CQRS.Commands;
+﻿using CQRS.Commands;
+using CQRS.Interfaces.Commands;
 using MassTransit;
 
-namespace MHM.WinFlexOne.CQRS.TimeoutService
+namespace CQRS.TimeoutService
 {
-    public class StartTimeoutCommandHandler : Interfaces.Commands.Handles<StartTimeout>, Consumes<StartTimeout>.All
+    public class StartTimeoutCommandHandler : Handles<StartTimeout>, Consumes<StartTimeout>.All
     {
         private readonly TimeoutRegistry _timeoutRegistry;
 

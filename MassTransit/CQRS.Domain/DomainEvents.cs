@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
+using CQRS.Interfaces.Events;
 using Ninject;
 
-namespace MHM.WinFlexOne.CQRS.Events
+namespace CQRS.Domain
 {
     public static class DomainEvents
     {

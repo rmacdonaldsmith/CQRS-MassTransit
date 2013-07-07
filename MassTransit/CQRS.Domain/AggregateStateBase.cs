@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
+using CQRS.Interfaces.Events;
 
-namespace MHM.WinFlexOne.CQRS.Domain
+namespace CQRS.Domain
 {
     public abstract class AggregateStateBase
     {

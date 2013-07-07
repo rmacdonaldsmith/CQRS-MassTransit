@@ -8,8 +8,8 @@
     <ProjectGuid>{7D5922DB-4EB9-43B1-BD0F-381B91BE8149}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MHM.WinFlexOne.CQRS.Events</RootNamespace>
-    <AssemblyName>MHM.WinFlexOne.CQRS.Events</AssemblyName>
+    <RootNamespace>CQRS.Events</RootNamespace>
+    <AssemblyName>CQRS.Events</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -43,7 +43,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="log4net">
-      <HintPath>..\MHM.WinFlexOne.CQRS.AutoFacModules\bin\Debug\log4net.dll</HintPath>
+      <HintPath>..\thirdparty\log4net\1.2.11\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Magnum, Version=2.1.0.0, Culture=neutral, PublicKeyToken=b800c4cfcdeea87b, processorArchitecture=MSIL">
       <HintPath>..\packages\Magnum.2.1.0\lib\NET40\Magnum.dll</HintPath>
@@ -96,17 +96,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CQRS.Interfaces\MHM.WinFlexOne.CQRS.Interfaces.csproj">
+    <ProjectReference Include="..\CQRS.Interfaces\CQRS.Interfaces.csproj">
       <Project>{230600C4-94FC-4C17-8D0D-0030D72EDDF1}</Project>
-      <Name>MHM.WinFlexOne.CQRS.Interfaces</Name>
+      <Name>CQRS.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CQRS.Messages\MHM.WinFlexOne.CQRS.Messages.csproj">
+    <ProjectReference Include="..\CQRS.Messages\CQRS.Messages.csproj">
       <Project>{33E90437-CFD1-48B9-BFCC-23FB733B3591}</Project>
-      <Name>MHM.WinFlexOne.CQRS.Messages</Name>
+      <Name>CQRS.Messages</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CQRS\MHM.WinFlexOne.CQRS.Common.csproj">
+    <ProjectReference Include="..\CQRS\CQRS.Common.csproj">
       <Project>{67B7F984-9016-40A5-A24E-B9D4DDFB0FBD}</Project>
-      <Name>MHM.WinFlexOne.CQRS.Common</Name>
+      <Name>CQRS.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

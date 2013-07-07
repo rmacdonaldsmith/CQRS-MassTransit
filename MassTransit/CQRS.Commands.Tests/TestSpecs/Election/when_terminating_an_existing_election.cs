@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using CQRS.Commands;
+using CQRS.Domain.Election;
+using CQRS.Domain.Repositories;
 using CQRS.DomainTesting;
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Domain.Election;
-using MHM.WinFlexOne.CQRS.Domain.Repositories;
-using MHM.WinFlexOne.CQRS.Events;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
+using CQRS.Interfaces.Events;
+using CQRS.Messages.Events;
 using NUnit.Framework;
 
-namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Election
+namespace CQRS.Domain.Tests.TestSpecs.Election
 {
     [TestFixture]
     public class when_terminating_an_existing_election : EventSpecification<TerminateElection>
@@ -53,7 +53,7 @@ namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Election
         /// <returns></returns>
         public override Interfaces.Commands.Handles<TerminateElection> BuildCommandHandler()
         {
-            return new TerminateElectionCommandHandler(new Repository<Domain.Election.Election>(EventStore));
+            return new TerminateElectionCommandHandler(new Repository<global::CQRS.Domain.Election.Election>(EventStore));
         }
 
         /// <summary>
@@ -66,6 +66,7 @@ namespace MHM.WinFlexOne.CQRS.Domain.Tests.TestSpecs.Election
                              {
                                  ElectionId = m_electionId.ToString(),
                                  TerminatedDate = m_terminateDate,
+                                 Version = 1
                              };
         }
 

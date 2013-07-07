@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using CQRS.Interfaces.Services.ReadModel;
 using MHM.WinFlexOne.CQRS.Dtos;
-using MHM.WinflexOne.CQRS.Interfaces.Services.ReadModel;
 
-namespace MHM.WinFlexOne.CQRS.Domain.Tests
+namespace CQRS.Domain.Tests
 {
     public class FakeElectionsService : IElectionsReadModel
     {

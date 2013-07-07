@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using MHM.WinFlexOne.CQRS.Dtos;
 
-namespace MHM.WinflexOne.CQRS.Interfaces.Services.ReadModel
+namespace CQRS.Interfaces.Services.ReadModel
 {
     public interface IBenefitsReadModel
     {

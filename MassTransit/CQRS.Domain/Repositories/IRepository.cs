@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MHM.WinFlexOne.CQRS.Domain.Repositories
+namespace CQRS.Domain.Repositories
 {
     public interface IRepository<T> where T : AggregateRoot, new()
     {

@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using CQRS.Commands;
+using CQRS.Interfaces.Events;
+using CQRS.Interfaces.Services.ReadModel;
+using CQRS.Messages.Events;
 using Common;
-using MHM.WinFlexOne.CQRS.Commands;
 using MHM.WinFlexOne.CQRS.Dtos;
-using MHM.WinFlexOne.CQRS.Events;
-using MHM.WinFlexOne.CQRS.Interfaces.Events;
-using MHM.WinflexOne.CQRS.Interfaces.Services.ReadModel;
 
-namespace MHM.WinFlexOne.CQRS.Domain.Claims
+namespace CQRS.Domain.Claims
 {
     public enum ClaimRequestStateEnum
     {

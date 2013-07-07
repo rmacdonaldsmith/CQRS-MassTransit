@@ -1,5 +1,5 @@
 ﻿using System;
-using MHM.WinFlexOne.CQRS.Interfaces.Commands;
+using CQRS.Interfaces.Commands;
 
 namespace CQRS.Tests.Commands
 {

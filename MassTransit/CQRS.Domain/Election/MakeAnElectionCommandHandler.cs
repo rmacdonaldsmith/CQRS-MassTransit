@@ -1,10 +1,10 @@
 ﻿using System;
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Domain.Repositories;
-using MHM.WinFlexOne.CQRS.Interfaces.Commands;
-using MHM.WinflexOne.CQRS.Interfaces.Services.ReadModel;
+using CQRS.Commands;
+using CQRS.Domain.Repositories;
+using CQRS.Interfaces.Commands;
+using CQRS.Interfaces.Services.ReadModel;
 
-namespace MHM.WinFlexOne.CQRS.Domain.Election
+namespace CQRS.Domain.Election
 {
     public class MakeAnElectionCommandHandler : CommandResponderBase<MakeAnElection>, Handles<MakeAnElection>
     {

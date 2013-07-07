@@ -1,11 +1,11 @@
 ﻿using System;
-using MHM.WinFlexOne.CQRS.Commands;
-using MHM.WinFlexOne.CQRS.Domain.Repositories;
-using MHM.WinFlexOne.CQRS.Interfaces.Commands;
-using MHM.WinflexOne.CQRS.Interfaces.Services.ReadModel;
+using CQRS.Commands;
+using CQRS.Domain.Repositories;
+using CQRS.Interfaces.Commands;
+using CQRS.Interfaces.Services.ReadModel;
 using MassTransit;
 
-namespace MHM.WinFlexOne.CQRS.Domain.Election
+namespace CQRS.Domain.Election
 {
     public class ChangeElectionAmountCommandHandler : Handles<ChangeElectionAmount>, Consumes<ChangeElectionAmount>.Context
     {

@@ -4,7 +4,7 @@ using MassTransit;
 using MassTransit.Log4NetIntegration;
 using MassTransit.Saga;
 
-namespace MHM.WinFlexOne.CQRS.CommandDispatch
+namespace CQRS.CommandDispatch
 {
     public class MassTransitInjectionModule : Module
     {

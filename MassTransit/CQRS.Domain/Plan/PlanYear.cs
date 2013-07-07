@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MHM.WinFlexOne.CQRS.Domain.Plan
+namespace CQRS.Domain.Plan
 {
     public sealed class PlanYear
     {
